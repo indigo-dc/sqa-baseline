@@ -1,27 +1,58 @@
 ---
-title: "Manubot Rootstock: Manuscript Title"
+title: "A set of Common Software Quality Assurance Baseline Criteria for Research Projects"
 keywords:
-  - markdown
-  - publishing
-  - manubot
+  - research software
+  - software quality assurance
+  - software lifecycle
+  - devops
+  - software automation
+  - software quality baseline
+  - software testing
+  - software deployment
+  - agile development
 lang: en-US
 author_info:
   -
-    github: johndoe
-    name: John Doe
-    initials: JD
-    orcid: XXXX-XXXX-XXXX-XXXX
-    twitter: johndoe
-    email: john.doe@something.com
+    github: orviz
+    name: Pablo Orviz
+    orcid: 0000-0002-2473-6405
+    email: orviz@ifca.unican.es
     affiliations:
-      - Department of Something, University of Whatever
-    funders: Grant XXXXXXXX
+      - Spanish National Research Council (CSIC)
+      - Institute of Physics of Cantabria (IFCA)
   -
-    github: janeroe
-    name: Jane Roe
-    initials: JR
-    orcid: XXXX-XXXX-XXXX-XXXX
-    email: jane.roe@whatever.edu
+    github: alvaro.lopez
+    name: Alvaro Lopez
+    orcid: 0000-0002-0013-4602
+    email: aloga@ifca.unican.es
     affiliations:
-      - Department of Something, University of Whatever
-      - Department of Whatever, University of Something
+      - Spanish National Research Council (CSIC)
+      - Institute of Physics of Cantabria (IFCA)
+  -
+    github: caifti
+    name: Doina Cristina Duma
+    orcid: 0000-0002-0124-4870 
+    email: cristina.aiftimiei@cnaf.infn.it
+    affiliations:
+      -  National Institute of Nuclear Physics (INFN)
+  -
+    github: 
+    name: Giacinto Donvito
+    orcid: 0000-0002-0628-1080 
+    email: giacinto.donvito@ba.infn.it
+    affiliations:
+      -  National Institute of Nuclear Physics (INFN)
+  -
+    github: mariojmdavid
+    name: Mario David
+    orcid: 0000-0003-1802-5356
+    email: mario@lip.pt
+    affiliations:
+      - Laboratory of Instrumentation and Experimental Particle Physics (LIP)
+  -
+    github: jorge-lip
+    name: Jorge Gomes
+    orcid: 0000-0002-9142-2596
+    email: jorge@lip.pt
+    affiliations:
+      - Laboratory of Instrumentation and Experimental Particle Physics (LIP)
