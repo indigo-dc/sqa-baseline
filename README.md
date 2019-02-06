@@ -1,4 +1,4 @@
-# Automated scholarly manuscripts on GitHub
+# A set of Common Software Quality Assurance Baseline Criteria for Research Projects
 
 <!-- usage note: edit the H1 title above to personalize the manuscript -->
 
@@ -6,116 +6,59 @@
 [![PDF Manuscript](https://img.shields.io/badge/manuscript-PDF-blue.svg)](https://indigo-dc.github.io/sqa-baseline/manuscript.pdf)
 [![Build Status](https://travis-ci.org/indigo-dc/sqa-baseline.svg?branch=master)](https://travis-ci.org/indigo-dc/sqa-baseline)
 
-## Manuscript description
+## Motivation
 
-<!-- usage note: edit this section. -->
+Research software development and maintenance often suffers from a lack of
+quality assurance realization. This might result from the fact that the
+different actors involved are either not aware of the benefits that applying
+quality practices bring along, or not keen to adhere to them as they might
+increase the burden of the software life cycle.
 
-This repository is a template manuscript (a.k.a. rootstock).
-Actual manuscript instances will clone this repository (see [`SETUP.md`](SETUP.md)) and replace this paragraph with a description of their manuscript.
+The main purpose of this document is to _provide a lightweight and practical
+approach_ to educate and, ultimately, achieve quality in the development of
+research software.
 
-## Manubot
+The Common Software Quality Assurance Baseline Criteria _establishes the
+minimum viable set of quality requirements_ that shall be covered when tackling
+any software development project, but mainly oriented to research. Additional
+best practices and recommendations are also defined to increase the value
+--e.g. reliability-- of the final product. In order to discern among them, the
+[RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) convention is used along the
+document, adding adequate information about the criticality of each
+requirement.
 
-<!-- usage note: do not edit this section -->
+## Open Collaboration
 
-Manubot is a system for writing scholarly manuscripts via GitHub.
-Manubot automates citations and references, versions manuscripts using git, and enables collaborative writing via GitHub.
-The [Manubot Rootstock repository](https://git.io/vQSvo) is a general purpose template for creating new Manubot instances, as detailed in [`SETUP.md`](SETUP.md).
-See [`USAGE.md`](USAGE.md) for documentation how to write a manuscript.
+The current baseline has been elaborated and extended based on the first-hand
+experiences extracted from several European-funded research projects for
+software development.
 
-Please open [an issue](https://github.com/indigo-dc/sqa-baseline/issues) for questions related to Manubot usage, bug reports, or general inquiries.
+We aim to consolidate the quality guidelines as a reference point for future
+research projects, setting a path for sustainability and knowledge transfer.
+This goal can only be achieved through a open and collaborative effort. __Any
+contribution is welcomed and will be considered for inclusion.__
 
-### Repository directories & files
+Please check our [contribution](CONTRIBUTING.md) guide.
 
-The directories are as follows:
+## Copyright Notice
 
-+ [`content`](content) contains the manuscript source, which includes markdown files as well as inputs for citations and references.
-  See [`USAGE.md`](USAGE.md) for more information.
-+ [`output`](output) contains the outputs (generated files) from the manubot including the resulting manuscripts.
-  You should not edit these files manually, because they will get overwritten.
-+ [`webpage`](webpage) is a directory meant to be rendered as a static webpage for viewing the HTML manuscript.
-+ [`build`](build) contains commands and tools for building the manuscript.
-+ [`ci`](ci) contains files necessary for deployment via continuous integration.
-  For the CI configuration, see [`.travis.yml`](.travis.yml).
-
-### Local execution
-
-To run the Manubot locally, install the [conda](https://conda.io) environment as described in [`build`](build).
-Then, you can build the manuscript on POSIX systems by running the following commands.
-
-```sh
-# Activate the manubot conda environment (assumes conda version >= 4.4)
-conda activate manubot
-
-# Build the manuscript, saving outputs to the output directory
-sh build/build.sh
-
-# At this point, the HTML & PDF outputs will have been created. The remaining
-# commands are for serving the webpage to view the HTML manuscript locally.
-
-# Configure the webpage directory
-python build/webpage.py
-
-# View the manuscript locally at http://localhost:8000/
-cd webpage
-python -m http.server
-```
-
-Sometimes it's helpful to monitor the content directory and automatically rebuild the manuscript when a change is detected.
-The following command, while running, will trigger both the `build.sh` and `webpage.py` scripts upon content changes:
-
-```sh
-sh build/autobuild.sh
-```
-
-### Continuous Integration
-
-[![Build Status](https://travis-ci.org/indigo-dc/sqa-baseline.svg?branch=master)](https://travis-ci.org/indigo-dc/sqa-baseline)
-
-Whenever a pull request is opened, Travis CI will test whether the changes break the build process to generate a formatted manuscript.
-The build process aims to detect common errors, such as invalid citations.
-If your pull request build fails, see the Travis CI logs for the cause of failure and revise your pull request accordingly.
-
-When a commit to the `master` branch occurs (for example, when a pull request is merged), Travis CI builds the manuscript and writes the results to the [`gh-pages`](https://github.com/indigo-dc/sqa-baseline/tree/gh-pages) and [`output`](https://github.com/indigo-dc/sqa-baseline/tree/output) branches.
-The `gh-pages` branch uses [GitHub Pages](https://pages.github.com/) to host the following URLs:
-
-+ **HTML manuscript** at https://indigo-dc.github.io/sqa-baseline/
-+ **PDF manuscript** at https://indigo-dc.github.io/sqa-baseline/manuscript.pdf
-
-For continuous integration configuration details, see [`.travis.yml`](.travis.yml).
+Copyright © Members of the INDIGO-DataCloud, DEEP Hybrid-DataCloud and eXtreme
+DataCloud collaborations, 2015-2020.
 
 ## License
 
-<!--
-usage note: edit this section to change the license of your manuscript or source code changes to this repository.
-We encourage users to openly license their manuscripts, which is the default as specified below.
--->
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-[![License: CC BY 4.0](https://img.shields.io/badge/License%20All-CC%20BY%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by/4.0/)
-[![License: CC0 1.0](https://img.shields.io/badge/License%20Parts-CC0%201.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+The Common Software Quality Assurance Baseline Criteria is licensed under a
+CC-BY SA 4.0. See [`LICENSE.md`](LICENSE.md).
 
-Except when noted otherwise, the entirety of this repository is licensed under a CC BY 4.0 License ([`LICENSE.md`](LICENSE.md)), which allows reuse with attribution.
-Please attribute by linking to https://github.com/indigo-dc/sqa-baseline.
+## Acknowledgments
 
-Since CC BY is not ideal for code and data, certain repository components are also released under the CC0 1.0 public domain dedication ([`LICENSE-CC0.md`](LICENSE-CC0.md)).
-All files matched by the following glob patterns are dual licensed under CC BY 4.0 and CC0 1.0:
+The INDIGO-DataCloud, DEEP-Hybrid-DataCloud and eXtreme-DataCloud
+projects have received funding from the European Union’s Horizon 2020
+research and innovation programme under grant agreement number 653549,
+777435 and 777367 respectively.
+![EC logo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1WF4g5KH3PnQE_Ve10QFRS-gZ0NpCQ7Qr-_km1RqnOCEF1fQt)
 
-+ `*.sh`
-+ `*.py`
-+ `*.yml` / `*.yaml`
-+ `*.json`
-+ `*.bib`
-+ `*.tsv`
-+ `.gitignore`
 
-All other files are only available under CC BY 4.0, including:
-
-+ `*.md`
-+ `*.html`
-+ `*.pdf`
-+ `*.docx`
-
-Except for the following files with different licenses:
-
-+ `build/assets/anchors.js` which is [released](https://www.bryanbraun.com/anchorjs/) under an [MIT License](https://opensource.org/licenses/MIT)
-
-Please open [an issue](https://github.com/indigo-dc/sqa-baseline/issues) for any question related to licensing.
+_Manuscript generated with [Manubot](https://greenelab.github.io/manubot-rootstock/)_
