@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Pablo Orviz" />
+  <meta name="author" content="Alvaro Lopez" />
+  <meta name="author" content="Doina Cristina Duma" />
+  <meta name="author" content="Giacinto Donvito" />
+  <meta name="author" content="Mario David" />
+  <meta name="author" content="Jorge Gomes" />
+  <meta name="dcterms.date" content="2019-02-06" />
+  <meta name="keywords" content="research software, software quality assurance, software lifecycle, devops, software automation, software quality baseline, software testing, software deployment, agile development" />
+  <title>A set of Common Software Quality Assurance Baseline Criteria for Research Projects</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">A set of Common Software Quality Assurance Baseline Criteria for Research Projects</h1>
+</header>
+<p><br> <img src="images/logo-DEEP.png" height="50" />     <img src="images/logo-INDIGO.png" height="50" />     <img src="images/logo-XDC.png" height="50" /></p>
+<p><em>A DOI-citable version of this manuscript is available at <a href="http://hdl.handle.net/10261/160086" class="uri">http://hdl.handle.net/10261/160086</a></em>.</p>
+<p><small><em> This manuscript (<a href="https://indigo-dc.github.io/sqa-baseline/v/5a434338f5d03a1b295484827edf2ea12030cd11/">permalink</a>) was automatically generated from <a href="https://github.com/indigo-dc/sqa-baseline/tree/5a434338f5d03a1b295484827edf2ea12030cd11">indigo-dc/sqa-baseline@5a43433</a> on February 6, 2019. </em></small></p>
+<h2 id="authors">Authors</h2>
+<ul>
+<li><p><strong>Pablo Orviz</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0002-2473-6405">0000-0002-2473-6405</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/orviz">orviz</a><br> <small> Spanish National Research Council (CSIC); Institute of Physics of Cantabria (IFCA) </small></p></li>
+<li><p><strong>Alvaro Lopez</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0002-0013-4602">0000-0002-0013-4602</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/alvaro.lopez">alvaro.lopez</a><br> <small> Spanish National Research Council (CSIC); Institute of Physics of Cantabria (IFCA) </small></p></li>
+<li><p><strong>Doina Cristina Duma</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0002-0124-4870">0000-0002-0124-4870</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/caifti">caifti</a><br> <small> National Institute of Nuclear Physics (INFN) </small></p></li>
+<li><p><strong>Giacinto Donvito</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0002-0628-1080">0000-0002-0628-1080</a><br> <small> National Institute of Nuclear Physics (INFN) </small></p></li>
+<li><p><strong>Mario David</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0003-1802-5356">0000-0003-1802-5356</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/mariojmdavid">mariojmdavid</a><br> <small> Laboratory of Instrumentation and Experimental Particle Physics (LIP) </small></p></li>
+<li><p><strong>Jorge Gomes</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0002-9142-2596">0000-0002-9142-2596</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/jorge-lip">jorge-lip</a><br> <small> Laboratory of Instrumentation and Experimental Particle Physics (LIP) </small></p></li>
+</ul>
+<h2 id="abstract" class="page_break_before">Abstract</h2>
+<p>The purpose of this document is to define a set of quality standards, procedures and best practices to conform a Software Quality Assurance plan to serve as a reference within the European research ecosystem related projects for the adequate development and timely delivery of software products.</p>
+<h2 id="document-log">Document Log</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Issue</th>
+<th>Date</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>v1.0</td>
+<td>31/01/2018</td>
+<td>First draft version</td>
+</tr>
+<tr class="even">
+<td>v2.0</td>
+<td>05/02/2018</td>
+<td>Updated criteria</td>
+</tr>
+</tbody>
+</table>
+<h2 id="introduction-and-purpose">Introduction and Purpose</h2>
+<p>This document has been tailored upon the recommendations and requirements found in the Initial Plan for Software Management and Pilot Services deliverable <span class="citation" data-cites="5VMJDbB2"><a href="#ref-5VMJDbB2">1</a></span>, produced by the INDIGO-DataCloud project. These guidelines evolved throughout the project’s lifetime and have been eventually extended in the DEEP-Hybrid-DataCloud and eXtreme DataCloud subsequent projects. The result is a consolidated Software Quality Assurance (SQA) baseline criteria emanated from the European Open Science Cloud (EOSC), which aims to outline the SQA principles to be considered in the upcoming software development efforts within the European research community, and continuously evolve in order to be aligned with future software engineering practices and security recommendations.</p>
+<h2 id="goals">Goals</h2>
+<ol type="1">
+<li>Set the base of minimum SQA criteria that a software developed within EOSC development project SHOULD fulfill.</li>
+<li>Enhance the visibility, accessibility and distribution of the produced source code through the alignment to the Open Source Definition.</li>
+<li>Promote code style standards to deliver good quality source code emphasizing its readability and reusability.</li>
+<li>Improve the quality and reliability of software by covering different testing methods at development and pre-production stages.</li>
+<li>Propose a change-based driven scenario where all new updates in the source code are continuously validated by the automated execution of the relevant tests.</li>
+<li>Adopt an agile approach to effectively produce timely and audience-specific documentation.</li>
+<li>Lower the barriers of software adoption by delivering quality documentation and the utilization of automated deployment solutions.</li>
+<li>Encourage secure coding practices and security static analysis at the development phase while providing recommendations on external security assessment.</li>
+</ol>
+<h2 id="notational-conventions">Notational Conventions</h2>
+<p>The keywords “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119 <span class="citation" data-cites="Ms8G1A12"><a href="#ref-Ms8G1A12">2</a></span>.</p>
+<h2 id="quality-criteria">Quality Criteria</h2>
+<p>The following sections describe the quality conventions and best practices that apply to the development phase of a software component within the EOSC ecosystem. These guidelines ruled the software development process of the former European Commission-funded project INDIGO-DataCloud, where they have proved valuable for improving the reliability of software produced in the scientific European arena.</p>
+<p>The next sections describe the development process driven by a change-based strategy, followed by a continuous integration approach. Changes in the source code, trigger automated builds to analyze the new contributions in order to validate them before being added to the software component code base. Consequently, software components are more eligible for being deployed in production infrastructures, reducing the likelihood of service disruption.</p>
+<h3 id="code-accessibility">Code Accessibility</h3>
+<ol type="1">
+<li>Following the open-source model, the source code being produced MUST be open and publicly available to promote the adoption and augment the visibility of the software developments.</li>
+<li>Source code MUST use a Version Control System (VCS).
+<ol type="i">
+<li>It is RECOMMENDED that all software components delivered by the same project agree on a common VCS.</li>
+</ol></li>
+<li>Source code produced within the scope of a broader development project SHOULD reside in a common organization of a version control repository hosting service.</li>
+</ol>
+<h3 id="licensing">Licensing</h3>
+<ol type="1">
+<li>As open-source software, source code MUST adhere to an open-source license to be freely used, modified and distributed by others.
+<ol type="i">
+<li>Non-licensed software is exclusive copyright by default.</li>
+</ol></li>
+<li>License MUST be compliant with the Open Source Definition <span class="citation" data-cites="HdIbF8WL"><a href="#ref-HdIbF8WL">3</a></span>.
+<ol type="i">
+<li>RECOMMENDED licenses are listed in the Open Source Initiative portal under the Popular Licenses category <span class="citation" data-cites="xVJMmGVr"><a href="#ref-xVJMmGVr">4</a></span>.</li>
+</ol></li>
+<li>Licenses MUST be physically present (e.g. as a LICENSE file) in the root of all the source code repositories related to the software component.</li>
+</ol>
+<h3 id="code-workflow">Code Workflow</h3>
+<p>A change-based approach is accomplished with a branching model.</p>
+<ol type="1">
+<li>The main branch in the source code repository MUST maintain a working state version of the software component.
+<ol type="i">
+<li>Main branch SHOULD be protected to disallow force pushing, thus preventing untested and unreviewed source code from entering the production-ready version.</li>
+<li>New features SHOULD only be merged in the main branch whenever the SQA criteria is fulfilled.</li>
+</ol></li>
+<li>New changes in the source code MUST be placed in individual branches.
+<ol type="i">
+<li>It is RECOMMENDED to agree on a branch nomenclature, usually by prefixing, to differentiate change types (e.g. feature, release, fix).</li>
+</ol></li>
+<li>The existence of a secondary long-term branch that contains the changes for the next release is RECOMMENDED.
+<ol type="i">
+<li>Next release changes come from the individual branches.</li>
+<li>Once ready for release, changes in the secondary long-term branch are merged into the main branch and versioned. At that point in time, main and secondary branches are aligned. This step SHOULD mark a production release.</li>
+</ol></li>
+<li>Semantic Versioning <span class="citation" data-cites="13UfgtMhu"><a href="#ref-13UfgtMhu">5</a></span> specification is RECOMMENDED for tagging the production releases.</li>
+</ol>
+<h3 id="code-style">Code Style</h3>
+<p>Code style requirements pursue the correct maintenance of the source code by the common agreement of a series of style conventions. These vary based on the programming language being used.</p>
+<ol type="1">
+<li>Each individual software product MUST comply with a de-facto code style standard for althe programming languages used in the codebase.
+<ol type="i">
+<li>Compliance with multiple standards MAY exist.</li>
+</ol></li>
+<li>Custom code style guidelines MUST be avoided, only considered in the hypothetical evenof programming languages without existing community style standards.
+<ol type="i">
+<li>Custom styles MUST be documented by defining each convention and its expected output.</li>
+<li>Custom styles SHOULD evolve over time towards a more consistent definition.</li>
+</ol></li>
+<li>Exceptions of individual conventions from the main definition are allowed but SHOULD bavoided
+<ol type="1">
+<li>Absence of standard conventions SHOULD be justified and tracked.</li>
+</ol></li>
+<li>Code style compliance testing MUST be automated and MUST be triggered for each candidate change in the source code.</li>
+</ol>
+<h3 id="unit-testing">Unit Testing</h3>
+<p>Unit testing evaluates all the possible flows in the internal design of the code, so that its behaviour becomes apparent. It is a key type of testing for early detection of failures in the development cycle.</p>
+<ol type="1">
+<li>Minimum acceptable code coverage threshold SHOULD be 70%.
+<ol type="i">
+<li>Unit testing coverage SHOULD be higher for those sections of the code identified as critical by the developers, such as units part of a security module.</li>
+<li>Unit testing coverage MAY be lower for external libraries or pieces of code not maintained within the product’s code base.</li>
+</ol></li>
+<li>Units SHOULD reside in the repository code base but separated from the main code.</li>
+<li>Unit testing coverage MUST be checked on change basis.</li>
+<li>Unit testing coverage MUST be automated.
+<ol type="i">
+<li>When working on automated testing, the use of testing doubles is RECOMMENDED to mimic a simplistic behaviour of objects and procedures.</li>
+</ol></li>
+</ol>
+<h3 id="functional-testing">Functional Testing</h3>
+<p>Functional testing involves the verification of the software component’s identified functionality, based on requested requirements and agreed design specifications. This type of software testing focus on the evaluation of the functionality that the software component exposes, leaving apart any internal design analysis or side-effects to external systems.</p>
+<ol type="1">
+<li>Functional testing SHOULD tend to cover the full set of functionality that the software component claims to provide.</li>
+<li>Functional tests SHOULD be checked automatically with the exception of those functionality that require human interaction, such as Graphical User Interfaces (GUI).</li>
+<li>When working on automated testing, the use of testing doubles is RECOMMENDED to mimic a simplistic behaviour of objects and procedures.</li>
+<li>Functional tests SHOULD reside in the software component repository code base but separated from the main code.</li>
+<li>Regression testing, that checks the conformance with previous tests, is covered at this stage by executing the complete set of functional tests available.</li>
+<li>Functional and regression testing MUST be checked on change basis.</li>
+<li>Functional and regression testing coverage MAY NOT be suitable for automated testing.</li>
+</ol>
+<h3 id="integration-testing">Integration Testing</h3>
+<p>Integration testing refers to the evaluation of the interactions among coupled software components or parts of a system that cooperate to achieve a given functionality.</p>
+<ol type="1">
+<li>Integration testing outcome MUST guarantee the overall operation of the software component whenever new functionality are involved.</li>
+<li>Integration testing MAY be complemented with Acceptance and Scalability testing.</li>
+<li>Integration testing MAY NOT be suitable for automated testing.</li>
+<li>On lack of automation, pilot service infrastructures or local testbeds MAY be used.</li>
+<li>Integration testing MAY NOT be viable to be checked on change basis, as it is likely to involve complex scenarios.</li>
+</ol>
+<h3 id="documentation">Documentation</h3>
+<ol type="1">
+<li>Documentation MUST be treated as code.
+<ol type="i">
+<li>Version controlled, it MAY reside in the same repository where the source code lies.</li>
+</ol></li>
+<li>Documentation MUST use plain text format using a markup language, such as Markdown or reStructuredText.
+<ol type="i">
+<li>It is RECOMMENDED that all software components delivered by the same project agree on a common markup language.</li>
+</ol></li>
+<li>Documentation MUST be online available in a documentation repository.
+<ol type="i">
+<li>Documentation SHOULD be rendered automatically.</li>
+</ol></li>
+<li>Documentation MUST be updated on new software versions involving any substantial or minimal change in the behaviour of the application.</li>
+<li>Documentation MUST be updated whenever reported as inaccurate or unclear.</li>
+<li>Documentation MUST be produced according to the target audience, varying according to the software component specification. The identified types of documentation and their RECOMMENDED content are:
+<ol type="i">
+<li>README file
+<ul>
+<li>One-paragraph description of the application.</li>
+<li>A “Getting Started” step-by-step description on how to get a development environment running (prerequisites, installation).</li>
+<li>Automated test execution how-to.</li>
+<li>Links to the external documentation below (production deployment, user guides).</li>
+<li>Contributing code of conduct (optionally linked to an external CONTRIBUTING file)</li>
+<li>Versioning specification.</li>
+<li>Author list and contacts.</li>
+<li>License information, with a link to the detailed description in an external LICENSE file.</li>
+<li>Acknowledgments.</li>
+</ul></li>
+<li>Developer
+<ul>
+<li>Private API documentation.</li>
+<li>Structure and interfaces.</li>
+<li>Build documentation.</li>
+</ul></li>
+<li>Deployment and Administration
+<ul>
+<li>Installation and configuration guides.</li>
+<li>Service Reference Card, with the following RECOMMENDED content:</li>
+<li>Brief functional description.</li>
+<li>List of processes or daemons.</li>
+<li>Init scripts and options.</li>
+<li>List of configuration files, location and example or template.</li>
+<li>Log files location and other useful audit information.</li>
+<li>List of ports.</li>
+<li>Service state information.</li>
+<li>List of cron jobs.</li>
+<li>Security information.</li>
+<li>FAQs and troubleshooting.</li>
+</ul></li>
+<li>User
+<ul>
+<li>Public API documentation.</li>
+<li>Command-line (CLI) reference.</li>
+</ul></li>
+</ol></li>
+<li>Documentation MUST be checked on change basis.</li>
+</ol>
+<h3 id="security">Security</h3>
+<ol type="1">
+<li>Secure coding practices SHALL be applied into all the stages of a software component development lifecycle.
+<ol type="i">
+<li>Compliance with Open Web Application Security Project (OWASP) secure coding guidelines <span class="citation" data-cites="13kp1l5RC"><a href="#ref-13kp1l5RC">6</a></span> is RECOMMENDED, even for non-web applications.</li>
+</ol></li>
+<li>Source code SHALL use automated linter tools to perform static application security testing (SAST) <span class="citation" data-cites="18kdpX8Tx"><a href="#ref-18kdpX8Tx">7</a></span> that flag common suspicious constructs that may cause a bug or lead to a security risk (e.g. inconsistent data structure sizes or unused resources).</li>
+<li>Dynamic application security testing (DAST) <span class="citation" data-cites="WzDw9I2K"><a href="#ref-WzDw9I2K">8</a></span> SHALL be performed from the outside, to software components in an operating state, to look for security vulnerabilities (e.g. SQL injection, cross-site scripting).</li>
+<li>Manual penetration testing MAY be part of the application security verification effort.</li>
+<li>Security code reviews [9] for certain vulnerabilities SHOULD be done as part of the identification of potential security flaws in the code. Inputs SHOULD come from automated linters and manual penetration testing results.</li>
+<li>World-writable files or directories MUST NOT be present in the product’s configuration or logging locations.</li>
+<li>World-writable files SHOULD NOT be created while the service is in operation. Whenever they are required, the relevant files MUST be documented.</li>
+<li>World-readable files MUST NOT contain passwords.</li>
+<li>The services delivered SHALL adhere to any extra security policies or requirements set at the operational level.</li>
+</ol>
+<h3 id="code-review">Code Review</h3>
+<p>Code review implies the informal, non-automated, peer, human-based revision of any change in the source code. It appears as the last step in the change management pipeline, once the candidate change has successfully passed over the required set of change-based tests.</p>
+<ol type="1">
+<li>Code reviews MUST be done in the agreed peer review tool within the project, with the following RECOMMENDED functionality:
+<ol type="i">
+<li>Allows general and specific comments on the line or lines that need to be reviewed.</li>
+<li>Shows the results of the required change-based test executions.</li>
+<li>Allows to prevent merges of the candidate change whenever not all the required tests are successful. Exceptions to this rule cover the third-party or upstream contributions which MAY use the existing mechanisms or tools for code review provided by the target software project. This exception MUST only be allowed whenever the external revision lifecycle does not interfere with the project deadlines.</li>
+</ol></li>
+<li>Code reviews MUST be open and collaborative, allowing external expert revisions.</li>
+<li>Code reviews SHOULD be lightweight and informal, meaning that some of the areas the reviewers MAY focus are:
+<ol type="i">
+<li>Message description: commit message is clear, self-explanatory and describes precisely the objectives being addressed.</li>
+<li>Goal or scope: change is needed and/or addresses/fixes the whole set of objectives.</li>
+<li>Code analysis: useless statements in the code, library or modules imported but never used or code style suggestions.</li>
+<li>Review of required tests: current battery of tests is sufficient for validation.</li>
+<li>Review of documentation: whether the change SHOULD bring along a corresponding update in the documentation.</li>
+</ol></li>
+<li>Code reviews MUST be checked on change basis.</li>
+<li>Code reviews SHOULD assess the inherent security risk of the changes, ensuring that the security model has not been downgraded or compromised by the changes.</li>
+</ol>
+<h3 id="automated-deployment">Automated Deployment</h3>
+<p>Production-ready code SHALL be deployed as a workable system with the minimal user or system administrator interaction leveraging software configuration management (SCM) tools.</p>
+<ol type="1">
+<li>A SCM module is treated as code.
+<ol type="i">
+<li>Version controlled, it SHOULD reside in a different repository than the source code to facilitate the distribution.</li>
+</ol></li>
+<li>It is RECOMMENDED that all software components delivered by the same project agree on a common SCM tool.
+<ol type="i">
+<li>However, software products are not restricted to provide a unique solution for the automated deployment.</li>
+</ol></li>
+<li>Any change affecting the application’s deployment or operation MUST be subsequently reflected in the relevant SCM modules.</li>
+<li>Official repositories provided by the manufacturer SHOULD be used to host the SCM modules, thus augmenting the visibility and promote external collaboration.</li>
+</ol>
+<h2 id="references" class="page_break_before">References</h2>
+<!-- Explicitly insert bibliography here -->
+<div id="refs">
+<div id="ref-5VMJDbB2">
+<p>1. <strong>INDIGO-DataCloud collaboration, Initial Plan for Software Management and Pilot Services</strong><br />
+Members of the INDIGO-DataCloud collaboration<br />
+(2015) <a href="https://owncloud.indigo-datacloud.eu/index.php/s/yDklCrWjKnjutVA">https://owncloud.indigo-datacloud.eu/index.php/s/yDklCrWjKnjutVA</a></p>
+</div>
+<div id="ref-Ms8G1A12">
+<p>2. <strong>Key words for use in RFCs to Indicate Requirement Levels</strong><br />
+Scott Bradner<br />
+(1997) <a href="https://www.ietf.org/rfc/rfc2119.txt">https://www.ietf.org/rfc/rfc2119.txt</a></p>
+</div>
+<div id="ref-HdIbF8WL">
+<p>3. <strong>The Open Source Definition, URL: https://opensource.org/osd</strong><br />
+Open Source Initiative<br />
+<a href="https://opensource.org/osd">https://opensource.org/osd</a></p>
+</div>
+<div id="ref-xVJMmGVr">
+<p>4. <strong>Licenses &amp; Standards, URL: https://opensource.org/licenses</strong><br />
+Open Source Initiative<br />
+<a href="https://opensource.org/licenses">https://opensource.org/licenses</a></p>
+</div>
+<div id="ref-13UfgtMhu">
+<p>5. <strong>Semantic Versioning 2.0.0, URL: https://semver.org</strong><br />
+Tom Preston-Werner<br />
+<a href="https://semver.org">https://semver.org</a></p>
+</div>
+<div id="ref-13kp1l5RC">
+<p>6. <strong>OWASP Secure Coding Practices, Quick Reference Guide, URL: https://www.owasp.org/images/0/08/OWASP_SCP_Quick_Reference_Guide_v2.pdf</strong><br />
+The OWASP Foundation<br />
+(2010) <a href="https://www.owasp.org/images/0/08/OWASP_SCP_Quick_Reference_Guide_v2.pdf">https://www.owasp.org/images/0/08/OWASP_SCP_Quick_Reference_Guide_v2.pdf</a></p>
+</div>
+<div id="ref-18kdpX8Tx">
+<p>7. <strong>Source Code Analysis Tools, URL: https://www.owasp.org/index.php/Source_Code_Analysis_Tools</strong><br />
+The OWASP Foundation<br />
+<a href="https://www.owasp.org/index.php/Source_Code_Analysis_Tools">https://www.owasp.org/index.php/Source_Code_Analysis_Tools</a></p>
+</div>
+<div id="ref-WzDw9I2K">
+<p>8. <strong>Dynamic Application Security Testing, URL: https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools</strong><br />
+The OWASP Foundation<br />
+<a href="https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools">https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools</a></p>
+</div>
+</div>
+<!-- default theme -->
+<style>
+
+    /* import google fonts */
+    @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+    @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
+
+    /* -------------------------------------------------- */
+    /* global */
+    /* -------------------------------------------------- */
+
+    /* all elements */
+    * {
+        /* force sans-serif font unless specified otherwise */
+        font-family: "Open Sans", "Helvetica", sans-serif;
+    }
+
+    /* "page" element */
+    body {
+        position: relative;
+        box-sizing: border-box;
+        /* make resemble paper */
+        max-width: 8.5in;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 20px auto;
+        padding: 40px;
+        border-radius: 4px;
+        background: #ffffff;
+        box-shadow: 0 0 15px #bbbbbb;
+    }
+
+    /* when on screen < 8.5in wide */
+    @media only screen and (max-width: 8.5in) {
+        /* "page" element */
+        body {
+            /* reduce padding to fit more text on screen */
+            padding: 20px;
+            /* remove the "paper" look */
+            margin: 0;
+            box-shadow: none;
+        }
+    }
+
+    /* -------------------------------------------------- */
+    /* headings */
+    /* -------------------------------------------------- */
+
+    /* all headings */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 20px 0;
+        padding: 0;
+        font-weight: bold;
+    }
+
+    /* biggest heading */
+    h1 {
+        margin-top: 40px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    /* second biggest heading */
+    h2 {
+        margin-top: 30px;
+        padding-bottom: 5px;
+        /* underline */
+        border-bottom: solid 1px #bbbbbb;
+    }
+
+    /* -------------------------------------------------- */
+    /* manuscript header */
+    /* -------------------------------------------------- */
+
+    /* manuscript title */
+    header > h1 {
+        margin: 0;
+    }
+
+    /* manuscript title caption text (ie "automatically generated on") */
+    header + p {
+        text-align: center;
+        margin-top: 0;
+    }
+
+    /* -------------------------------------------------- */
+    /* text elements */
+    /* -------------------------------------------------- */
+
+    /* links */
+    a {
+        color: #2196f3;
+    }
+
+    /* superscripts and subscripts */
+    sub,
+    sup {
+        /* prevent from affecting line height */
+        line-height: 0;
+    }
+
+    /* unordered and ordered lists*/
+    ul,
+    ol {
+        /* align similarly to other elements */
+        padding-left: 20px;
+    }
+
+    /* -------------------------------------------------- */
+    /* section elements */
+    /* -------------------------------------------------- */
+
+    /* horizontal divider line */
+    hr {
+        border: none;
+        height: 1px;
+        background: #bbbbbb;
+    }
+
+    /* paragraphs, horizontal dividers, figures, and tables */
+    p,
+    hr,
+    figure,
+    table {
+        /* treat all as "paragraphs", with consistent vertical margins */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* figures and tables */
+    figure,
+    table {
+        /* horizontally center */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* -------------------------------------------------- */
+    /* figures */
+    /* -------------------------------------------------- */
+
+    /* figure container */
+    figure {
+        max-width: 100%;
+        /* horizontally center */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* figure caption */
+    figcaption {
+        margin: 10px 20px 0 20px;
+    }
+
+    /* figure auto-number */
+    figcaption > span:first-child {
+        font-weight: 600;
+        margin-right: 5px;
+    }
+
+    /* figure image element */
+    figure img {
+        /* squash image if too wide for page */
+        max-width: 100%;
+        /* horizontally center */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* -------------------------------------------------- */
+    /* tables */
+    /* -------------------------------------------------- */
+
+    /* table container */
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* table caption */
+    caption {
+        text-align: left;
+        margin: 0 20px 10px 20px;
+    }
+
+    /* table auto-number */
+    caption > span:first-child {
+        font-weight: 600;
+        margin-right: 5px;
+    }
+
+    /* table cells */
+    th,
+    td {
+        border: solid 1px #bbbbbb;
+        padding: 10px;
+        /* squash table if too wide for page by forcing line breaks */
+        /* put line break break anywhere in text */
+        word-break: break-all;
+        /* put line break between words. if not supported by browser, will fall back to break-all */
+        word-break: break-word;
+    }
+
+    /* header row and even rows */
+    th,
+    tr:nth-child(2n) {
+        background-color: #f8f8f8;
+    }
+
+    /* odd rows */
+    tr:nth-child(2n + 1) {
+        background-color: #ffffff;
+    }
+
+    /* -------------------------------------------------- */
+    /* code */
+    /* -------------------------------------------------- */
+
+    /* multi-line code block */
+    pre {
+        /* give grey box background */
+        padding: 10px;
+        background-color: #f0f0f0;
+        border: solid 1px #bbbbbb;
+        border-radius: 4px;
+    }
+
+    /* inline code, ie code within normal text */
+    /* a piece of code not already surrounded by a code block */
+    :not(pre) > code {
+        /* give grey box background */
+        padding: 1px 5px;
+        background-color: #f0f0f0;
+        border: solid 1px #bbbbbb;
+        border-radius: 4px;
+    }
+
+    /* code text */
+    /* apply all children, to reach syntax highlighting sub-elements */
+    code,
+    code * {
+        /* force monospace font */
+        font-family: "Source Code Pro", "Courier New", monospace;
+        /* reduce font size to match relative size of main font */
+        font-size: 14px;
+    }
+
+    /* -------------------------------------------------- */
+    /* quotes */
+    /* -------------------------------------------------- */
+
+    /* quoted text */
+    blockquote {
+        margin: 0;
+        padding: 0;
+        border-left: 4px solid #bbbbbb;
+        /* align similarly to other elements */
+        padding-left: 16px;
+    }
+
+    /* -------------------------------------------------- */
+    /* mathjax */
+    /* -------------------------------------------------- */
+
+    /* all first-generation children of mathjax containers */
+    .math.display > span {
+        overflow: auto hidden !important;
+        /* turn inline element (no dimensions) into block (allows fixed width and thus scrolling) */
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        /* remove mathjax margins */
+        margin: 0 !important;
+    }
+
+    /* right click menu */
+    .MathJax_Menu {
+        border: none !important;
+        border-radius: 4px !important;
+        box-shadow: 0 0 15px #bbbbbb !important;
+    }
+
+    /* -------------------------------------------------- */
+    /* buttons */
+    /* -------------------------------------------------- */
+
+    /* class for styling links like buttons */
+    .button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 1px;
+        background: none;
+        color: #2196f3;
+        border: solid 1px #bbbbbb;
+        border-radius: 4px;
+    }
+
+    /* buttons when hovered */
+    .button:hover:not([disabled]),
+    .icon_button:hover:not([disabled]) {
+        cursor: pointer;
+        background: #f0f0f0;
+    }
+
+    /* buttons when disabled */
+    .button[disabled],
+    .icon_button[disabled] {
+        opacity: 0.35;
+        pointer-events: none;
+    }
+
+    /* class for styling buttons containg only single icon (used in plugins) */
+    .icon_button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        background: none;
+        border-radius: 4px;
+        border: none;
+        width: 20px;
+        height: 20px;
+    }
+
+    /* -------------------------------------------------- */
+    /* icons */
+    /* -------------------------------------------------- */
+
+    /* class for styling icons inline with text */
+    .inline_icon {
+        height: 1em;
+        position: relative;
+        top: 0.125em;
+    }
+
+    /* -------------------------------------------------- */
+    /* when printing */
+    /* -------------------------------------------------- */
+
+    /* paper/page size and margins */
+    @page {
+        size: letter;
+        margin-top: 0.75in;
+        margin-bottom: 0.75in;
+        margin-left: 0.75in;
+        margin-right: 0.75in;
+    }
+
+    @media print {
+        /* page element */
+        body {
+            /* remove margin and padding; go right up to page margins */
+            margin: 0;
+            padding: 0;
+            /* remove "paper" effect */
+            box-shadow: none;
+            /* make font size smaller to fit more words on page */
+            font-size: 12px;
+        }
+
+        /* all h2 headings except the first */
+        h2:not(:first-of-type) {
+            /* force page break */
+            page-break-before: always !important;
+        }
+
+        /* always insert a page break before the element */
+        .page_break_before {
+            page-break-before: always !important;
+        }
+
+        /* always insert a page break after the element */
+        .page_break_after {
+            page-break-after: always !important;
+        }
+
+        /* avoid page break before the element */
+        .page_break_before_avoid {
+            page-break-before: avoid !important;
+        }
+
+        /* avoid page break after the element */
+        .page_break_after_avoid {
+            page-break-after: avoid !important;
+        }
+
+        /* avoid page break inside the element */
+        .page_break_inside_avoid {
+            page-break-inside: avoid !important;
+        }
+    }
+
+    /* -------------------------------------------------- */
+    /* override pandoc css quirks */
+    /* -------------------------------------------------- */
+
+    .sourceCode {
+        /* prevent unsightly overflow in wide code blocks */
+        overflow: auto !important;
+    }
+
+</style>
+<!-- Insert Analytics Script Below -->
+<script>
+</script>
+<!-- End Analytics Script -->
+<script>
+// AnchorJS minified version below.
+// Source https://github.com/bryanbraun/anchorjs/blob/064abdd0987f305933ec4982af6d0c1cf2fd0814/anchor.js
+
+/**
+ * AnchorJS - v4.0.0 - 2017-06-02
+ * https://github.com/bryanbraun/anchorjs
+ * Copyright (c) 2017 Bryan Braun; Licensed MIT
+ */
+!function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";function A(A){function e(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.class=A.hasOwnProperty("class")?A.class:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64}function t(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}function n(){if(null===document.head.querySelector("style.anchorjs")){var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"], style'))?document.head.appendChild(e):document.head.insertBefore(e,A),e.sheet.insertRule(" .anchorjs-link {   opacity: 0;   text-decoration: none;   -webkit-font-smoothing: antialiased;   -moz-osx-font-smoothing: grayscale; }",e.sheet.cssRules.length),e.sheet.insertRule(" *:hover > .anchorjs-link, .anchorjs-link:focus  {   opacity: 1; }",e.sheet.cssRules.length),e.sheet.insertRule(" [data-anchorjs-icon]::after {   content: attr(data-anchorjs-icon); }",e.sheet.cssRules.length),e.sheet.insertRule(' @font-face {   font-family: "anchorjs-icons";   src: url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype"); }',e.sheet.cssRules.length)}}this.options=A||{},this.elements=[],e(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var i,o,s,c,r,a,h,l,u,d,f,g,p=[];if(e(this.options),"touch"===(g=this.options.visible)&&(g=this.isTouchDevice()?"always":"hover"),A||(A="h2, h3, h4, h5, h6"),0===(i=t(A)).length)return this;for(n(),o=document.querySelectorAll("[id]"),s=[].map.call(o,function(A){return A.id}),r=0;r<i.length;r++)if(this.hasAnchorJSLink(i[r]))p.push(r);else{if(i[r].hasAttribute("id"))c=i[r].getAttribute("id");else if(i[r].hasAttribute("data-anchor-id"))c=i[r].getAttribute("data-anchor-id");else{u=l=this.urlify(i[r].textContent),h=0;do{void 0!==a&&(u=l+"-"+h),a=s.indexOf(u),h+=1}while(-1!==a);a=void 0,s.push(u),i[r].setAttribute("id",u),c=u}d=c.replace(/-/g," "),(f=document.createElement("a")).className="anchorjs-link "+this.options.class,f.href="#"+c,f.setAttribute("aria-label","Anchor link for: "+d),f.setAttribute("data-anchorjs-icon",this.options.icon),"always"===g&&(f.style.opacity="1"),""===this.options.icon&&(f.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(f.style.lineHeight="inherit")),"left"===this.options.placement?(f.style.position="absolute",f.style.marginLeft="-1em",f.style.paddingRight="0.5em",i[r].insertBefore(f,i[r].firstChild)):(f.style.paddingLeft="0.375em",i[r].appendChild(f))}for(r=0;r<p.length;r++)i.splice(p[r]-r,1);return this.elements=this.elements.concat(i),this},this.remove=function(A){for(var e,n,i=t(A),o=0;o<i.length;o++)(n=i[o].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(i[o]))&&this.elements.splice(e,1),i[o].removeChild(n));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){var t=/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\]/g;return this.options.truncate||e(this.options),A.trim().replace(/\'/gi,"").replace(t,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&(" "+A.firstChild.className+" ").indexOf(" anchorjs-link ")>-1,t=A.lastChild&&(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ")>-1;return e||t||!1}}return A});
+
+// Enable links for selected headers
+var anchors = new AnchorJS();
+anchors.add("h2, h3, h4")
+</script>
+<!-- Enable Hypothesis annotation. https://web.hypothes.is/ -->
+<script src="https://hypothes.is/embed.js" async></script>
+</body>
+</html>
