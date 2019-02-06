@@ -1,6 +1,6 @@
 ---
 name: Consultancy service
-about: Ask us.
+about: Reach us.
 title: "[HELP]"
 labels: help wanted
 assignees: orviz
