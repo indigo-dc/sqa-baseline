@@ -33,9 +33,9 @@ _A DOI-citable version of this manuscript is available at <http://hdl.handle.net
 
 <small><em>
 This manuscript
-([permalink](https://indigo-dc.github.io/sqa-baseline/v/ccc71e7375ef32d83f9082621aedfaa4c558aad9/))
+([permalink](https://indigo-dc.github.io/sqa-baseline/v/930782973a5c24440b1d0628c5977e930ab0b17a/))
 was automatically generated
-from [indigo-dc/sqa-baseline@ccc71e7](https://github.com/indigo-dc/sqa-baseline/tree/ccc71e7375ef32d83f9082621aedfaa4c558aad9)
+from [indigo-dc/sqa-baseline@9307829](https://github.com/indigo-dc/sqa-baseline/tree/930782973a5c24440b1d0628c5977e930ab0b17a)
 on February 6, 2019.
 </em></small>
 
