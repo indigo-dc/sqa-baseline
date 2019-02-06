@@ -1,0 +1,112 @@
+{
+  "date": "February 6, 2019",
+  "authors": [
+    {
+      "github": "orviz",
+      "name": "Pablo Orviz",
+      "orcid": "0000-0002-2473-6405",
+      "email": "orviz@ifca.unican.es",
+      "affiliations": [
+        "Spanish National Research Council (CSIC)",
+        "Institute of Physics of Cantabria (IFCA)"
+      ],
+      "affiliation_numbers": [
+        1,
+        2
+      ]
+    },
+    {
+      "github": "alvaro.lopez",
+      "name": "Alvaro Lopez",
+      "orcid": "0000-0002-0013-4602",
+      "email": "aloga@ifca.unican.es",
+      "affiliations": [
+        "Spanish National Research Council (CSIC)",
+        "Institute of Physics of Cantabria (IFCA)"
+      ],
+      "affiliation_numbers": [
+        1,
+        2
+      ]
+    },
+    {
+      "github": "caifti",
+      "name": "Doina Cristina Duma",
+      "orcid": "0000-0002-0124-4870",
+      "email": "cristina.aiftimiei@cnaf.infn.it",
+      "affiliations": [
+        "National Institute of Nuclear Physics (INFN)"
+      ],
+      "affiliation_numbers": [
+        3
+      ]
+    },
+    {
+      "github": null,
+      "name": "Giacinto Donvito",
+      "orcid": "0000-0002-0628-1080",
+      "email": "giacinto.donvito@ba.infn.it",
+      "affiliations": [
+        "National Institute of Nuclear Physics (INFN)"
+      ],
+      "affiliation_numbers": [
+        3
+      ]
+    },
+    {
+      "github": "mariojmdavid",
+      "name": "Mario David",
+      "orcid": "0000-0003-1802-5356",
+      "email": "mario@lip.pt",
+      "affiliations": [
+        "Laboratory of Instrumentation and Experimental Particle Physics (LIP)"
+      ],
+      "affiliation_numbers": [
+        4
+      ]
+    },
+    {
+      "github": "jorge-lip",
+      "name": "Jorge Gomes",
+      "orcid": "0000-0002-9142-2596",
+      "email": "jorge@lip.pt",
+      "affiliations": [
+        "Laboratory of Instrumentation and Experimental Particle Physics (LIP)"
+      ],
+      "affiliation_numbers": [
+        4
+      ]
+    }
+  ],
+  "affiliations": [
+    {
+      "affiliation": "Spanish National Research Council (CSIC)",
+      "affiliation_number": 1
+    },
+    {
+      "affiliation": "Institute of Physics of Cantabria (IFCA)",
+      "affiliation_number": 2
+    },
+    {
+      "affiliation": "National Institute of Nuclear Physics (INFN)",
+      "affiliation_number": 3
+    },
+    {
+      "affiliation": "Laboratory of Instrumentation and Experimental Particle Physics (LIP)",
+      "affiliation_number": 4
+    }
+  ],
+  "ci_source": {
+    "repo_slug": "indigo-dc/sqa-baseline",
+    "repo_owner": "indigo-dc",
+    "repo_name": "sqa-baseline",
+    "commit": "5a434338f5d03a1b295484827edf2ea12030cd11"
+  },
+  "manuscript_stats": {
+    "reference_counts": {
+      "url": 8,
+      "total": 8
+    },
+    "word_count": 2609
+  }
+}

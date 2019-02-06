@@ -1,0 +1,113 @@
+[
+  {
+    "type": "webpage",
+    "URL": "https://opensource.org/licenses",
+    "title": "Licenses & Standards, URL: https://opensource.org/licenses",
+    "author": [
+      {
+        "literal": "Open Source Initiative"
+      }
+    ],
+    "id": "xVJMmGVr"
+  },
+  {
+    "type": "webpage",
+    "URL": "https://opensource.org/osd",
+    "title": "The Open Source Definition, URL: https://opensource.org/osd",
+    "author": [
+      {
+        "literal": "Open Source Initiative"
+      }
+    ],
+    "id": "HdIbF8WL"
+  },
+  {
+    "type": "report",
+    "URL": "https://owncloud.indigo-datacloud.eu/index.php/s/yDklCrWjKnjutVA",
+    "title": "INDIGO-DataCloud collaboration, Initial Plan for Software Management and Pilot Services",
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "author": [
+      {
+        "literal": "Members of the INDIGO-DataCloud collaboration"
+      }
+    ],
+    "id": "5VMJDbB2"
+  },
+  {
+    "type": "webpage",
+    "URL": "https://semver.org",
+    "title": "Semantic Versioning 2.0.0, URL: https://semver.org",
+    "author": [
+      {
+        "given": "Tom",
+        "family": "Preston-Werner"
+      }
+    ],
+    "id": "13UfgtMhu"
+  },
+  {
+    "type": "legislation",
+    "URL": "https://www.ietf.org/rfc/rfc2119.txt",
+    "title": "Key words for use in RFCs to Indicate Requirement Levels",
+    "issued": {
+      "date-parts": [
+        [
+          1997
+        ]
+      ]
+    },
+    "author": [
+      {
+        "given": "Scott",
+        "family": "Bradner"
+      }
+    ],
+    "id": "Ms8G1A12"
+  },
+  {
+    "type": "webpage",
+    "URL": "https://www.owasp.org/images/0/08/OWASP_SCP_Quick_Reference_Guide_v2.pdf",
+    "title": "OWASP Secure Coding Practices, Quick Reference Guide, URL: https://www.owasp.org/images/0/08/OWASP_SCP_Quick_Reference_Guide_v2.pdf",
+    "issued": {
+      "date-parts": [
+        [
+          2010
+        ]
+      ]
+    },
+    "author": [
+      {
+        "literal": "The OWASP Foundation"
+      }
+    ],
+    "id": "13kp1l5RC"
+  },
+  {
+    "type": "webpage",
+    "URL": "https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools",
+    "title": "Dynamic Application Security Testing, URL: https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools",
+    "author": [
+      {
+        "literal": "The OWASP Foundation"
+      }
+    ],
+    "id": "WzDw9I2K"
+  },
+  {
+    "type": "webpage",
+    "URL": "https://www.owasp.org/index.php/Source_Code_Analysis_Tools",
+    "title": "Source Code Analysis Tools, URL: https://www.owasp.org/index.php/Source_Code_Analysis_Tools",
+    "author": [
+      {
+        "literal": "The OWASP Foundation"
+      }
+    ],
+    "id": "18kdpX8Tx"
+  }
+]
