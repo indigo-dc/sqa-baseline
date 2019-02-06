@@ -1,9 +1,9 @@
 ---
 name: Inconsistency report
 about: Create a report to fix a spotted inconsistency
-title: ''
-labels: ''
-assignees: ''
+title: "[INCONSISTENCY]"
+labels: inconsistency
+assignees: orviz
 
 ---
 

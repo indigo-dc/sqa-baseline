@@ -1,9 +1,9 @@
 ---
 name: Typo report
 about: Create a report to fix a spotted typo
-title: ''
-labels: ''
-assignees: ''
+title: "[TYPO]"
+labels: typo
+assignees: orviz
 
 ---
 
