@@ -33,9 +33,9 @@ _A DOI-citable version of this manuscript is available at <http://hdl.handle.net
 
 <small><em>
 This manuscript
-([permalink](https://indigo-dc.github.io/sqa-baseline/v/721c9f2795f48eff3e1dddb3fbaca07dc2d5e11a/))
+([permalink](https://indigo-dc.github.io/sqa-baseline/v/f79310c47778413aa94d8579b4f981f8f1224f1d/))
 was automatically generated
-from [indigo-dc/sqa-baseline@721c9f2](https://github.com/indigo-dc/sqa-baseline/tree/721c9f2795f48eff3e1dddb3fbaca07dc2d5e11a)
+from [indigo-dc/sqa-baseline@f79310c](https://github.com/indigo-dc/sqa-baseline/tree/f79310c47778413aa94d8579b4f981f8f1224f1d)
 on February 6, 2019.
 </em></small>
 
@@ -228,7 +228,7 @@ programming language being used.
        definition.
 3. Exceptions of individual conventions from the main definition are allowed
    but SHOULD bavoided
-   1. Absence of standard conventions SHOULD be justified and tracked.
+   i. Absence of standard conventions SHOULD be justified and tracked.
 4. Code style compliance testing MUST be automated and MUST be triggered for
    each candidate change in the source code.
 
