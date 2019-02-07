@@ -7,5 +7,5 @@ assignees: orviz
 
 ---
 
-** Please add your question here **
+** Add your question here **
  Please provide as much information as you can, examples, etc.
