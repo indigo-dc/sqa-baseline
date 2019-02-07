@@ -1,5 +1,5 @@
 {
-  "date": "February 6, 2019",
+  "date": "February 7, 2019",
   "authors": [
     {
       "github": "orviz",
@@ -100,7 +100,7 @@
     "repo_slug": "indigo-dc/sqa-baseline",
     "repo_owner": "indigo-dc",
     "repo_name": "sqa-baseline",
-    "commit": "0e6418e9214545162e570383a0c80e34fe9c1df1"
+    "commit": "b0386fc7e8763daf60b5f281d8b04616df9af94c"
   },
   "manuscript_stats": {
     "reference_counts": {
