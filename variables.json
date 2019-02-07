@@ -42,18 +42,6 @@
       ]
     },
     {
-      "github": null,
-      "name": "Giacinto Donvito",
-      "orcid": "0000-0002-0628-1080",
-      "email": "giacinto.donvito@ba.infn.it",
-      "affiliations": [
-        "National Institute of Nuclear Physics (INFN)"
-      ],
-      "affiliation_numbers": [
-        3
-      ]
-    },
-    {
       "github": "mariojmdavid",
       "name": "Mario David",
       "orcid": "0000-0003-1802-5356",
@@ -75,6 +63,18 @@
       ],
       "affiliation_numbers": [
         4
+      ]
+    },
+    {
+      "github": null,
+      "name": "Giacinto Donvito",
+      "orcid": "0000-0002-0628-1080",
+      "email": "giacinto.donvito@ba.infn.it",
+      "affiliations": [
+        "National Institute of Nuclear Physics (INFN)"
+      ],
+      "affiliation_numbers": [
+        3
       ]
     }
   ],
@@ -100,7 +100,7 @@
     "repo_slug": "indigo-dc/sqa-baseline",
     "repo_owner": "indigo-dc",
     "repo_name": "sqa-baseline",
-    "commit": "87bc18c1eee457d01484e3f061724896695ff03c"
+    "commit": "0cfa9ff8e030adef54f7279499579d140e9045b8"
   },
   "manuscript_stats": {
     "reference_counts": {

@@ -3,9 +3,9 @@ author-meta:
 - Pablo Orviz
 - Alvaro Lopez
 - Doina Cristina Duma
-- Giacinto Donvito
 - Mario David
 - Jorge Gomes
+- Giacinto Donvito
 date-meta: '2019-02-07'
 keywords:
 - research software
@@ -33,9 +33,9 @@ _A DOI-citable version of this manuscript is available at <http://hdl.handle.net
 
 <small><em>
 This manuscript
-([permalink](https://indigo-dc.github.io/sqa-baseline/v/87bc18c1eee457d01484e3f061724896695ff03c/))
+([permalink](https://indigo-dc.github.io/sqa-baseline/v/0cfa9ff8e030adef54f7279499579d140e9045b8/))
 was automatically generated
-from [indigo-dc/sqa-baseline@87bc18c](https://github.com/indigo-dc/sqa-baseline/tree/87bc18c1eee457d01484e3f061724896695ff03c)
+from [indigo-dc/sqa-baseline@0cfa9ff](https://github.com/indigo-dc/sqa-baseline/tree/0cfa9ff8e030adef54f7279499579d140e9045b8)
 on February 7, 2019.
 </em></small>
 
@@ -70,13 +70,6 @@ on February 7, 2019.
      National Institute of Nuclear Physics (INFN)
   </small>
 
-+ **Giacinto Donvito**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
-    [0000-0002-0628-1080](https://orcid.org/0000-0002-0628-1080)<br>
-  <small>
-     National Institute of Nuclear Physics (INFN)
-  </small>
-
 + **Mario David**<br>
     ![ORCID icon](images/orcid.svg){.inline_icon}
     [0000-0003-1802-5356](https://orcid.org/0000-0003-1802-5356)
@@ -93,6 +86,13 @@ on February 7, 2019.
     [jorge-lip](https://github.com/jorge-lip)<br>
   <small>
      Laboratory of Instrumentation and Experimental Particle Physics (LIP)
+  </small>
+
++ **Giacinto Donvito**<br>
+    ![ORCID icon](images/orcid.svg){.inline_icon}
+    [0000-0002-0628-1080](https://orcid.org/0000-0002-0628-1080)<br>
+  <small>
+     National Institute of Nuclear Physics (INFN)
   </small>
 
 
