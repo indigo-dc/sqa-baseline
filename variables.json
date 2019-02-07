@@ -100,13 +100,13 @@
     "repo_slug": "indigo-dc/sqa-baseline",
     "repo_owner": "indigo-dc",
     "repo_name": "sqa-baseline",
-    "commit": "a99a50af1e8094a8199c7f094d0613d097811ef0"
+    "commit": "841d63b13ee4141af95b7b1e9a7ff9a49cd4979f"
   },
   "manuscript_stats": {
     "reference_counts": {
       "url": 8,
       "total": 8
     },
-    "word_count": 2609
+    "word_count": 2712
   }
 }

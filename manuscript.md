@@ -33,9 +33,9 @@ _A DOI-citable version of this manuscript is available at <http://hdl.handle.net
 
 <small><em>
 This manuscript
-([permalink](https://indigo-dc.github.io/sqa-baseline/v/a99a50af1e8094a8199c7f094d0613d097811ef0/))
+([permalink](https://indigo-dc.github.io/sqa-baseline/v/841d63b13ee4141af95b7b1e9a7ff9a49cd4979f/))
 was automatically generated
-from [indigo-dc/sqa-baseline@a99a50a](https://github.com/indigo-dc/sqa-baseline/tree/a99a50af1e8094a8199c7f094d0613d097811ef0)
+from [indigo-dc/sqa-baseline@841d63b](https://github.com/indigo-dc/sqa-baseline/tree/841d63b13ee4141af95b7b1e9a7ff9a49cd4979f)
 on February 7, 2019.
 </em></small>
 
@@ -102,6 +102,20 @@ The purpose of this document is to define a set of quality standards,
 procedures and best practices to conform a Software Quality Assurance plan to
 serve as a reference within the European research ecosystem related projects
 for the adequate development and timely delivery of software products.
+
+
+## Copyright Notice
+Copyright © Members of the INDIGO-DataCloud, DEEP Hybrid-DataCloud and eXtreme
+DataCloud collaborations, 2015-2020.
+
+## Acknowledgements
+The INDIGO-DataCloud, DEEP-Hybrid-DataCloud and eXtreme-DataCloud
+projects have received funding from the European Union’s Horizon 2020
+research and innovation programme under grant agreement number 653549,
+777435 and 777367 respectively.
+<p align="center">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1WF4g5KH3PnQE_Ve10QFRS-gZ0NpCQ7Qr-_km1RqnOCEF1fQt">
+</p>
 
 
 ## Document Log
@@ -422,6 +436,35 @@ management (SCM) tools.
 4. Official repositories provided by the manufacturer SHOULD be used to host
    the SCM modules, thus augmenting the visibility and promote external
    collaboration.
+
+
+## Glossary
+__API__
+: Application Programming Interface
+
+__CLI__
+: Command Line Interface
+
+__DAST__
+: Dynamic Application Security Testing
+
+__EOSC__
+: European Open Science Cloud
+
+__OWASP__
+: Open Web Application Security Project
+
+__SAST__
+: Static Application Security Testing
+
+__SCM__
+: Software Configuration Management
+
+__SQA__
+: Software Quality Assurance
+
+__VCS__
+: Version Control System
 
 
 ## References {.page_break_before}
