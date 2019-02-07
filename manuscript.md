@@ -33,9 +33,9 @@ _A DOI-citable version of this manuscript is available at <http://hdl.handle.net
 
 <small><em>
 This manuscript
-([permalink](https://indigo-dc.github.io/sqa-baseline/v/841d63b13ee4141af95b7b1e9a7ff9a49cd4979f/))
+([permalink](https://indigo-dc.github.io/sqa-baseline/v/87bc18c1eee457d01484e3f061724896695ff03c/))
 was automatically generated
-from [indigo-dc/sqa-baseline@841d63b](https://github.com/indigo-dc/sqa-baseline/tree/841d63b13ee4141af95b7b1e9a7ff9a49cd4979f)
+from [indigo-dc/sqa-baseline@87bc18c](https://github.com/indigo-dc/sqa-baseline/tree/87bc18c1eee457d01484e3f061724896695ff03c)
 on February 7, 2019.
 </em></small>
 
@@ -234,7 +234,7 @@ programming language being used.
    standard for althe programming languages used in the codebase.
    i. Compliance with multiple standards MAY exist.
 2. Custom code style guidelines MUST be avoided, only considered in the
-   hypothetical evenof programming languages without existing community style
+   hypothetical event of programming languages without existing community style
    standards.
     i. Custom styles MUST be documented by defining each convention and its
        expected output.
