@@ -54,8 +54,9 @@ CC-BY SA 4.0. See [`LICENSE.md`](LICENSE.md).
 The INDIGO-DataCloud, DEEP-Hybrid-DataCloud and eXtreme-DataCloud projects have
 received funding from the European Union’s Horizon 2020 research and innovation
 programme under grant agreement number 653549, 777435 and 777367 respectively.
-
-![EC logo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1WF4g5KH3PnQE_Ve10QFRS-gZ0NpCQ7Qr-_km1RqnOCEF1fQt)
+<p align="center">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1WF4g5KH3PnQE_Ve10QFRS-gZ0NpCQ7Qr-_km1RqnOCEF1fQt">
+</p>
 
 
 ###### _Manuscript generated with [Manubot](https://greenelab.github.io/manubot-rootstock/)_
