@@ -36,13 +36,6 @@ author_info:
     affiliations:
       -  National Institute of Nuclear Physics (INFN)
   -
-    github: 
-    name: Giacinto Donvito
-    orcid: 0000-0002-0628-1080 
-    email: giacinto.donvito@ba.infn.it
-    affiliations:
-      -  National Institute of Nuclear Physics (INFN)
-  -
     github: mariojmdavid
     name: Mario David
     orcid: 0000-0003-1802-5356
@@ -56,3 +49,10 @@ author_info:
     email: jorge@lip.pt
     affiliations:
       - Laboratory of Instrumentation and Experimental Particle Physics (LIP)
+  -
+    github: 
+    name: Giacinto Donvito
+    orcid: 0000-0002-0628-1080 
+    email: giacinto.donvito@ba.infn.it
+    affiliations:
+      -  National Institute of Nuclear Physics (INFN)
