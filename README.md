@@ -16,14 +16,14 @@ increase the burden on the software life cycle. Thus, the main purpose of this
 document is to _provide a lightweight and practical approach_ to educate and,
 ultimately, achieve quality in the development of research software.
 
-The Common Software Quality Assurance Baseline Criteria _establishes the
-minimum viable set of quality requirements_ that shall be covered when tackling
-any software development project, but mainly oriented to research. Additional
-best practices and recommendations are also defined to increase the value
---reliability, interoperability-- of the final product. In order to discern
-among them, the [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) convention is
-used throughout the document, thus adding adequate information about the
-criticality of each requirement.
+The [Common Software Quality Assurance Baseline Criteria](https://indigo-dc.github.io/sqa-baseline/)
+_establishes the minimum viable set of quality requirements_ that shall be
+covered when tackling any software development project, but mainly oriented to
+research. Additional best practices and recommendations are also defined to
+increase the value --reliability, interoperability-- of the final product. In
+order to discern among them, the [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt)
+convention is used throughout the document, thus adding adequate information
+about the criticality of each requirement.
 
 ## Open Collaboration
 
@@ -54,8 +54,9 @@ CC-BY SA 4.0. See [`LICENSE.md`](LICENSE.md).
 The INDIGO-DataCloud, DEEP-Hybrid-DataCloud and eXtreme-DataCloud projects have
 received funding from the European Union’s Horizon 2020 research and innovation
 programme under grant agreement number 653549, 777435 and 777367 respectively.
-
-![EC logo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1WF4g5KH3PnQE_Ve10QFRS-gZ0NpCQ7Qr-_km1RqnOCEF1fQt)
+<p align="center">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1WF4g5KH3PnQE_Ve10QFRS-gZ0NpCQ7Qr-_km1RqnOCEF1fQt">
+</p>
 
 
 ###### _Manuscript generated with [Manubot](https://greenelab.github.io/manubot-rootstock/)_
