@@ -1,9 +1,9 @@
 # Contributing
 The current repository has been set to provide a public channel for the
 interested communities to send contributions, thus continuously evolve the
-the _Common Software Quality Assurance Baseline Criteria_ document. The
-intended audience are primarily, but not restricted to, stakeholders involved
-in software development research fields.
+the [Common Software Quality Assurance Baseline Criteria](https://indigo-dc.github.io/sqa-baseline/)
+document. The intended audience are primarily, but not restricted to,
+stakeholders involved in software development research fields.
 
 Contributions are in form of issues. These can be accompanied by an associated
 change, done through a pull request. There are thematic issues for each type of

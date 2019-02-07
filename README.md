@@ -16,14 +16,14 @@ increase the burden on the software life cycle. Thus, the main purpose of this
 document is to _provide a lightweight and practical approach_ to educate and,
 ultimately, achieve quality in the development of research software.
 
-The Common Software Quality Assurance Baseline Criteria _establishes the
-minimum viable set of quality requirements_ that shall be covered when tackling
-any software development project, but mainly oriented to research. Additional
-best practices and recommendations are also defined to increase the value
---reliability, interoperability-- of the final product. In order to discern
-among them, the [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) convention is
-used throughout the document, thus adding adequate information about the
-criticality of each requirement.
+The [Common Software Quality Assurance Baseline Criteria](https://indigo-dc.github.io/sqa-baseline/)
+_establishes the minimum viable set of quality requirements_ that shall be
+covered when tackling any software development project, but mainly oriented to
+research. Additional best practices and recommendations are also defined to
+increase the value --reliability, interoperability-- of the final product. In
+order to discern among them, the [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt)
+convention is used throughout the document, thus adding adequate information
+about the criticality of each requirement.
 
 ## Open Collaboration
 
