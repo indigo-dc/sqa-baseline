@@ -7,4 +7,4 @@ __IMPORTANT: This project requires an associated issue before creating the pull 
 
 
 ### Related Issue/s
-<!--- Please link to the issue here: -->
+<!--- Please link to the issue here. If the pull request fixes any related issue, be sure to use the appropriate keyword, such as 'resolves #4'. See https://help.github.com/en/articles/closing-issues-using-keywords -->
