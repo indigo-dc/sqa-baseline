@@ -1,5 +1,52 @@
 [
   {
+    "id": "AJBpTuJY",
+    "type": "article-journal",
+    "title": "Software citation principles",
+    "container-title": "PeerJ Computer Science",
+    "page": "e86",
+    "volume": "2",
+    "source": "peerj.com",
+    "abstract": "Software is a critical part of modern research and yet there is little support across the scholarly ecosystem for its acknowledgement and citation. Inspired by the activities of the FORCE11 working group focused on data citation, this document summarizes the recommendations of the FORCE11 Software Citation Working Group and its activities between June 2015 and April 2016. Based on a review of existing community practices, the goal of the working group was to produce a consolidated set of citation principles that may encourage broad adoption of a consistent policy for software citation across disciplines and venues. Our work is presented here as a set of software citation principles, a discussion of the motivations for developing the principles, reviews of existing community practice, and a discussion of the requirements these principles would place upon different stakeholders. Working examples and possible technical solutions for how these principles can be implemented will be discussed in a separate paper.",
+    "URL": "https://peerj.com/articles/cs-86",
+    "DOI": "10.7717/peerj-cs.86",
+    "ISSN": "2376-5992",
+    "journalAbbreviation": "PeerJ Comput. Sci.",
+    "language": "en",
+    "author": [
+      {
+        "family": "Smith",
+        "given": "Arfon M."
+      },
+      {
+        "family": "Katz",
+        "given": "Daniel S."
+      },
+      {
+        "family": "Niemeyer",
+        "given": "Kyle E."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          "2016",
+          9,
+          19
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          "2020",
+          1,
+          3
+        ]
+      ]
+    }
+  },
+  {
     "type": "webpage",
     "URL": "https://opensource.org/licenses",
     "title": "Licenses & Standards, URL: https://opensource.org/licenses",

@@ -10,7 +10,7 @@
   <meta name="author" content="Mario David" />
   <meta name="author" content="Jorge Gomes" />
   <meta name="author" content="Giacinto Donvito" />
-  <meta name="dcterms.date" content="2019-04-03" />
+  <meta name="dcterms.date" content="2020-01-03" />
   <meta name="keywords" content="research software, software quality assurance, software lifecycle, devops, software automation, software quality baseline, software testing, software deployment, agile development" />
   <title>A set of Common Software Quality Assurance Baseline Criteria for Research Projects</title>
   <style>
@@ -27,9 +27,9 @@
 <header id="title-block-header">
 <h1 class="title">A set of Common Software Quality Assurance Baseline Criteria for Research Projects</h1>
 </header>
-<p><br> <img src="images/logo-DEEP.png" height="50" />     <img src="images/logo-INDIGO.png" height="50" />     <img src="images/logo-XDC.png" height="50" /></p>
+<p><br> <img src="images/logo-SYNERGY.png" height="50" />     <img src="images/logo-DEEP.png" height="50" />     <img src="images/logo-INDIGO.png" height="50" />     <img src="images/logo-XDC.png" height="50" /></p>
 <p><em>A DOI-citable version of this manuscript is available at <a href="http://hdl.handle.net/10261/160086" class="uri">http://hdl.handle.net/10261/160086</a></em>.</p>
-<p><small><em> This manuscript (<a href="https://indigo-dc.github.io/sqa-baseline/v/f835d0a5f8369b92072f3d05939078da10f6f7bd/">permalink</a>) was automatically generated from <a href="https://github.com/indigo-dc/sqa-baseline/tree/f835d0a5f8369b92072f3d05939078da10f6f7bd">indigo-dc/sqa-baseline@f835d0a</a> on April 3, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://indigo-dc.github.io/sqa-baseline/v/ef4e7f35a18029c22b8ea2ca00e66e0c2dc1e714/">permalink</a>) was automatically generated from <a href="https://github.com/indigo-dc/sqa-baseline/tree/ef4e7f35a18029c22b8ea2ca00e66e0c2dc1e714">indigo-dc/sqa-baseline@ef4e7f3</a> on January 3, 2020. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Pablo Orviz</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0002-2473-6405">0000-0002-2473-6405</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/orviz">orviz</a><br> <small> Spanish National Research Council (CSIC); Institute of Physics of Cantabria (IFCA) </small></p></li>
@@ -44,7 +44,7 @@
 <h2 id="copyright-notice">Copyright Notice</h2>
 <p>Copyright © Members of the INDIGO-DataCloud, DEEP Hybrid-DataCloud and eXtreme DataCloud collaborations, 2015-2020.</p>
 <h2 id="acknowledgements">Acknowledgements</h2>
-The INDIGO-DataCloud, DEEP-Hybrid-DataCloud and eXtreme-DataCloud projects have received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement number 653549, 777435 and 777367 respectively.
+The INDIGO-DataCloud, DEEP-Hybrid-DataCloud, eXtreme-DataCloud and EOSC-Synergy projects have received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement number 653549, 777435, 777367 and 857647 respectively.
 <p align="center">
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1WF4g5KH3PnQE_Ve10QFRS-gZ0NpCQ7Qr-_km1RqnOCEF1fQt">
 </p>
@@ -68,10 +68,15 @@ The INDIGO-DataCloud, DEEP-Hybrid-DataCloud and eXtreme-DataCloud projects have 
 <td>05/02/2018</td>
 <td>Updated criteria</td>
 </tr>
+<tr class="odd">
+<td>v3.0</td>
+<td>20/12/2019</td>
+<td>Code management section, metadata for software</td>
+</tr>
 </tbody>
 </table>
 <h2 id="introduction-and-purpose">Introduction and Purpose</h2>
-<p>This document has been tailored upon the recommendations and requirements found in the Initial Plan for Software Management and Pilot Services deliverable <span class="citation" data-cites="5VMJDbB2"><a href="#ref-5VMJDbB2">1</a></span>, produced by the INDIGO-DataCloud project. These guidelines evolved throughout the project’s lifetime and have been eventually extended in the DEEP-Hybrid-DataCloud and eXtreme DataCloud subsequent projects. The result is a consolidated Software Quality Assurance (SQA) baseline criteria emanated from the European Open Science Cloud (EOSC), which aims to outline the SQA principles to be considered in the upcoming software development efforts within the European research community, and continuously evolve in order to be aligned with future software engineering practices and security recommendations.</p>
+<p>This document has been tailored upon the recommendations and requirements found in the Initial Plan for Software Management and Pilot Services deliverable <span class="citation" data-cites="5VMJDbB2"><a href="#ref-5VMJDbB2">1</a></span>, produced by the INDIGO-DataCloud project. These guidelines evolved throughout the project’s lifetime and are being extended in the EOSC-Synergy, DEEP-Hybrid-DataCloud and eXtreme DataCloud subsequent projects. The result is a consolidated Software Quality Assurance (SQA) baseline criteria emanated from the European Open Science Cloud (EOSC), which aims to outline the SQA principles to be considered in the upcoming software development efforts within the European research community, and continuously evolve in order to be aligned with future software engineering practices and security recommendations.</p>
 <h2 id="goals">Goals</h2>
 <ol type="1">
 <li>Set the base of minimum SQA criteria that a software developed within EOSC development project SHOULD fulfill.</li>
@@ -128,14 +133,35 @@ The INDIGO-DataCloud, DEEP-Hybrid-DataCloud and eXtreme-DataCloud projects have 
 </ol></li>
 <li>Semantic Versioning <span class="citation" data-cites="13UfgtMhu"><a href="#ref-13UfgtMhu">5</a></span> specification is RECOMMENDED for tagging the production releases.</li>
 </ol>
+<h3 id="code-management">Code Management</h3>
+<ol type="1">
+<li>An issue tracking system facilitates structured software development. Leveraging issues to track down both new enhancements and defects (bugs or documentation typos) is RECOMMENDED.
+<ol type="i">
+<li>In addition to monitoring the internal development, issues are the best means for supporting users. External users SHOULD be able to create incidences based on the operational performance of the software.</li>
+<li>The description of an issue SHOULD be concise and state clearly the problem. It is RECOMMENDED to add any reference to the actual problem. In the case of bugs, the issue SHOULD be accompanied by the relevant debug information.
+<ul>
+<li>The usage of templates for the issue description is RECOMMENDED.</li>
+</ul></li>
+</ol></li>
+<li>In social coding environments, pull requests represent the cornerstone of collaboration. A pull request provides a place for review and discussion of the changes proposed to be part of an existing version of the code.
+<ol type="i">
+<li>Pull requests SHOULD be used for every change in the codebase.</li>
+<li>A software project SHOULD be open to external collaboration through pull requests.</li>
+<li>A pull request description SHOULD be concise and state clearly its purpose (e.g. if it is fixing an observed bug or adding a new feature)
+<ul>
+<li>The usage of templates for the pull request’s description is RECOMMENDED.</li>
+</ul></li>
+<li>It is RECOMMENDED to use pull requests to address open issues. The pull request description SHOULD make reference to the identifiers of the issues it is fixing (to eventually close them, either manually or automatically).</li>
+</ol></li>
+</ol>
 <h3 id="code-style">Code Style</h3>
 <p>Code style requirements pursue the correct maintenance of the source code by the common agreement of a series of style conventions. These vary based on the programming language being used.</p>
 <ol type="1">
-<li>Each individual software product MUST comply with a de-facto code style standard for althe programming languages used in the codebase.
+<li>Each individual software product MUST comply with community-driven or de-facto code style standards for the programming languages being used.
 <ol type="i">
-<li>Compliance with multiple standards MAY exist.</li>
+<li>Compliance with multiple complementary standards MAY exist.</li>
 </ol></li>
-<li>Custom code style guidelines MUST be avoided, only considered in the hypothetical event of programming languages without existing community style standards.
+<li>Custom code style guidelines SHOULD be avoided, only considered in the hypothetical event of programming languages without existing community style standards.
 <ol type="i">
 <li>Custom styles MUST be documented by defining each convention and its expected output.</li>
 <li>Custom styles SHOULD evolve over time towards a more consistent definition.</li>
@@ -146,6 +172,9 @@ The INDIGO-DataCloud, DEEP-Hybrid-DataCloud and eXtreme-DataCloud projects have 
 </ol></li>
 <li>Code style compliance testing MUST be automated and MUST be triggered for each candidate change in the source code.</li>
 </ol>
+<h3 id="code-metadata">Code metadata</h3>
+<p>Metadata for the software component provides a way to achieve its full identification, thus making software citation viable <span class="citation" data-cites="AJBpTuJY">[<a href="#ref-AJBpTuJY">6</a>]</span>. It allows the assignement of a Digital Object Identifier (DOI) and is key towards preservation, discovery, reuse, and attribution of the software component.</p>
+<p>A metadata file SHOULD exist along side the code, under its VCS. The metadata file SHOULD be updated when needed, as is the case of a new version.</p>
 <h3 id="unit-testing">Unit Testing</h3>
 <p>Unit testing evaluates all the possible flows in the internal design of the code, so that its behaviour becomes apparent. It is a key type of testing for early detection of failures in the development cycle.</p>
 <ol type="1">
@@ -178,7 +207,7 @@ The INDIGO-DataCloud, DEEP-Hybrid-DataCloud and eXtreme-DataCloud projects have 
 <li>Integration testing outcome MUST guarantee the overall operation of the software component whenever new functionality are involved.</li>
 <li>Integration testing MAY be complemented with Acceptance and Scalability testing.</li>
 <li>Integration testing MAY NOT be suitable for automated testing.</li>
-<li>On lack of automation, pilot service infrastructures or local testbeds MAY be used.</li>
+<li>Ad-hoc pilot service infrastructures and/or local testbeds MAY be used to cope with the integration testing requirements.</li>
 <li>Integration testing MAY NOT be viable to be checked on change basis, as it is likely to involve complex scenarios.</li>
 </ol>
 <h3 id="documentation">Documentation</h3>
@@ -244,10 +273,10 @@ The INDIGO-DataCloud, DEEP-Hybrid-DataCloud and eXtreme-DataCloud projects have 
 <ol type="1">
 <li>Secure coding practices SHALL be applied into all the stages of a software component development lifecycle.
 <ol type="i">
-<li>Compliance with Open Web Application Security Project (OWASP) secure coding guidelines <span class="citation" data-cites="13kp1l5RC"><a href="#ref-13kp1l5RC">6</a></span> is RECOMMENDED, even for non-web applications.</li>
+<li>Compliance with Open Web Application Security Project (OWASP) secure coding guidelines <span class="citation" data-cites="13kp1l5RC"><a href="#ref-13kp1l5RC">7</a></span> is RECOMMENDED, even for non-web applications.</li>
 </ol></li>
-<li>Source code SHALL use automated linter tools to perform static application security testing (SAST) <span class="citation" data-cites="18kdpX8Tx"><a href="#ref-18kdpX8Tx">7</a></span> that flag common suspicious constructs that may cause a bug or lead to a security risk (e.g. inconsistent data structure sizes or unused resources).</li>
-<li>Dynamic application security testing (DAST) <span class="citation" data-cites="WzDw9I2K"><a href="#ref-WzDw9I2K">8</a></span> SHALL be performed from the outside, to software components in an operating state, to look for security vulnerabilities (e.g. SQL injection, cross-site scripting).</li>
+<li>Source code SHALL use automated linter tools to perform static application security testing (SAST) <span class="citation" data-cites="18kdpX8Tx"><a href="#ref-18kdpX8Tx">8</a></span> that flag common suspicious constructs that may cause a bug or lead to a security risk (e.g. inconsistent data structure sizes or unused resources).</li>
+<li>Dynamic application security testing (DAST) <span class="citation" data-cites="WzDw9I2K"><a href="#ref-WzDw9I2K">9</a></span> SHALL be performed from the outside, to software components in an operating state, to look for security vulnerabilities (e.g. SQL injection, cross-site scripting).</li>
 <li>Manual penetration testing MAY be part of the application security verification effort.</li>
 <li>Security code reviews [9] for certain vulnerabilities SHOULD be done as part of the identification of potential security flaws in the code. Inputs SHOULD come from automated linters and manual penetration testing results.</li>
 <li>World-writable files or directories MUST NOT be present in the product’s configuration or logging locations.</li>
@@ -265,7 +294,7 @@ The INDIGO-DataCloud, DEEP-Hybrid-DataCloud and eXtreme-DataCloud projects have 
 <li>Allows to prevent merges of the candidate change whenever not all the required tests are successful. Exceptions to this rule cover the third-party or upstream contributions which MAY use the existing mechanisms or tools for code review provided by the target software project. This exception MUST only be allowed whenever the external revision lifecycle does not interfere with the project deadlines.</li>
 </ol></li>
 <li>Code reviews MUST be open and collaborative, allowing external expert revisions.</li>
-<li>Code reviews SHOULD be lightweight and informal, meaning that some of the areas the reviewers MAY focus are:
+<li>Code reviews SHOULD be concise and use neutral language. The areas where the reviewers MAY focus are:
 <ol type="i">
 <li>Message description: commit message is clear, self-explanatory and describes precisely the objectives being addressed.</li>
 <li>Goal or scope: change is needed and/or addresses/fixes the whole set of objectives.</li>
@@ -348,18 +377,24 @@ Open Source Initiative<br />
 Tom Preston-Werner<br />
 <a href="https://semver.org">https://semver.org</a></p>
 </div>
+<div id="ref-AJBpTuJY">
+<p>6. <strong>Software citation principles</strong><br />
+Arfon M. Smith, Daniel S. Katz, Kyle E. Niemeyer<br />
+<em>PeerJ Computer Science</em> (2016-09-19) <a href="https://peerj.com/articles/cs-86">https://peerj.com/articles/cs-86</a><br />
+DOI: <a href="https://doi.org/10.7717/peerj-cs.86">10.7717/peerj-cs.86</a></p>
+</div>
 <div id="ref-13kp1l5RC">
-<p>6. <strong>OWASP Secure Coding Practices, Quick Reference Guide, URL: https://www.owasp.org/images/0/08/OWASP_SCP_Quick_Reference_Guide_v2.pdf</strong><br />
+<p>7. <strong>OWASP Secure Coding Practices, Quick Reference Guide, URL: https://www.owasp.org/images/0/08/OWASP_SCP_Quick_Reference_Guide_v2.pdf</strong><br />
 The OWASP Foundation<br />
 (2010) <a href="https://www.owasp.org/images/0/08/OWASP_SCP_Quick_Reference_Guide_v2.pdf">https://www.owasp.org/images/0/08/OWASP_SCP_Quick_Reference_Guide_v2.pdf</a></p>
 </div>
 <div id="ref-18kdpX8Tx">
-<p>7. <strong>Source Code Analysis Tools, URL: https://www.owasp.org/index.php/Source_Code_Analysis_Tools</strong><br />
+<p>8. <strong>Source Code Analysis Tools, URL: https://www.owasp.org/index.php/Source_Code_Analysis_Tools</strong><br />
 The OWASP Foundation<br />
 <a href="https://www.owasp.org/index.php/Source_Code_Analysis_Tools">https://www.owasp.org/index.php/Source_Code_Analysis_Tools</a></p>
 </div>
 <div id="ref-WzDw9I2K">
-<p>8. <strong>Dynamic Application Security Testing, URL: https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools</strong><br />
+<p>9. <strong>Dynamic Application Security Testing, URL: https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools</strong><br />
 The OWASP Foundation<br />
 <a href="https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools">https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools</a></p>
 </div>

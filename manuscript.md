@@ -6,7 +6,7 @@ author-meta:
 - Mario David
 - Jorge Gomes
 - Giacinto Donvito
-date-meta: '2019-04-03'
+date-meta: '2020-01-03'
 keywords:
 - research software
 - software quality assurance
@@ -24,6 +24,7 @@ title: A set of Common Software Quality Assurance Baseline Criteria for Research
 
 
 <br>
+![](images/logo-SYNERGY.png){height="50px"}&nbsp;&nbsp;&nbsp;&nbsp;
 ![](images/logo-DEEP.png){height="50px"}&nbsp;&nbsp;&nbsp;&nbsp;
 ![](images/logo-INDIGO.png){height="50px"}&nbsp;&nbsp;&nbsp;&nbsp;
 ![](images/logo-XDC.png){height="50px"}
@@ -33,10 +34,10 @@ _A DOI-citable version of this manuscript is available at <http://hdl.handle.net
 
 <small><em>
 This manuscript
-([permalink](https://indigo-dc.github.io/sqa-baseline/v/f835d0a5f8369b92072f3d05939078da10f6f7bd/))
+([permalink](https://indigo-dc.github.io/sqa-baseline/v/ef4e7f35a18029c22b8ea2ca00e66e0c2dc1e714/))
 was automatically generated
-from [indigo-dc/sqa-baseline@f835d0a](https://github.com/indigo-dc/sqa-baseline/tree/f835d0a5f8369b92072f3d05939078da10f6f7bd)
-on April 3, 2019.
+from [indigo-dc/sqa-baseline@ef4e7f3](https://github.com/indigo-dc/sqa-baseline/tree/ef4e7f35a18029c22b8ea2ca00e66e0c2dc1e714)
+on January 3, 2020.
 </em></small>
 
 ## Authors
@@ -98,6 +99,7 @@ on April 3, 2019.
 
 
 ## Abstract {.page_break_before}
+
 The purpose of this document is to define a set of quality standards,
 procedures and best practices to conform a Software Quality Assurance plan to
 serve as a reference within the European research ecosystem related projects
@@ -105,33 +107,38 @@ for the adequate development and timely delivery of software products.
 
 
 ## Copyright Notice
+
 Copyright © Members of the INDIGO-DataCloud, DEEP Hybrid-DataCloud and eXtreme
 DataCloud collaborations, 2015-2020.
 
 ## Acknowledgements
-The INDIGO-DataCloud, DEEP-Hybrid-DataCloud and eXtreme-DataCloud
-projects have received funding from the European Union’s Horizon 2020
-research and innovation programme under grant agreement number 653549,
-777435 and 777367 respectively.
+
+The INDIGO-DataCloud, DEEP-Hybrid-DataCloud, eXtreme-DataCloud and
+EOSC-Synergy projects have received funding from the European Union’s 
+Horizon 2020 research and innovation programme under grant agreement 
+number 653549, 777435, 777367 and 857647 respectively.
 <p align="center">
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1WF4g5KH3PnQE_Ve10QFRS-gZ0NpCQ7Qr-_km1RqnOCEF1fQt">
 </p>
 
 
 ## Document Log
+
 | Issue | Date | Comment |
 |----------|----------|----------|
 | v1.0 | 31/01/2018 | First draft version |
 | v2.0 | 05/02/2018 | Updated criteria |
+| v3.0 | 20/12/2019 | Code management section, metadata for software |
 
 
 ## Introduction and Purpose
+
 This document has been tailored upon the recommendations and requirements found
 in the Initial Plan for Software Management and Pilot Services deliverable
 @5VMJDbB2,
 produced by the INDIGO-DataCloud project. These guidelines evolved throughout
-the project’s lifetime and have been eventually extended in the
-DEEP-Hybrid-DataCloud and eXtreme DataCloud subsequent projects. The result is
+the project’s lifetime and are being extended in the
+EOSC-Synergy, DEEP-Hybrid-DataCloud and eXtreme DataCloud subsequent projects. The result is
 a consolidated Software Quality Assurance (SQA) baseline criteria emanated
 from the European Open Science Cloud (EOSC), which aims to outline the SQA
 principles to be considered in the upcoming software development efforts within
@@ -140,6 +147,7 @@ with future software engineering practices and security recommendations.
 
 
 ## Goals
+
 1. Set the base of minimum SQA criteria that a software developed within EOSC
 development project SHOULD fulfill.
 2. Enhance the visibility, accessibility and distribution of the produced
@@ -161,12 +169,14 @@ assessment.
 
 
 ## Notational Conventions
+
 The keywords “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”,
 “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be
 interpreted as described in RFC 2119 @Ms8G1A12.
 
 
 ## Quality Criteria
+
 The following sections describe the quality conventions and best practices that
 apply to the development phase of a software component within the EOSC
 ecosystem. These guidelines ruled the software development process of the
@@ -182,17 +192,19 @@ Consequently, software components are more eligible for being deployed in
 production infrastructures, reducing the likelihood of service disruption.
 
 ### Code Accessibility
+
 1. Following the open-source model, the source code being produced MUST be open
    and publicly available to promote the adoption and augment the visibility of
    the software developments.
 2. Source code MUST use a Version Control System (VCS).
    i. It is RECOMMENDED that all software components delivered by the same
-	  project agree on a common VCS.
+      project agree on a common VCS.
 3. Source code produced within the scope of a broader development project
    SHOULD reside in a common organization of a version control repository
    hosting service.
 
 ### Licensing
+
 1. As open-source software, source code MUST adhere to an open-source license
 to be freely used, modified and distributed by others.
    i. Non-licensed software is exclusive copyright by default.
@@ -203,6 +215,7 @@ to be freely used, modified and distributed by others.
    all the source code repositories related to the software component.
 
 ### Code Workflow
+
 A change-based approach is accomplished with a branching model.
 
 1. The main branch in the source code repository MUST maintain a working state
@@ -225,15 +238,39 @@ A change-based approach is accomplished with a branching model.
 4. Semantic Versioning @13UfgtMhu specification is RECOMMENDED for
    tagging the production releases.
 
+### Code Management
+1. An issue tracking system facilitates structured software development. Leveraging
+   issues to track down both new enhancements and defects (bugs or documentation typos) 
+   is RECOMMENDED.
+    i. In addition to monitoring the internal development, issues are the best means for
+       supporting users. External users SHOULD be able to create incidences based on the
+       operational performance of the software.
+   ii. The description of an issue SHOULD be concise and state clearly the problem. It is 
+       RECOMMENDED to add any reference to the actual problem. In the case of bugs, the 
+       issue SHOULD be accompanied by the relevant debug information.
+         * The usage of templates for the issue description is RECOMMENDED.
+2. In social coding environments, pull requests represent the cornerstone of collaboration. 
+   A pull request provides a place for review and discussion of the changes proposed to be
+   part of an existing version of the code.
+     i. Pull requests SHOULD be used for every change in the codebase.
+    ii. A software project SHOULD be open to external collaboration through pull requests.
+   iii. A pull request description SHOULD be concise and state clearly its purpose (e.g. if
+        it is fixing an observed bug or adding a new feature)
+          * The usage of templates for the pull request's description is RECOMMENDED.
+    iv. It is RECOMMENDED to use pull requests to address open issues. The pull request 
+        description SHOULD make reference to the identifiers of the issues it is fixing 
+        (to eventually close them, either manually or automatically).
+
 ### Code Style
+
 Code style requirements pursue the correct maintenance of the source code by
 the common agreement of a series of style conventions. These vary based on the
 programming language being used.
 
-1. Each individual software product MUST comply with a de-facto code style
-   standard for althe programming languages used in the codebase.
-   i. Compliance with multiple standards MAY exist.
-2. Custom code style guidelines MUST be avoided, only considered in the
+1. Each individual software product MUST comply with community-driven or de-facto
+   code style standards for the programming languages being used.
+   i. Compliance with multiple complementary standards MAY exist.
+2. Custom code style guidelines SHOULD be avoided, only considered in the
    hypothetical event of programming languages without existing community style
    standards.
     i. Custom styles MUST be documented by defining each convention and its
@@ -246,7 +283,18 @@ programming language being used.
 4. Code style compliance testing MUST be automated and MUST be triggered for
    each candidate change in the source code.
 
+### Code metadata
+
+Metadata for the software component provides a way to achieve its full identification,
+thus making software citation viable [@AJBpTuJY].
+It allows the assignement of a Digital Object Identifier (DOI) and is key
+towards preservation, discovery, reuse, and attribution of the software component.
+
+A metadata file SHOULD exist along side the code, under its VCS.
+The metadata file SHOULD be updated when needed, as is the case of a new version.
+
 ### Unit Testing
+
 Unit testing evaluates all the possible flows in the internal design of the
 code, so that its behaviour becomes apparent. It is a key type of testing for
 early detection of failures in the development cycle.
@@ -265,6 +313,7 @@ early detection of failures in the development cycle.
       RECOMMENDED to mimic a simplistic behaviour of objects and procedures.
 
 ### Functional Testing
+
 Functional testing involves the verification of the software component’s
 identified functionality, based on requested requirements and agreed design
 specifications. This type of software testing focus on the evaluation of the
@@ -288,6 +337,7 @@ design analysis or side-effects to external systems.
    testing.
 
 ### Integration Testing
+
 Integration testing refers to the evaluation of the interactions among coupled
 software components or parts of a system that cooperate to achieve a given
 functionality.
@@ -297,12 +347,13 @@ functionality.
 2. Integration testing MAY be complemented with Acceptance and Scalability
    testing.
 3. Integration testing MAY NOT be suitable for automated testing.
-4. On lack of automation, pilot service infrastructures or local testbeds MAY
-   be used.
+4. Ad-hoc pilot service infrastructures and/or local testbeds MAY be used to 
+   cope with the integration testing requirements.
 5. Integration testing MAY NOT be viable to be checked on change basis, as it
    is likely to involve complex scenarios.
 
 ### Documentation
+
 1. Documentation MUST be treated as code.
    i. Version controlled, it MAY reside in the same repository where the source
       code lies.
@@ -355,6 +406,7 @@ functionality.
 7. Documentation MUST be checked on change basis.
 
 ### Security
+
 1. Secure coding practices SHALL be applied into all the stages of a software
    component development lifecycle.
    i. Compliance with Open Web Application Security Project (OWASP) secure
@@ -383,6 +435,7 @@ functionality.
    requirements set at the operational level.
 
 ### Code Review
+
 Code review implies the informal, non-automated, peer, human-based revision of
 any change in the source code. It appears as the last step in the change
 management pipeline, once the candidate change has successfully passed over the
@@ -402,8 +455,8 @@ required set of change-based tests.
    deadlines.
 2. Code reviews MUST be open and collaborative, allowing external expert
    revisions.
-3. Code reviews SHOULD be lightweight and informal, meaning that some of the
-   areas the reviewers MAY focus are:
+3. Code reviews SHOULD be concise and use neutral language. The areas where the 
+   reviewers MAY focus are:
      i. Message description: commit message is clear, self-explanatory and
         describes precisely the objectives being addressed.
     ii. Goal or scope: change is needed and/or addresses/fixes the whole set of
@@ -420,6 +473,7 @@ required set of change-based tests.
    the changes.
 
 ### Automated Deployment
+
 Production-ready code SHALL be deployed as a workable system with the minimal
 user or system administrator interaction leveraging software configuration
 management (SCM) tools.
@@ -439,6 +493,7 @@ management (SCM) tools.
 
 
 ## Glossary
+
 __API__
 : Application Programming Interface
 
