@@ -127,5 +127,59 @@
       "literal": "The OWASP Foundation"
     }
   ]
+},
+{
+  "type":"article-journal",
+  "publisher":"PeerJ",
+  "DOI":"10.7717/peerj-cs.86",
+  "page":"e86",
+  "source":"Crossref",
+  "title":"Software citation principles",
+  "volume":2,
+  "author":[
+    {
+      "ORCID":"http://orcid.org/0000-0002-3957-2474",
+      "authenticated-orcid":true,
+      "given":"Arfon M.",
+      "family":"Smith",
+      "sequence":"first",
+      "affiliation":[
+        {
+          "name":"GitHub, Inc., San Francisco, California, United States"
+        }
+      ]
+    },
+    {
+      "ORCID":"http://orcid.org/0000-0001-5934-7525",
+      "authenticated-orcid":true,
+      "given":"Daniel S.",
+      "family":"Katz",
+      "sequence":"additional",
+      "affiliation":[
+        {
+          "name":"National Center for Supercomputing Applications & Electrical and Computer Engineering Department & School of Information Sciences, University of Illinois at Urbana-Champaign, Urbana, Illinois, United States"
+        }
+      ]
+    },
+    {
+      "ORCID":"http://orcid.org/0000-0003-4425-7097",
+      "authenticated-orcid":true,
+      "given":"Kyle E.",
+      "family":"Niemeyer",
+      "sequence":"additional",
+      "affiliation":[
+        {
+          "name":"School of Mechanical, Industrial, and Manufacturing Engineering, Oregon State University, Corvallis, Oregon, United States"
+        }
+      ]
+    }
+  ],
+  "container-title":"PeerJ Computer Science",
+  "language":"en",
+  "issued":{"date-parts":[[2016,9,19]]},
+  "standard_citation":"http://dx.doi.org/10.7717/peerj-cs.86",
+  "URL":"http://dx.doi.org/10.7717/peerj-cs.86",
+  "ISSN":"2376-5992",
+  "id":"temp_id_7660989779236345"
 }
 ]
