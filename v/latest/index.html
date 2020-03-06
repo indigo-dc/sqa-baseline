@@ -10,7 +10,7 @@
   <meta name="author" content="Mario David" />
   <meta name="author" content="Jorge Gomes" />
   <meta name="author" content="Giacinto Donvito" />
-  <meta name="dcterms.date" content="2020-01-03" />
+  <meta name="dcterms.date" content="2020-03-06" />
   <meta name="keywords" content="research software, software quality assurance, software lifecycle, devops, software automation, software quality baseline, software testing, software deployment, agile development" />
   <title>A set of Common Software Quality Assurance Baseline Criteria for Research Projects</title>
   <style>
@@ -29,7 +29,7 @@
 </header>
 <p><br> <img src="images/logo-SYNERGY.png" height="50" />     <img src="images/logo-DEEP.png" height="50" />     <img src="images/logo-INDIGO.png" height="50" />     <img src="images/logo-XDC.png" height="50" /></p>
 <p><em>A DOI-citable version of this manuscript is available at <a href="http://hdl.handle.net/10261/160086" class="uri">http://hdl.handle.net/10261/160086</a></em>.</p>
-<p><small><em> This manuscript (<a href="https://indigo-dc.github.io/sqa-baseline/v/ef4e7f35a18029c22b8ea2ca00e66e0c2dc1e714/">permalink</a>) was automatically generated from <a href="https://github.com/indigo-dc/sqa-baseline/tree/ef4e7f35a18029c22b8ea2ca00e66e0c2dc1e714">indigo-dc/sqa-baseline@ef4e7f3</a> on January 3, 2020. </em></small></p>
+<p><small><em> This manuscript (<a href="https://indigo-dc.github.io/sqa-baseline/v/d2b752d9acc5a660643f6577ac6b16264673590b/">permalink</a>) was automatically generated from <a href="https://github.com/indigo-dc/sqa-baseline/tree/d2b752d9acc5a660643f6577ac6b16264673590b">indigo-dc/sqa-baseline@d2b752d</a> on March 6, 2020. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Pablo Orviz</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0002-2473-6405">0000-0002-2473-6405</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/orviz">orviz</a><br> <small> Spanish National Research Council (CSIC); Institute of Physics of Cantabria (IFCA) </small></p></li>
@@ -73,6 +73,11 @@ The INDIGO-DataCloud, DEEP-Hybrid-DataCloud, eXtreme-DataCloud and EOSC-Synergy 
 <td>20/12/2019</td>
 <td>Code management section, metadata for software</td>
 </tr>
+<tr class="even">
+<td>v3.1</td>
+<td>05/03/2020</td>
+<td>Add tags/names for each criteria</td>
+</tr>
 </tbody>
 </table>
 <h2 id="introduction-and-purpose">Introduction and Purpose</h2>
@@ -93,142 +98,141 @@ The INDIGO-DataCloud, DEEP-Hybrid-DataCloud, eXtreme-DataCloud and EOSC-Synergy 
 <h2 id="quality-criteria">Quality Criteria</h2>
 <p>The following sections describe the quality conventions and best practices that apply to the development phase of a software component within the EOSC ecosystem. These guidelines ruled the software development process of the former European Commission-funded project INDIGO-DataCloud, where they have proved valuable for improving the reliability of software produced in the scientific European arena.</p>
 <p>The next sections describe the development process driven by a change-based strategy, followed by a continuous integration approach. Changes in the source code, trigger automated builds to analyze the new contributions in order to validate them before being added to the software component code base. Consequently, software components are more eligible for being deployed in production infrastructures, reducing the likelihood of service disruption.</p>
-<h3 id="code-accessibility">Code Accessibility</h3>
-<ol type="1">
-<li>Following the open-source model, the source code being produced MUST be open and publicly available to promote the adoption and augment the visibility of the software developments.</li>
-<li>Source code MUST use a Version Control System (VCS).
-<ol type="i">
-<li>It is RECOMMENDED that all software components delivered by the same project agree on a common VCS.</li>
-</ol></li>
-<li>Source code produced within the scope of a broader development project SHOULD reside in a common organization of a version control repository hosting service.</li>
-</ol>
-<h3 id="licensing">Licensing</h3>
-<ol type="1">
-<li>As open-source software, source code MUST adhere to an open-source license to be freely used, modified and distributed by others.
-<ol type="i">
-<li>Non-licensed software is exclusive copyright by default.</li>
-</ol></li>
-<li>License MUST be compliant with the Open Source Definition <span class="citation" data-cites="HdIbF8WL"><a href="#ref-HdIbF8WL">3</a></span>.
-<ol type="i">
-<li>RECOMMENDED licenses are listed in the Open Source Initiative portal under the Popular Licenses category <span class="citation" data-cites="xVJMmGVr"><a href="#ref-xVJMmGVr">4</a></span>.</li>
-</ol></li>
-<li>Licenses MUST be physically present (e.g. as a LICENSE file) in the root of all the source code repositories related to the software component.</li>
-</ol>
-<h3 id="code-workflow">Code Workflow</h3>
-<p>A change-based approach is accomplished with a branching model.</p>
-<ol type="1">
-<li>The main branch in the source code repository MUST maintain a working state version of the software component.
-<ol type="i">
-<li>Main branch SHOULD be protected to disallow force pushing, thus preventing untested and unreviewed source code from entering the production-ready version.</li>
-<li>New features SHOULD only be merged in the main branch whenever the SQA criteria is fulfilled.</li>
-</ol></li>
-<li>New changes in the source code MUST be placed in individual branches.
-<ol type="i">
-<li>It is RECOMMENDED to agree on a branch nomenclature, usually by prefixing, to differentiate change types (e.g. feature, release, fix).</li>
-</ol></li>
-<li>The existence of a secondary long-term branch that contains the changes for the next release is RECOMMENDED.
-<ol type="i">
-<li>Next release changes come from the individual branches.</li>
-<li>Once ready for release, changes in the secondary long-term branch are merged into the main branch and versioned. At that point in time, main and secondary branches are aligned. This step SHOULD mark a production release.</li>
-</ol></li>
-<li>Semantic Versioning <span class="citation" data-cites="13UfgtMhu"><a href="#ref-13UfgtMhu">5</a></span> specification is RECOMMENDED for tagging the production releases.</li>
-</ol>
-<h3 id="code-management">Code Management</h3>
-<ol type="1">
-<li>An issue tracking system facilitates structured software development. Leveraging issues to track down both new enhancements and defects (bugs or documentation typos) is RECOMMENDED.
-<ol type="i">
-<li>In addition to monitoring the internal development, issues are the best means for supporting users. External users SHOULD be able to create incidences based on the operational performance of the software.</li>
-<li>The description of an issue SHOULD be concise and state clearly the problem. It is RECOMMENDED to add any reference to the actual problem. In the case of bugs, the issue SHOULD be accompanied by the relevant debug information.
+<h3 id="code-accessibility-qc.acc">Code Accessibility [QC.Acc]</h3>
 <ul>
-<li>The usage of templates for the issue description is RECOMMENDED.</li>
+<li><strong>[QC.Acc01]</strong> Following the open-source model, the source code being produced MUST be open and publicly available to promote the adoption and augment the visibility of the software developments.</li>
+<li><strong>[QC.Acc02]</strong> Source code MUST use a Version Control System (VCS).
+<ul>
+<li><strong>[QC.Acc02.1]</strong> It is RECOMMENDED that all software components delivered by the same project agree on a common VCS.</li>
 </ul></li>
-</ol></li>
-<li>In social coding environments, pull requests represent the cornerstone of collaboration. A pull request provides a place for review and discussion of the changes proposed to be part of an existing version of the code.
-<ol type="i">
-<li>Pull requests SHOULD be used for every change in the codebase.</li>
-<li>A software project SHOULD be open to external collaboration through pull requests.</li>
-<li>A pull request description SHOULD be concise and state clearly its purpose (e.g. if it is fixing an observed bug or adding a new feature)
+<li><strong>[QC.Acc03]</strong> Source code produced within the scope of a broader development project SHOULD reside in a common organization of a version control repository hosting service.</li>
+</ul>
+<h3 id="licensing-qc.lic">Licensing [QC.Lic]</h3>
+<ul>
+<li><strong>[QC.Lic01]</strong> As open-source software, source code MUST adhere to an open-source license to be freely used, modified and distributed by others.
+<ul>
+<li><strong>[QC.Lic01.1]</strong> Non-licensed software is exclusive copyright by default.</li>
+</ul></li>
+<li><strong>[QC.Lic02]</strong> License MUST be compliant with the Open Source Definition <span class="citation" data-cites="HdIbF8WL"><a href="#ref-HdIbF8WL">3</a></span>.
+<ul>
+<li><strong>[QC.Lic02.1]</strong> RECOMMENDED licenses are listed in the Open Source Initiative portal under the Popular Licenses category <span class="citation" data-cites="xVJMmGVr"><a href="#ref-xVJMmGVr">4</a></span>.</li>
+</ul></li>
+<li><strong>[QC.Lic03]</strong> Licenses MUST be physically present (e.g. as a LICENSE file) in the root of all the source code repositories related to the software component.</li>
+</ul>
+<h3 id="code-workflow-qc.wor">Code Workflow [QC.Wor]</h3>
+<p>A change-based approach is accomplished with a branching model.</p>
+<ul>
+<li><strong>[QC.Wor01]</strong> The main branch in the source code repository MUST maintain a working state version of the software component.
+<ul>
+<li><strong>[QC.Wor01.1]</strong> Main branch SHOULD be protected to disallow force pushing, thus preventing untested and unreviewed source code from entering the production-ready version.</li>
+<li><strong>[QC.Wor01.2]</strong> New features SHOULD only be merged in the main branch whenever the SQA criteria is fulfilled.</li>
+</ul></li>
+<li><strong>[QC.Wor02]</strong> New changes in the source code MUST be placed in individual branches.
+<ul>
+<li><strong>[QC.Wor02.1]</strong> It is RECOMMENDED to agree on a branch nomenclature, usually by prefixing, to differentiate change types (e.g. feature, release, fix).</li>
+</ul></li>
+<li><strong>[QC.Wor03]</strong> The existence of a secondary long-term branch that contains the changes for the next release is RECOMMENDED.
+<ul>
+<li><strong>[QC.Wor03.1]</strong> Next release changes come from the individual branches.</li>
+<li><strong>[QC.Wor03.2]</strong> Once ready for release, changes in the secondary long-term branch are merged into the main branch and versioned. At that point in time, main and secondary branches are aligned. This step SHOULD mark a production release.</li>
+</ul></li>
+<li><strong>[QC.Wor04]</strong> Semantic Versioning <span class="citation" data-cites="13UfgtMhu"><a href="#ref-13UfgtMhu">5</a></span> specification is RECOMMENDED for tagging the production releases.</li>
+</ul>
+<h3 id="code-management-qc.man">Code Management [QC.Man]</h3>
+<ul>
+<li><strong>[QC.Man01]</strong> An issue tracking system facilitates structured software development. Leveraging issues to track down both new enhancements and defects (bugs or documentation typos) is RECOMMENDED.
+<ul>
+<li><strong>[QC.Man01.1]</strong> In addition to monitoring the internal development, issues are the best means for supporting users. External users SHOULD be able to create incidences based on the operational performance of the software.</li>
+<li><strong>[QC.Man01.2]</strong> The description of an issue SHOULD be concise and state clearly the problem. It is RECOMMENDED to add any reference to the actual problem. In the case of bugs, the issue SHOULD be accompanied by the relevant debug information. * The usage of templates for the issue description is RECOMMENDED.</li>
+</ul></li>
+<li><strong>[QC.Man02]</strong> In social coding environments, pull requests represent the cornerstone of collaboration. A pull request provides a place for review and discussion of the changes proposed to be part of an existing version of the code.
+<ul>
+<li><strong>[QC.Man02.1]</strong> Pull requests SHOULD be used for every change in the codebase.</li>
+<li><strong>[QC.Man02.2]</strong> A software project SHOULD be open to external collaboration through pull requests.</li>
+<li><strong>[QC.Man02.3]</strong> A pull request description SHOULD be concise and state clearly its purpose (e.g. if it is fixing an observed bug or adding a new feature)
 <ul>
 <li>The usage of templates for the pull request’s description is RECOMMENDED.</li>
 </ul></li>
-<li>It is RECOMMENDED to use pull requests to address open issues. The pull request description SHOULD make reference to the identifiers of the issues it is fixing (to eventually close them, either manually or automatically).</li>
-</ol></li>
-</ol>
-<h3 id="code-style">Code Style</h3>
+<li><strong>[QC.Man02.4]</strong> It is RECOMMENDED to use pull requests to address open issues. The pull request description SHOULD make reference to the identifiers of the issues it is fixing (to eventually close them, either manually or automatically).</li>
+</ul></li>
+</ul>
+<h3 id="code-style-qc.sty">Code Style [QC.Sty]</h3>
 <p>Code style requirements pursue the correct maintenance of the source code by the common agreement of a series of style conventions. These vary based on the programming language being used.</p>
-<ol type="1">
-<li>Each individual software product MUST comply with community-driven or de-facto code style standards for the programming languages being used.
-<ol type="i">
-<li>Compliance with multiple complementary standards MAY exist.</li>
-</ol></li>
-<li>Custom code style guidelines SHOULD be avoided, only considered in the hypothetical event of programming languages without existing community style standards.
-<ol type="i">
-<li>Custom styles MUST be documented by defining each convention and its expected output.</li>
-<li>Custom styles SHOULD evolve over time towards a more consistent definition.</li>
-</ol></li>
-<li>Exceptions of individual conventions from the main definition are allowed but SHOULD bavoided
-<ol type="i">
-<li>Absence of standard conventions SHOULD be justified and tracked.</li>
-</ol></li>
-<li>Code style compliance testing MUST be automated and MUST be triggered for each candidate change in the source code.</li>
-</ol>
-<h3 id="code-metadata">Code metadata</h3>
+<ul>
+<li><strong>[QC.Sty01]</strong> Each individual software product MUST comply with community-driven or de-facto code style standards for the programming languages being used.
+<ul>
+<li><strong>[QC.Sty01.1]</strong> Compliance with multiple complementary standards MAY exist.</li>
+</ul></li>
+<li><strong>[QC.Sty02]</strong> Custom code style guidelines SHOULD be avoided, only considered in the hypothetical event of programming languages without existing community style standards.
+<ul>
+<li><strong>[QC.Sty02.1]</strong> Custom styles MUST be documented by defining each convention and its expected output.</li>
+<li><strong>[QC.Sty02.2]</strong> Custom styles SHOULD evolve over time towards a more consistent definition.</li>
+</ul></li>
+<li><strong>[QC.Sty03]</strong> Exceptions of individual conventions from the main definition are allowed but SHOULD bavoided
+<ul>
+<li><strong>[QC.Sty03.1]</strong> Absence of standard conventions SHOULD be justified and tracked.</li>
+</ul></li>
+<li><strong>[QC.Sty04]</strong> Code style compliance testing MUST be automated and MUST be triggered for each candidate change in the source code.</li>
+</ul>
+<h3 id="code-metadata-qc.met">Code metadata [QC.Met]</h3>
 <p>Metadata for the software component provides a way to achieve its full identification, thus making software citation viable <span class="citation" data-cites="AJBpTuJY">[<a href="#ref-AJBpTuJY">6</a>]</span>. It allows the assignement of a Digital Object Identifier (DOI) and is key towards preservation, discovery, reuse, and attribution of the software component.</p>
-<p>A metadata file SHOULD exist along side the code, under its VCS. The metadata file SHOULD be updated when needed, as is the case of a new version.</p>
-<h3 id="unit-testing">Unit Testing</h3>
+<ul>
+<li><strong>[QC.Met01]</strong> A metadata file SHOULD exist along side the code, under its VCS. The metadata file SHOULD be updated when needed, as is the case of a new version.</li>
+</ul>
+<h3 id="unit-testing-qc.uni">Unit Testing [QC.Uni]</h3>
 <p>Unit testing evaluates all the possible flows in the internal design of the code, so that its behaviour becomes apparent. It is a key type of testing for early detection of failures in the development cycle.</p>
-<ol type="1">
-<li>Minimum acceptable code coverage threshold SHOULD be 70%.
-<ol type="i">
-<li>Unit testing coverage SHOULD be higher for those sections of the code identified as critical by the developers, such as units part of a security module.</li>
-<li>Unit testing coverage MAY be lower for external libraries or pieces of code not maintained within the product’s code base.</li>
-</ol></li>
-<li>Units SHOULD reside in the repository code base but separated from the main code.</li>
-<li>Unit testing coverage MUST be checked on change basis.</li>
-<li>Unit testing coverage MUST be automated.
-<ol type="i">
-<li>When working on automated testing, the use of testing doubles is RECOMMENDED to mimic a simplistic behaviour of objects and procedures.</li>
-</ol></li>
-</ol>
-<h3 id="functional-testing">Functional Testing</h3>
+<ul>
+<li><strong>[QC.Uni01]</strong> Minimum acceptable code coverage threshold SHOULD be 70%.
+<ul>
+<li><strong>[QC.Uni01.1]</strong> Unit testing coverage SHOULD be higher for those sections of the code identified as critical by the developers, such as units part of a security module.</li>
+<li><strong>[QC.Uni01.2]</strong> Unit testing coverage MAY be lower for external libraries or pieces of code not maintained within the product’s code base.</li>
+</ul></li>
+<li><strong>[QC.Uni02]</strong> Units SHOULD reside in the repository code base but separated from the main code.</li>
+<li><strong>[QC.Uni03]</strong> Unit testing coverage MUST be checked on change basis.</li>
+<li><strong>[QC.Uni04]</strong> Unit testing coverage MUST be automated.
+<ul>
+<li><strong>[QC.Uni04.1]</strong> When working on automated testing, the use of testing doubles is RECOMMENDED to mimic a simplistic behaviour of objects and procedures.</li>
+</ul></li>
+</ul>
+<h3 id="functional-testing-qc.fun">Functional Testing [QC.Fun]</h3>
 <p>Functional testing involves the verification of the software component’s identified functionality, based on requested requirements and agreed design specifications. This type of software testing focus on the evaluation of the functionality that the software component exposes, leaving apart any internal design analysis or side-effects to external systems.</p>
-<ol type="1">
-<li>Functional testing SHOULD tend to cover the full set of functionality that the software component claims to provide.</li>
-<li>Functional tests SHOULD be checked automatically with the exception of those functionality that require human interaction, such as Graphical User Interfaces (GUI).</li>
-<li>When working on automated testing, the use of testing doubles is RECOMMENDED to mimic a simplistic behaviour of objects and procedures.</li>
-<li>Functional tests SHOULD reside in the software component repository code base but separated from the main code.</li>
-<li>Regression testing, that checks the conformance with previous tests, is covered at this stage by executing the complete set of functional tests available.</li>
-<li>Functional and regression testing MUST be checked on change basis.</li>
-<li>Functional and regression testing coverage MAY NOT be suitable for automated testing.</li>
-</ol>
-<h3 id="integration-testing">Integration Testing</h3>
+<ul>
+<li><strong>[QC.Fun01]</strong> Functional testing SHOULD tend to cover the full set of functionality that the software component claims to provide.</li>
+<li><strong>[QC.Fun02]</strong> Functional tests SHOULD be checked automatically with the exception of those functionality that require human interaction, such as Graphical User Interfaces (GUI).</li>
+<li><strong>[QC.Fun03]</strong> When working on automated testing, the use of testing doubles is RECOMMENDED to mimic a simplistic behaviour of objects and procedures.</li>
+<li><strong>[QC.Fun04]</strong> Functional tests SHOULD reside in the software component repository code base but separated from the main code.</li>
+<li><strong>[QC.Fun05]</strong> Regression testing, that checks the conformance with previous tests, is covered at this stage by executing the complete set of functional tests available.</li>
+<li><strong>[QC.Fun06]</strong> Functional and regression testing MUST be checked on change basis.</li>
+<li><strong>[QC.Fun07]</strong> Functional and regression testing coverage MAY NOT be suitable for automated testing.</li>
+</ul>
+<h3 id="integration-testing-qc.int">Integration Testing [QC.Int]</h3>
 <p>Integration testing refers to the evaluation of the interactions among coupled software components or parts of a system that cooperate to achieve a given functionality.</p>
-<ol type="1">
-<li>Integration testing outcome MUST guarantee the overall operation of the software component whenever new functionality are involved.</li>
-<li>Integration testing MAY be complemented with Acceptance and Scalability testing.</li>
-<li>Integration testing MAY NOT be suitable for automated testing.</li>
-<li>Ad-hoc pilot service infrastructures and/or local testbeds MAY be used to cope with the integration testing requirements.</li>
-<li>Integration testing MAY NOT be viable to be checked on change basis, as it is likely to involve complex scenarios.</li>
-</ol>
-<h3 id="documentation">Documentation</h3>
-<ol type="1">
-<li>Documentation MUST be treated as code.
-<ol type="i">
-<li>Version controlled, it MAY reside in the same repository where the source code lies.</li>
-</ol></li>
-<li>Documentation MUST use plain text format using a markup language, such as Markdown or reStructuredText.
-<ol type="i">
-<li>It is RECOMMENDED that all software components delivered by the same project agree on a common markup language.</li>
-</ol></li>
-<li>Documentation MUST be online available in a documentation repository.
-<ol type="i">
-<li>Documentation SHOULD be rendered automatically.</li>
-</ol></li>
-<li>Documentation MUST be updated on new software versions involving any substantial or minimal change in the behaviour of the application.</li>
-<li>Documentation MUST be updated whenever reported as inaccurate or unclear.</li>
-<li>Documentation MUST be produced according to the target audience, varying according to the software component specification. The identified types of documentation and their RECOMMENDED content are:
-<ol type="i">
-<li>README file
+<ul>
+<li><strong>[QC.Int01]</strong> Integration testing outcome MUST guarantee the overall operation of the software component whenever new functionality are involved.</li>
+<li><strong>[QC.Int02]</strong> Integration testing MAY be complemented with Acceptance and Scalability testing.</li>
+<li><strong>[QC.Int03]</strong> Integration testing MAY NOT be suitable for automated testing.</li>
+<li><strong>[QC.Int04]</strong> Ad-hoc pilot service infrastructures and/or local testbeds MAY be used to cope with the integration testing requirements.</li>
+<li><strong>[QC.Int05]</strong> Integration testing MAY NOT be viable to be checked on change basis, as it is likely to involve complex scenarios.</li>
+</ul>
+<h3 id="documentation-qc.doc">Documentation [QC.Doc]</h3>
+<ul>
+<li><strong>[QC.Doc01]</strong> Documentation MUST be treated as code.
+<ul>
+<li><strong>[QC.Doc01.1]</strong> Version controlled, it MAY reside in the same repository where the source code lies.</li>
+</ul></li>
+<li><strong>[QC.Doc02]</strong> Documentation MUST use plain text format using a markup language, such as Markdown or reStructuredText.
+<ul>
+<li><strong>[QC.Doc02.1]</strong> It is RECOMMENDED that all software components delivered by the same project agree on a common markup language.</li>
+</ul></li>
+<li><strong>[QC.Doc03]</strong> Documentation MUST be online available in a documentation repository.
+<ul>
+<li><strong>[QC.Doc03.1]</strong> Documentation SHOULD be rendered automatically.</li>
+</ul></li>
+<li><strong>[QC.Doc04]</strong> Documentation MUST be updated on new software versions involving any substantial or minimal change in the behaviour of the application.</li>
+<li><strong>[QC.Doc05]</strong> Documentation MUST be updated whenever reported as inaccurate or unclear.</li>
+<li><strong>[QC.Doc06]</strong> Documentation MUST be produced according to the target audience, varying according to the software component specification. The identified types of documentation and their RECOMMENDED content are:
+<ul>
+<li><strong>[QC.Doc06.1]</strong> README file
 <ul>
 <li>One-paragraph description of the application.</li>
 <li>A “Getting Started” step-by-step description on how to get a development environment running (prerequisites, installation).</li>
@@ -240,13 +244,13 @@ The INDIGO-DataCloud, DEEP-Hybrid-DataCloud, eXtreme-DataCloud and EOSC-Synergy 
 <li>License information, with a link to the detailed description in an external LICENSE file.</li>
 <li>Acknowledgments.</li>
 </ul></li>
-<li>Developer
+<li><strong>[QC.Doc06.2]</strong> Developer
 <ul>
 <li>Private API documentation.</li>
 <li>Structure and interfaces.</li>
 <li>Build documentation.</li>
 </ul></li>
-<li>Deployment and Administration
+<li><strong>[QC.Doc06.3]</strong> Deployment and Administration
 <ul>
 <li>Installation and configuration guides.</li>
 <li>Service Reference Card, with the following RECOMMENDED content:</li>
@@ -261,64 +265,64 @@ The INDIGO-DataCloud, DEEP-Hybrid-DataCloud, eXtreme-DataCloud and EOSC-Synergy 
 <li>Security information.</li>
 <li>FAQs and troubleshooting.</li>
 </ul></li>
-<li>User
+<li><strong>[QC.Doc06.4]</strong> User
 <ul>
 <li>Public API documentation.</li>
 <li>Command-line (CLI) reference.</li>
 </ul></li>
-</ol></li>
-<li>Documentation MUST be checked on change basis.</li>
-</ol>
-<h3 id="security">Security</h3>
-<ol type="1">
-<li>Secure coding practices SHALL be applied into all the stages of a software component development lifecycle.
-<ol type="i">
-<li>Compliance with Open Web Application Security Project (OWASP) secure coding guidelines <span class="citation" data-cites="13kp1l5RC"><a href="#ref-13kp1l5RC">7</a></span> is RECOMMENDED, even for non-web applications.</li>
-</ol></li>
-<li>Source code SHALL use automated linter tools to perform static application security testing (SAST) <span class="citation" data-cites="18kdpX8Tx"><a href="#ref-18kdpX8Tx">8</a></span> that flag common suspicious constructs that may cause a bug or lead to a security risk (e.g. inconsistent data structure sizes or unused resources).</li>
-<li>Dynamic application security testing (DAST) <span class="citation" data-cites="WzDw9I2K"><a href="#ref-WzDw9I2K">9</a></span> SHALL be performed from the outside, to software components in an operating state, to look for security vulnerabilities (e.g. SQL injection, cross-site scripting).</li>
-<li>Manual penetration testing MAY be part of the application security verification effort.</li>
-<li>Security code reviews [9] for certain vulnerabilities SHOULD be done as part of the identification of potential security flaws in the code. Inputs SHOULD come from automated linters and manual penetration testing results.</li>
-<li>World-writable files or directories MUST NOT be present in the product’s configuration or logging locations.</li>
-<li>World-writable files SHOULD NOT be created while the service is in operation. Whenever they are required, the relevant files MUST be documented.</li>
-<li>World-readable files MUST NOT contain passwords.</li>
-<li>The services delivered SHALL adhere to any extra security policies or requirements set at the operational level.</li>
-</ol>
-<h3 id="code-review">Code Review</h3>
+</ul></li>
+<li><strong>[QC.Doc07]</strong> Documentation MUST be checked on change basis.</li>
+</ul>
+<h3 id="security-qc.sec">Security [QC.Sec]</h3>
+<ul>
+<li><strong>[QC.Sec01]</strong> Secure coding practices SHALL be applied into all the stages of a software component development lifecycle.
+<ul>
+<li><strong>[QC.Sec01.1]</strong> Compliance with Open Web Application Security Project (OWASP) secure coding guidelines <span class="citation" data-cites="13kp1l5RC"><a href="#ref-13kp1l5RC">7</a></span> is RECOMMENDED, even for non-web applications.</li>
+</ul></li>
+<li><strong>[QC.Sec02]</strong> Source code SHALL use automated linter tools to perform static application security testing (SAST) <span class="citation" data-cites="18kdpX8Tx"><a href="#ref-18kdpX8Tx">8</a></span> that flag common suspicious constructs that may cause a bug or lead to a security risk (e.g. inconsistent data structure sizes or unused resources).</li>
+<li><strong>[QC.Sec03]</strong> Dynamic application security testing (DAST) <span class="citation" data-cites="WzDw9I2K"><a href="#ref-WzDw9I2K">9</a></span> SHALL be performed from the outside, to software components in an operating state, to look for security vulnerabilities (e.g. SQL injection, cross-site scripting).</li>
+<li><strong>[QC.Sec04]</strong> Manual penetration testing MAY be part of the application security verification effort.</li>
+<li><strong>[QC.Sec05]</strong> Security code reviews [9] for certain vulnerabilities SHOULD be done as part of the identification of potential security flaws in the code. Inputs SHOULD come from automated linters and manual penetration testing results.</li>
+<li><strong>[QC.Sec06]</strong> World-writable files or directories MUST NOT be present in the product’s configuration or logging locations.</li>
+<li><strong>[QC.Sec07]</strong> World-writable files SHOULD NOT be created while the service is in operation. Whenever they are required, the relevant files MUST be documented.</li>
+<li><strong>[QC.Sec08]</strong> World-readable files MUST NOT contain passwords.</li>
+<li><strong>[QC.Sec09]</strong> The services delivered SHALL adhere to any extra security policies or requirements set at the operational level.</li>
+</ul>
+<h3 id="code-review-qc.rev">Code Review [QC.Rev]</h3>
 <p>Code review implies the informal, non-automated, peer, human-based revision of any change in the source code. It appears as the last step in the change management pipeline, once the candidate change has successfully passed over the required set of change-based tests.</p>
-<ol type="1">
-<li>Code reviews MUST be done in the agreed peer review tool within the project, with the following RECOMMENDED functionality:
-<ol type="i">
-<li>Allows general and specific comments on the line or lines that need to be reviewed.</li>
-<li>Shows the results of the required change-based test executions.</li>
-<li>Allows to prevent merges of the candidate change whenever not all the required tests are successful. Exceptions to this rule cover the third-party or upstream contributions which MAY use the existing mechanisms or tools for code review provided by the target software project. This exception MUST only be allowed whenever the external revision lifecycle does not interfere with the project deadlines.</li>
-</ol></li>
-<li>Code reviews MUST be open and collaborative, allowing external expert revisions.</li>
-<li>Code reviews SHOULD be concise and use neutral language. The areas where the reviewers MAY focus are:
-<ol type="i">
-<li>Message description: commit message is clear, self-explanatory and describes precisely the objectives being addressed.</li>
-<li>Goal or scope: change is needed and/or addresses/fixes the whole set of objectives.</li>
-<li>Code analysis: useless statements in the code, library or modules imported but never used or code style suggestions.</li>
-<li>Review of required tests: current battery of tests is sufficient for validation.</li>
-<li>Review of documentation: whether the change SHOULD bring along a corresponding update in the documentation.</li>
-</ol></li>
-<li>Code reviews MUST be checked on change basis.</li>
-<li>Code reviews SHOULD assess the inherent security risk of the changes, ensuring that the security model has not been downgraded or compromised by the changes.</li>
-</ol>
-<h3 id="automated-deployment">Automated Deployment</h3>
-<p>Production-ready code SHALL be deployed as a workable system with the minimal user or system administrator interaction leveraging software configuration management (SCM) tools.</p>
-<ol type="1">
-<li>A SCM module is treated as code.
-<ol type="i">
-<li>Version controlled, it SHOULD reside in a different repository than the source code to facilitate the distribution.</li>
-</ol></li>
-<li>It is RECOMMENDED that all software components delivered by the same project agree on a common SCM tool.
-<ol type="i">
-<li>However, software products are not restricted to provide a unique solution for the automated deployment.</li>
-</ol></li>
-<li>Any change affecting the application’s deployment or operation MUST be subsequently reflected in the relevant SCM modules.</li>
-<li>Official repositories provided by the manufacturer SHOULD be used to host the SCM modules, thus augmenting the visibility and promote external collaboration.</li>
-</ol>
+<ul>
+<li><strong>[QC.Rev01]</strong> Code reviews MUST be done in the agreed peer review tool within the project, with the following RECOMMENDED functionality:
+<ul>
+<li><strong>[QC.Rev01.1]</strong> Allows general and specific comments on the line or lines that need to be reviewed.</li>
+<li><strong>[QC.Rev01.2]</strong> Shows the results of the required change-based test executions.</li>
+<li><strong>[QC.Rev01.3]</strong> Allows to prevent merges of the candidate change whenever not all the required tests are successful. Exceptions to this rule cover the third-party or upstream contributions which MAY use the existing mechanisms or tools for code review provided by the target software project. This exception MUST only be allowed whenever the external revision lifecycle does not interfere with the project deadlines.</li>
+</ul></li>
+<li><strong>[QC.Rev02]</strong> Code reviews MUST be open and collaborative, allowing external expert revisions.</li>
+<li><strong>[QC.Rev03]</strong> Code reviews SHOULD be concise and use neutral language. The areas where the reviewers MAY focus are:
+<ul>
+<li><strong>[QC.Rev03.1]</strong> Message description: commit message is clear, self-explanatory and describes precisely the objectives being addressed.</li>
+<li><strong>[QC.Rev03.2]</strong> Goal or scope: change is needed and/or addresses/fixes the whole set of objectives.</li>
+<li><strong>[QC.Rev03.3]</strong> Code analysis: useless statements in the code, library or modules imported but never used or code style suggestions.</li>
+<li><strong>[QC.Rev03.4]</strong> Review of required tests: current battery of tests is sufficient for validation.</li>
+<li><strong>[QC.Rev03.5]</strong> Review of documentation: whether the change SHOULD bring along a corresponding update in the documentation.</li>
+</ul></li>
+<li><strong>[QC.Rev04]</strong> Code reviews MUST be checked on change basis.</li>
+<li><strong>[QC.Rev05]</strong> Code reviews SHOULD assess the inherent security risk of the changes, ensuring that the security model has not been downgraded or compromised by the changes.</li>
+</ul>
+<h3 id="automated-deployment-qc.aud">Automated Deployment [QC.Aud]</h3>
+<ul>
+<li><strong>[QC.Aud01]</strong> Production-ready code SHALL be deployed as a workable system with the minimal user or system administrator interaction leveraging software configuration management (SCM) tools.</li>
+<li><strong>[QC.Aud02]</strong> A SCM module is treated as code.
+<ul>
+<li><strong>[QC.Aud02.1]</strong> Version controlled, it SHOULD reside in a different repository than the source code to facilitate the distribution.</li>
+</ul></li>
+<li><strong>[QC.Aud03]</strong> It is RECOMMENDED that all software components delivered by the same project agree on a common SCM tool.
+<ul>
+<li><strong>[QC.Aud03.1]</strong> However, software products are not restricted to provide a unique solution for the automated deployment.</li>
+</ul></li>
+<li><strong>[QC.Aud04]</strong> Any change affecting the application’s deployment or operation MUST be subsequently reflected in the relevant SCM modules.</li>
+<li><strong>[QC.Aud05]</strong> Official repositories provided by the manufacturer SHOULD be used to host the SCM modules, thus augmenting the visibility and promote external collaboration.</li>
+</ul>
 <h2 id="glossary">Glossary</h2>
 <dl>
 <dt><strong>API</strong></dt>
