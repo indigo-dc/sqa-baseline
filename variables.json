@@ -1,5 +1,5 @@
 {
-  "date": "January 3, 2020",
+  "date": "March 6, 2020",
   "authors": [
     {
       "github": "orviz",
@@ -100,13 +100,13 @@
     "repo_slug": "indigo-dc/sqa-baseline",
     "repo_owner": "indigo-dc",
     "repo_name": "sqa-baseline",
-    "commit": "ef4e7f35a18029c22b8ea2ca00e66e0c2dc1e714"
+    "commit": "d2b752d9acc5a660643f6577ac6b16264673590b"
   },
   "manuscript_stats": {
     "reference_counts": {
       "url": 9,
       "total": 9
     },
-    "word_count": 3050
+    "word_count": 3174
   }
 }
