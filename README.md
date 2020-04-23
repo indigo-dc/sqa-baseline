@@ -41,8 +41,8 @@ Please check our [contribution](CONTRIBUTING.md) guide.
 
 ## Copyright Notice
 
-Copyright © Members of the INDIGO-DataCloud, DEEP Hybrid-DataCloud and eXtreme
-DataCloud collaborations, 2015-2020.
+Copyright © Members of the INDIGO-DataCloud, DEEP Hybrid-DataCloud, eXtreme
+DataCloud and EOSC-Synergy collaborations, 2015-2020.
 
 ## License
 
@@ -51,11 +51,12 @@ DataCloud collaborations, 2015-2020.
 The Common Software Quality Assurance Baseline Criteria is licensed under a
 CC-BY SA 4.0. See [`LICENSE.md`](LICENSE.md).
 
-## Acknowledgments
+## Acknowledgment
 
-The INDIGO-DataCloud, DEEP-Hybrid-DataCloud and eXtreme-DataCloud projects have
-received funding from the European Union’s Horizon 2020 research and innovation
-programme under grant agreement number 653549, 777435 and 777367 respectively.
+The INDIGO-DataCloud, DEEP-Hybrid-DataCloud, eXtreme-DataCloud and EOSC-Synergy
+projects have received funding from the European Union’s Horizon 2020 research
+and innovation programme under grant agreement number 653549, 777435, 777367
+and 857647 respectively.
 <p align="center">
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1WF4g5KH3PnQE_Ve10QFRS-gZ0NpCQ7Qr-_km1RqnOCEF1fQt">
 </p>
