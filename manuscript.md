@@ -6,7 +6,7 @@ author-meta:
 - Mario David
 - Jorge Gomes
 - Giacinto Donvito
-date-meta: '2020-03-06'
+date-meta: '2020-04-27'
 keywords:
 - research software
 - software quality assurance
@@ -34,10 +34,10 @@ _A DOI-citable version of this manuscript is available at <http://hdl.handle.net
 
 <small><em>
 This manuscript
-([permalink](https://indigo-dc.github.io/sqa-baseline/v/d2b752d9acc5a660643f6577ac6b16264673590b/))
+([permalink](https://indigo-dc.github.io/sqa-baseline/v/f7f3ee4cce8d4ee8baa6df0a4f75f43de510d86b/))
 was automatically generated
-from [indigo-dc/sqa-baseline@d2b752d](https://github.com/indigo-dc/sqa-baseline/tree/d2b752d9acc5a660643f6577ac6b16264673590b)
-on March 6, 2020.
+from [indigo-dc/sqa-baseline@f7f3ee4](https://github.com/indigo-dc/sqa-baseline/tree/f7f3ee4cce8d4ee8baa6df0a4f75f43de510d86b)
+on April 27, 2020.
 </em></small>
 
 ## Authors
@@ -108,8 +108,8 @@ for the adequate development and timely delivery of software products.
 
 ## Copyright Notice
 
-Copyright © Members of the INDIGO-DataCloud, DEEP Hybrid-DataCloud and eXtreme
-DataCloud collaborations, 2015-2020.
+Copyright © Members of the INDIGO-DataCloud, DEEP Hybrid-DataCloud eXtreme
+DataCloud and EOSC-Synergy collaborations, 2015-2020.
 
 ## Acknowledgements
 
@@ -130,6 +130,7 @@ number 653549, 777435, 777367 and 857647 respectively.
 | v2.0 | 05/02/2018 | Updated criteria |
 | v3.0 | 20/12/2019 | Code management section, metadata for software |
 | v3.1 | 05/03/2020 | Add tags/names for each criteria |
+| v3.2 | 23/04/2020 | Add EOSC-Synergy to copyright |
 
 
 ## Introduction and Purpose
