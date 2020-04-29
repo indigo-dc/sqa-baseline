@@ -62,4 +62,4 @@ and 857647 respectively.
 </p>
 
 
-###### _Manuscript generated with [Manubot](https://greenelab.github.io/manubot-rootstock/)_
+###### _Manuscript generated with [Manubot](https://github.com/manubot/rootstock/)_
