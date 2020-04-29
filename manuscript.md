@@ -6,7 +6,7 @@ author-meta:
 - Mario David
 - Jorge Gomes
 - Giacinto Donvito
-date-meta: '2020-04-27'
+date-meta: '2020-04-29'
 keywords:
 - research software
 - software quality assurance
@@ -34,10 +34,10 @@ _A DOI-citable version of this manuscript is available at <http://hdl.handle.net
 
 <small><em>
 This manuscript
-([permalink](https://indigo-dc.github.io/sqa-baseline/v/f7f3ee4cce8d4ee8baa6df0a4f75f43de510d86b/))
+([permalink](https://indigo-dc.github.io/sqa-baseline/v/a9c34faaa989c6d672d1f88132c4dc35e5a7d986/))
 was automatically generated
-from [indigo-dc/sqa-baseline@f7f3ee4](https://github.com/indigo-dc/sqa-baseline/tree/f7f3ee4cce8d4ee8baa6df0a4f75f43de510d86b)
-on April 27, 2020.
+from [indigo-dc/sqa-baseline@a9c34fa](https://github.com/indigo-dc/sqa-baseline/tree/a9c34faaa989c6d672d1f88132c4dc35e5a7d986)
+on April 29, 2020.
 </em></small>
 
 ## Authors
