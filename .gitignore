@@ -11,6 +11,9 @@ webpage/v
 # Manubot cache directory
 ci/cache
 
+# Pandoc filters downloaded during continuous integration setup
+build/pandoc/filters/spellcheck.lua
+
 # Python
 __pycache__/
 *.pyc
@@ -21,7 +24,7 @@ __pycache__/
 # Misc temporary files
 *.bak
 
-# Operating system specific files
+# System specific files
 
 ## Linux
 *~
@@ -35,3 +38,6 @@ __pycache__/
 ## Windows
 Thumbs.db
 [Dd]esktop.ini
+
+## Text Editors
+.vscode

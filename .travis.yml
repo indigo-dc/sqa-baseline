@@ -1,6 +1,8 @@
 dist: trusty
 sudo: false
 language: generic
+services:
+  - docker
 branches:
   only:
     - master
@@ -13,16 +15,19 @@ before_install:
   - conda config
     --set always_yes yes
     --set changeps1 no
+env:
+  - SPELLCHECK=true
 install:
-  - conda env create --quiet --file build/environment.yml
-  - conda list --name manubot
-  - conda activate manubot
+  - source ci/install.sh
 script:
-  - sh build/build.sh
+  - bash build/build.sh
 cache:
   directories:
     - ci/cache
-after_success:
-  - test $TRAVIS_BRANCH = "master" &&
-    test $TRAVIS_EVENT_TYPE = "push" &&
-    sh ci/deploy.sh
+deploy:
+  provider: script
+  script: bash ci/deploy.sh
+  skip_cleanup: true
+  on:
+    branch: master
+    condition: $TRAVIS_EVENT_TYPE = "push" && (-v MANUBOT_SSH_PRIVATE_KEY || "${!encrypted_*}" != "")
