@@ -5,16 +5,8 @@ services:
   - docker
 branches:
   only:
+    - main
     - master
-before_install:
-  - wget https://repo.continuum.io/miniconda/Miniconda3-4.6.14-Linux-x86_64.sh
-    --output-document miniconda.sh
-  - bash miniconda.sh -f -b -p $HOME/miniconda
-  - source $HOME/miniconda/etc/profile.d/conda.sh
-  - hash -r
-  - conda config
-    --set always_yes yes
-    --set changeps1 no
 env:
   - SPELLCHECK=true
 install:
@@ -29,5 +21,6 @@ deploy:
   script: bash ci/deploy.sh
   skip_cleanup: true
   on:
+    # branch kept as master since travis deployment is legacy.
     branch: master
     condition: $TRAVIS_EVENT_TYPE = "push" && (-v MANUBOT_SSH_PRIVATE_KEY || "${!encrypted_*}" != "")
