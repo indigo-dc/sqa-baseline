@@ -5,6 +5,7 @@ aliqua
 aliquip
 amet
 anim
+API
 assignement
 Aud
 aute
@@ -59,6 +60,7 @@ linters
 Lorem
 magna
 mariojmdavid
+Metadata
 mollit
 nisi
 nostrud
@@ -66,7 +68,7 @@ Notational
 nulla
 occaecat
 officia
-orviz
+Orviz
 OWASP
 Pandoc’s
 pariatur
@@ -93,5 +95,8 @@ unreviewed
 VCS
 velit
 veniam
+versioned
+Versioning
 voluptate
 Wor
+Workflow

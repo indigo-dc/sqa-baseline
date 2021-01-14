@@ -1,3 +1,4 @@
+content/00.front-matter.md:4:metadata
 content/00.front-matter.md:14:citable
 content/02.0.copyright-ack.md:3:DataCloud
 content/02.0.copyright-ack.md:3:DataCloud
@@ -61,6 +62,7 @@ content/02.delete-me.md:47:sint
 content/02.delete-me.md:47:sunt
 content/02.delete-me.md:236:Pandoc's
 content/02.delete-me.md:246:Pandoc's
+content/02.document-log.md:7:metadata
 content/02.document-log.md:9:EOSC
 content/03.intro.md:5:datacloud
 content/03.intro.md:6:DataCloud
@@ -82,13 +84,20 @@ content/06.quality_criteria.md:22:VCS
 content/06.quality_criteria.md:24:VCS
 content/06.quality_criteria.md:29:Lic
 content/06.quality_criteria.md:40:Wor
+content/06.quality_criteria.md:40:Workflow
 content/06.quality_criteria.md:47:unreviewed
 content/06.quality_criteria.md:49:SQA
+content/06.quality_criteria.md:58:versioned
+content/06.quality_criteria.md:61:Versioning
 content/06.quality_criteria.md:79:codebase
 content/06.quality_criteria.md:94:facto
 content/06.quality_criteria.md:105:bavoided
+content/06.quality_criteria.md:110:metadata
+content/06.quality_criteria.md:112:Metadata
 content/06.quality_criteria.md:114:assignement
+content/06.quality_criteria.md:117:metadata
 content/06.quality_criteria.md:117:VCS
+content/06.quality_criteria.md:118:metadata
 content/06.quality_criteria.md:123:behaviour
 content/06.quality_criteria.md:137:behaviour
 content/06.quality_criteria.md:153:behaviour
@@ -98,8 +107,11 @@ content/06.quality_criteria.md:174:testbeds
 content/06.quality_criteria.md:185:reStructuredText
 content/06.quality_criteria.md:191:behaviour
 content/06.quality_criteria.md:196:README
+content/06.quality_criteria.md:205:Versioning
+content/06.quality_criteria.md:211:API
 content/06.quality_criteria.md:219:Init
 content/06.quality_criteria.md:224:cron
+content/06.quality_criteria.md:228:API
 content/06.quality_criteria.md:229:CLI
 content/06.quality_criteria.md:235:lifecycle
 content/06.quality_criteria.md:236:OWASP
