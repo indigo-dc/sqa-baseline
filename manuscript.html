@@ -10,44 +10,514 @@
   <meta name="author" content="Mario David" />
   <meta name="author" content="Jorge Gomes" />
   <meta name="author" content="Giacinto Donvito" />
-  <meta name="dcterms.date" content="2020-04-29" />
+  <meta name="dcterms.date" content="2021-01-14" />
   <meta name="keywords" content="research software, software quality assurance, software lifecycle, devops, software automation, software quality baseline, software testing, software deployment, agile development" />
   <title>A set of Common Software Quality Assurance Baseline Criteria for Research Projects</title>
   <style>
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
+  <!--
+  Manubot generated metadata rendered from header-includes-template.html.
+  Suggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html
+  -->
+  <meta name="dc.format" content="text/html" />
+  <meta name="dc.title" content="A set of Common Software Quality Assurance Baseline Criteria for Research Projects" />
+  <meta name="citation_title" content="A set of Common Software Quality Assurance Baseline Criteria for Research Projects" />
+  <meta property="og:title" content="A set of Common Software Quality Assurance Baseline Criteria for Research Projects" />
+  <meta property="twitter:title" content="A set of Common Software Quality Assurance Baseline Criteria for Research Projects" />
+  <meta name="dc.date" content="2021-01-14" />
+  <meta name="citation_publication_date" content="2021-01-14" />
+  <meta name="dc.language" content="en-US" />
+  <meta name="citation_language" content="en-US" />
+  <meta name="dc.relation.ispartof" content="Manubot" />
+  <meta name="dc.publisher" content="Manubot" />
+  <meta name="citation_journal_title" content="Manubot" />
+  <meta name="citation_technical_report_institution" content="Manubot" />
+  <meta name="citation_author" content="Pablo Orviz" />
+  <meta name="citation_author_institution" content="Spanish National Research Council (CSIC)" />
+  <meta name="citation_author_institution" content="Institute of Physics of Cantabria (IFCA)" />
+  <meta name="citation_author_orcid" content="0000-0002-2473-6405" />
+  <meta name="citation_author" content="Alvaro Lopez" />
+  <meta name="citation_author_institution" content="Spanish National Research Council (CSIC)" />
+  <meta name="citation_author_institution" content="Institute of Physics of Cantabria (IFCA)" />
+  <meta name="citation_author_orcid" content="0000-0002-0013-4602" />
+  <meta name="citation_author" content="Doina Cristina Duma" />
+  <meta name="citation_author_institution" content="National Institute of Nuclear Physics (INFN)" />
+  <meta name="citation_author_orcid" content="0000-0002-0124-4870" />
+  <meta name="citation_author" content="Mario David" />
+  <meta name="citation_author_institution" content="Laboratory of Instrumentation and Experimental Particle Physics (LIP)" />
+  <meta name="citation_author_orcid" content="0000-0003-1802-5356" />
+  <meta name="citation_author" content="Jorge Gomes" />
+  <meta name="citation_author_institution" content="Laboratory of Instrumentation and Experimental Particle Physics (LIP)" />
+  <meta name="citation_author_orcid" content="0000-0002-9142-2596" />
+  <meta name="citation_author" content="Giacinto Donvito" />
+  <meta name="citation_author_institution" content="National Institute of Nuclear Physics (INFN)" />
+  <meta name="citation_author_orcid" content="0000-0002-0628-1080" />
+  <link rel="canonical" href="https://indigo-dc.github.io/sqa-baseline/" />
+  <meta property="og:url" content="https://indigo-dc.github.io/sqa-baseline/" />
+  <meta property="twitter:url" content="https://indigo-dc.github.io/sqa-baseline/" />
+  <meta name="citation_fulltext_html_url" content="https://indigo-dc.github.io/sqa-baseline/" />
+  <meta name="citation_pdf_url" content="https://indigo-dc.github.io/sqa-baseline/manuscript.pdf" />
+  <link rel="alternate" type="application/pdf" href="https://indigo-dc.github.io/sqa-baseline/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://indigo-dc.github.io/sqa-baseline/v/c9afe6556b22a286a01ddf8319b39f77e18fd4e6/" />
+  <meta name="manubot_html_url_versioned" content="https://indigo-dc.github.io/sqa-baseline/v/c9afe6556b22a286a01ddf8319b39f77e18fd4e6/" />
+  <meta name="manubot_pdf_url_versioned" content="https://indigo-dc.github.io/sqa-baseline/v/c9afe6556b22a286a01ddf8319b39f77e18fd4e6/manuscript.pdf" />
+  <meta property="og:type" content="article" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
+  <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
+  <meta name="theme-color" content="#ad1457" />
+  <!-- end Manubot generated metadata -->
+  
+  <!-- pandoc-eqnos: equation style -->
+  <style>
+    .eqnos { display: inline-block; position: relative; width: 100%; }
+    .eqnos br { display: none; }
+    .eqnos-number { position: absolute; right: 0em; top: 50%; line-height: 0; }
+  </style>
 </head>
 <body>
 <header id="title-block-header">
 <h1 class="title">A set of Common Software Quality Assurance Baseline Criteria for Research Projects</h1>
 </header>
-<p><br> <img src="images/logo-SYNERGY.png" height="50" />     <img src="images/logo-DEEP.png" height="50" />     <img src="images/logo-INDIGO.png" height="50" />     <img src="images/logo-XDC.png" height="50" /></p>
+<p><br>
+<img src="images/logo-SYNERGY.png" height="50" />    
+<img src="images/logo-DEEP.png" height="50" />    
+<img src="images/logo-INDIGO.png" height="50" />    
+<img src="images/logo-XDC.png" height="50" /></p>
 <p><em>A DOI-citable version of this manuscript is available at <a href="http://hdl.handle.net/10261/160086" class="uri">http://hdl.handle.net/10261/160086</a></em>.</p>
-<p><small><em> This manuscript (<a href="https://indigo-dc.github.io/sqa-baseline/v/a9c34faaa989c6d672d1f88132c4dc35e5a7d986/">permalink</a>) was automatically generated from <a href="https://github.com/indigo-dc/sqa-baseline/tree/a9c34faaa989c6d672d1f88132c4dc35e5a7d986">indigo-dc/sqa-baseline@a9c34fa</a> on April 29, 2020. </em></small></p>
+<p><small><em>
+This manuscript
+(<a href="https://indigo-dc.github.io/sqa-baseline/v/c9afe6556b22a286a01ddf8319b39f77e18fd4e6/">permalink</a>)
+was automatically generated
+from <a href="https://github.com/indigo-dc/sqa-baseline/tree/c9afe6556b22a286a01ddf8319b39f77e18fd4e6">indigo-dc/sqa-baseline@c9afe65</a>
+on January 14, 2021.
+</em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
-<li><p><strong>Pablo Orviz</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0002-2473-6405">0000-0002-2473-6405</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/orviz">orviz</a><br> <small> Spanish National Research Council (CSIC); Institute of Physics of Cantabria (IFCA) </small></p></li>
-<li><p><strong>Alvaro Lopez</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0002-0013-4602">0000-0002-0013-4602</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/alvaro.lopez">alvaro.lopez</a><br> <small> Spanish National Research Council (CSIC); Institute of Physics of Cantabria (IFCA) </small></p></li>
-<li><p><strong>Doina Cristina Duma</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0002-0124-4870">0000-0002-0124-4870</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/caifti">caifti</a><br> <small> National Institute of Nuclear Physics (INFN) </small></p></li>
-<li><p><strong>Mario David</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0003-1802-5356">0000-0003-1802-5356</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/mariojmdavid">mariojmdavid</a><br> <small> Laboratory of Instrumentation and Experimental Particle Physics (LIP) </small></p></li>
-<li><p><strong>Jorge Gomes</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0002-9142-2596">0000-0002-9142-2596</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/jorge-lip">jorge-lip</a><br> <small> Laboratory of Instrumentation and Experimental Particle Physics (LIP) </small></p></li>
-<li><p><strong>Giacinto Donvito</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/0000-0002-0628-1080">0000-0002-0628-1080</a><br> <small> National Institute of Nuclear Physics (INFN) </small></p></li>
+<li><p><strong>Pablo Orviz</strong><br>
+<img src="images/orcid.svg" class="inline_icon" alt="ORCID icon" />
+<a href="https://orcid.org/0000-0002-2473-6405">0000-0002-2473-6405</a>
+· <img src="images/github.svg" class="inline_icon" alt="GitHub icon" />
+<a href="https://github.com/orviz">orviz</a><br>
+<small>
+Spanish National Research Council (CSIC); Institute of Physics of Cantabria (IFCA)
+</small></p></li>
+<li><p><strong>Alvaro Lopez</strong><br>
+<img src="images/orcid.svg" class="inline_icon" alt="ORCID icon" />
+<a href="https://orcid.org/0000-0002-0013-4602">0000-0002-0013-4602</a>
+· <img src="images/github.svg" class="inline_icon" alt="GitHub icon" />
+<a href="https://github.com/alvaro.lopez">alvaro.lopez</a><br>
+<small>
+Spanish National Research Council (CSIC); Institute of Physics of Cantabria (IFCA)
+</small></p></li>
+<li><p><strong>Doina Cristina Duma</strong><br>
+<img src="images/orcid.svg" class="inline_icon" alt="ORCID icon" />
+<a href="https://orcid.org/0000-0002-0124-4870">0000-0002-0124-4870</a>
+· <img src="images/github.svg" class="inline_icon" alt="GitHub icon" />
+<a href="https://github.com/caifti">caifti</a><br>
+<small>
+National Institute of Nuclear Physics (INFN)
+</small></p></li>
+<li><p><strong>Mario David</strong><br>
+<img src="images/orcid.svg" class="inline_icon" alt="ORCID icon" />
+<a href="https://orcid.org/0000-0003-1802-5356">0000-0003-1802-5356</a>
+· <img src="images/github.svg" class="inline_icon" alt="GitHub icon" />
+<a href="https://github.com/mariojmdavid">mariojmdavid</a><br>
+<small>
+Laboratory of Instrumentation and Experimental Particle Physics (LIP)
+</small></p></li>
+<li><p><strong>Jorge Gomes</strong><br>
+<img src="images/orcid.svg" class="inline_icon" alt="ORCID icon" />
+<a href="https://orcid.org/0000-0002-9142-2596">0000-0002-9142-2596</a>
+· <img src="images/github.svg" class="inline_icon" alt="GitHub icon" />
+<a href="https://github.com/jorge-lip">jorge-lip</a><br>
+<small>
+Laboratory of Instrumentation and Experimental Particle Physics (LIP)
+</small></p></li>
+<li><p><strong>Giacinto Donvito</strong><br>
+<img src="images/orcid.svg" class="inline_icon" alt="ORCID icon" />
+<a href="https://orcid.org/0000-0002-0628-1080">0000-0002-0628-1080</a><br>
+<small>
+National Institute of Nuclear Physics (INFN)
+</small></p></li>
 </ul>
-<h2 id="abstract" class="page_break_before">Abstract</h2>
-<p>The purpose of this document is to define a set of quality standards, procedures and best practices to conform a Software Quality Assurance plan to serve as a reference within the European research ecosystem related projects for the adequate development and timely delivery of software products.</p>
+<h2 class="page_break_before" id="abstract">Abstract</h2>
+<p>The purpose of this document is to define a set of quality standards,
+procedures and best practices to conform a Software Quality Assurance plan to
+serve as a reference within the European research ecosystem related projects
+for the adequate development and timely delivery of software products.</p>
 <h2 id="copyright-notice">Copyright Notice</h2>
-<p>Copyright © Members of the INDIGO-DataCloud, DEEP Hybrid-DataCloud eXtreme DataCloud and EOSC-Synergy collaborations, 2015-2020.</p>
+<p>Copyright © Members of the INDIGO-DataCloud, DEEP Hybrid-DataCloud eXtreme
+DataCloud and EOSC-Synergy collaborations, 2015-2020.</p>
 <h2 id="acknowledgements">Acknowledgements</h2>
-The INDIGO-DataCloud, DEEP-Hybrid-DataCloud, eXtreme-DataCloud and EOSC-Synergy projects have received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement number 653549, 777435, 777367 and 857647 respectively.
+The INDIGO-DataCloud, DEEP-Hybrid-DataCloud, eXtreme-DataCloud and
+EOSC-Synergy projects have received funding from the European Union’s
+Horizon 2020 research and innovation programme under grant agreement
+number 653549, 777435, 777367 and 857647 respectively.
 <p align="center">
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1WF4g5KH3PnQE_Ve10QFRS-gZ0NpCQ7Qr-_km1RqnOCEF1fQt">
 </p>
+<p>This manuscript is a template (aka “rootstock”) for <a href="https://manubot.org/" title="Manubot">Manubot</a>, a tool for writing scholarly manuscripts.
+Use this template as a starting point for your manuscript.</p>
+<p>The rest of this document is a full list of formatting elements/features supported by Manubot.
+Compare the input (<code>.md</code> files in the <code>/content</code> directory) to the output you see below.</p>
+<h2 id="basic-formatting">Basic formatting</h2>
+<p><strong>Bold</strong> <strong>text</strong></p>
+<p><span class="semibold">Semi-bold text</span></p>
+<p><span class="center">Centered text</span></p>
+<p><span class="right">Right-aligned text</span></p>
+<p><em>Italic</em> <em>text</em></p>
+<p>Combined <em>italics and <strong>bold</strong></em></p>
+<p><del>Strikethrough</del></p>
+<ol type="1">
+<li>Ordered list item</li>
+<li>Ordered list item
+<ol type="a">
+<li>Sub-item</li>
+<li>Sub-item
+<ol type="i">
+<li>Sub-sub-item</li>
+</ol></li>
+</ol></li>
+<li>Ordered list item
+<ol type="a">
+<li>Sub-item</li>
+</ol></li>
+</ol>
+<ul>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+</ul>
+<p>subscript: H<sub>2</sub>O is a liquid</p>
+<p>superscript: 2<sup>10</sup> is 1024.</p>
+<p><a href="https://www.google.com/search?q=superscript+generator">unicode superscripts</a>⁰¹²³⁴⁵⁶⁷⁸⁹</p>
+<p><a href="https://www.google.com/search?q=superscript+generator">unicode subscripts</a>₀₁₂₃₄₅₆₇₈₉</p>
+<p>A long paragraph of text.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Putting each sentence on its own line has numerous benefits with regard to <a href="https://asciidoctor.org/docs/asciidoc-recommended-practices/#one-sentence-per-line">editing</a> and <a href="https://rhodesmill.org/brandon/2012/one-sentence-per-line/">version control</a>.</p>
+<p>Line break without starting a new paragraph by putting<br />
+two spaces at end of line.</p>
+<h2 id="document-organization">Document organization</h2>
+<p>Document section headings:</p>
+<h1 id="heading-1">Heading 1</h1>
+<h2 id="heading-2">Heading 2</h2>
+<h3 id="heading-3">Heading 3</h3>
+<h4 id="heading-4">Heading 4</h4>
+<h5 id="heading-5">Heading 5</h5>
+<h6 id="heading-6">Heading 6</h6>
+<h3 class="center page_center" id="a-heading-centered-on-its-own-printed-page">A heading centered on its own printed page</h3>
+<!-- an arbitrary comment. visible in input, but not visible in output. -->
+<p>Horizontal rule:</p>
+<hr />
+<p><code>Heading 1</code>’s are recommended to be reserved for the title of the manuscript.</p>
+<p><code>Heading 2</code>’s are recommended for broad sections such as <em>Abstract</em>, <em>Methods</em>, <em>Conclusion</em>, etc.</p>
+<p><code>Heading 3</code>’s and <code>Heading 4</code>’s are recommended for sub-sections.</p>
+<h2 id="links">Links</h2>
+<p>Bare URL link: <a href="https://manubot.org" class="uri">https://manubot.org</a></p>
+<p><a href="https://manubot.org">Long link with lots of words and stuff and junk and bleep and blah and stuff and other stuff and more stuff yeah</a></p>
+<p><a href="https://manubot.org">Link with text</a></p>
+<p><a href="https://manubot.org" title="Manubot Homepage">Link with hover text</a></p>
+<p><a href="https://manubot.org">Link by reference</a></p>
+<h2 id="citations">Citations</h2>
+<p>Citation by DOI <span class="citation" data-cites="IhliSZDo">[<a href="#ref-IhliSZDo" role="doc-biblioref">1</a>]</span>.</p>
+<p>Citation by PubMed Central ID <span class="citation" data-cites="mSMVRkoc">[<a href="#ref-mSMVRkoc" role="doc-biblioref">2</a>]</span>.</p>
+<p>Citation by PubMed ID <span class="citation" data-cites="126Wi5Us4">[<a href="#ref-126Wi5Us4" role="doc-biblioref">3</a>]</span>.</p>
+<p>Citation by Wikidata ID <span class="citation" data-cites="QhC8yJ7V">[<a href="#ref-QhC8yJ7V" role="doc-biblioref">4</a>]</span>.</p>
+<p>Citation by ISBN <span class="citation" data-cites="zBPP9YKu">[<a href="#ref-zBPP9YKu" role="doc-biblioref">5</a>]</span>.</p>
+<p>Citation by URL <span class="citation" data-cites="6acIRW4q">[<a href="#ref-6acIRW4q" role="doc-biblioref">6</a>]</span>.</p>
+<p>Citation by alias <span class="citation" data-cites="PZMP42Ak">[<a href="#ref-PZMP42Ak" role="doc-biblioref">7</a>]</span>.</p>
+<p>Multiple citations can be put inside the same set of brackets <span class="citation" data-cites="IhliSZDo PZMP42Ak zBPP9YKu">[<a href="#ref-IhliSZDo" role="doc-biblioref">1</a>,<a href="#ref-zBPP9YKu" role="doc-biblioref">5</a>,<a href="#ref-PZMP42Ak" role="doc-biblioref">7</a>]</span>.
+Manubot plugins provide easier, more convenient visualization of and navigation between citations <span class="citation" data-cites="YuJbg3zO 126Wi5Us4 mSMVRkoc PZMP42Ak">[<a href="#ref-mSMVRkoc" role="doc-biblioref">2</a>,<a href="#ref-126Wi5Us4" role="doc-biblioref">3</a>,<a href="#ref-PZMP42Ak" role="doc-biblioref">7</a>,<a href="#ref-YuJbg3zO" role="doc-biblioref">8</a>]</span>.</p>
+<p>Citation tags (i.e. aliases) can be defined in their own paragraphs using Markdown’s reference link syntax:</p>
+<h2 id="referencing-figures-tables-equations">Referencing figures, tables, equations</h2>
+<p>Figure <a href="#fig:square-image">1</a></p>
+<p>Figure <a href="#fig:wide-image">2</a></p>
+<p>Figure <a href="#fig:tall-image">3</a></p>
+<p>Figure <a href="#fig:vector-image">4</a></p>
+<p>Table <a href="#tbl:bowling-scores">1</a></p>
+<p>Equation <a href="#eq:regular-equation">1</a></p>
+<p>Equation <a href="#eq:long-equation">2</a></p>
+<h2 id="quotes-and-code">Quotes and code</h2>
+<blockquote>
+<p>Quoted text</p>
+</blockquote>
+<blockquote>
+<p>Quoted block of text</p>
+<p>Two roads diverged in a wood, and I—<br />
+I took the one less traveled by,<br />
+And that has made all the difference.</p>
+</blockquote>
+<p>Code <code>in the middle</code> of normal text, aka <code>inline code</code>.</p>
+<p>Code block with Python syntax highlighting:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">from</span> manubot.cite.doi <span class="im">import</span> expand_short_doi</span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="kw">def</span> test_expand_short_doi():</span>
+<span id="cb1-4"><a href="#cb1-4"></a>    doi <span class="op">=</span> expand_short_doi(<span class="st">&quot;10/c3bp&quot;</span>)</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    <span class="co"># a string too long to fit within page:</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="cf">assert</span> doi <span class="op">==</span> <span class="st">&quot;10.25313/2524-2695-2018-3-vliyanie-enhansera-copia-i-insulyatora-gypsy-na-sintez-ernk-modifikatsii-hromatina-i-svyazyvanie-insulyatornyh-belkov-vtransfetsirovannyh-geneticheskih-konstruktsiyah&quot;</span></span></code></pre></div>
+<p>Code block with no syntax highlighting:</p>
+<pre><code>Exporting HTML manuscript
+Exporting DOCX manuscript
+Exporting PDF manuscript</code></pre>
+<h2 id="figures">Figures</h2>
+<div id="fig:square-image" class="fignos">
+<figure>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/square.png" alt="" /><figcaption><span>Figure 1:</span> <strong>A square image at actual size and with a bottom caption.</strong>
+Loaded from the latest version of image on GitHub.</figcaption>
+</figure>
+</div>
+<div id="fig:wide-image" class="fignos">
+<figure>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/wide.png" alt="" /><figcaption><span>Figure 2:</span> <strong>An image too wide to fit within page at full size.</strong>
+Loaded from a specific (hashed) version of the image on GitHub.</figcaption>
+</figure>
+</div>
+<div id="fig:tall-image" class="fignos">
+<figure>
+<img src="https://github.com/manubot/resources/raw/15493970f8882fce22bef829619d3fb37a613ba5/test/tall.png" style="height:3in" alt="" /><figcaption><span>Figure 3:</span> <strong>A tall image with a specified height.</strong>
+Loaded from a specific (hashed) version of the image on GitHub.</figcaption>
+</figure>
+</div>
+<div id="fig:vector-image" class="fignos">
+<figure>
+<img src="https://raw.githubusercontent.com/manubot/resources/main/test/vector.svg?sanitize=true" class="white" style="height:2.5in" alt="" /><figcaption><span>Figure 4:</span> <strong>A vector <code>.svg</code> image loaded from GitHub.</strong>
+The parameter <code>sanitize=true</code> is necessary to properly load SVGs hosted via GitHub URLs.
+White background specified to serve as a backdrop for transparent sections of the image.</figcaption>
+</figure>
+</div>
+<h2 id="tables">Tables</h2>
+<div id="tbl:bowling-scores" class="tablenos">
+<table>
+<caption><span>Table 1:</span> A table with a top caption and specified relative column widths.
+</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><em>Bowling Scores</em></th>
+<th style="text-align: center;">Jane</th>
+<th style="text-align: center;">John</th>
+<th style="text-align: center;">Alice</th>
+<th style="text-align: center;">Bob</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Game 1</td>
+<td style="text-align: center;">150</td>
+<td style="text-align: center;">187</td>
+<td style="text-align: center;">210</td>
+<td style="text-align: center;">105</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Game 2</td>
+<td style="text-align: center;">98</td>
+<td style="text-align: center;">202</td>
+<td style="text-align: center;">197</td>
+<td style="text-align: center;">102</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Game 3</td>
+<td style="text-align: center;">123</td>
+<td style="text-align: center;">180</td>
+<td style="text-align: center;">238</td>
+<td style="text-align: center;">134</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tbl:constant-digits" class="tablenos">
+<table>
+<caption><span>Table 2:</span> A table too wide to fit within page.
+</caption>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 20%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 34%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Digits 1-33</th>
+<th style="text-align: left;">Digits 34-66</th>
+<th style="text-align: left;">Digits 67-99</th>
+<th style="text-align: left;">Ref.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">pi</td>
+<td style="text-align: left;">3.14159265358979323846264338327950</td>
+<td style="text-align: left;">288419716939937510582097494459230</td>
+<td style="text-align: left;">781640628620899862803482534211706</td>
+<td style="text-align: left;"><a href="https://www.piday.org/million/"><code>piday.org</code></a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">e</td>
+<td style="text-align: left;">2.71828182845904523536028747135266</td>
+<td style="text-align: left;">249775724709369995957496696762772</td>
+<td style="text-align: left;">407663035354759457138217852516642</td>
+<td style="text-align: left;"><a href="https://apod.nasa.gov/htmltest/gifcity/e.2mil"><code>nasa.gov</code></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tbl:4db09be8-71e9-42d1-b452-6744ce0b463b" class="tablenos">
+<table>
+<caption><span>Table 3:</span> A table with merged cells using the <code>attributes</code> plugin.
+</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><strong>Colors</strong> <!-- $colspan="2" --></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>Size</strong></td>
+<td style="text-align: center;"><strong>Text Color</strong></td>
+<td style="text-align: center;"><strong>Background Color</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">big</td>
+<td style="text-align: center;">blue</td>
+<td style="text-align: center;">orange</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">small</td>
+<td style="text-align: center;">black</td>
+<td style="text-align: center;">white</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="equations">Equations</h2>
+<p>A LaTeX equation:</p>
+<p><span id="eq:regular-equation" class="eqnos"><span class="math display">\[\int_0^\infty e^{-x^2} dx=\frac{\sqrt{\pi}}{2}\]</span><span class="eqnos-number">(1)</span></span> </p>
+<p>An equation too long to fit within page:</p>
+<p><span id="eq:long-equation" class="eqnos"><span class="math display">\[x = a + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + w + x + y + z + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9\]</span><span class="eqnos-number">(2)</span></span> </p>
+<h2 id="special">Special</h2>
+<p><i class="fas fa-exclamation-triangle"></i> <span class="semibold">WARNING</span> <em>The following features are only supported and intended for <code>.html</code> and <code>.pdf</code> exports.</em>
+<em>Journals are not likely to support them, and they may not display correctly when converted to other formats such as <code>.docx</code>.</em></p>
+<p><a href="https://manubot.org" class="button" title="Manubot Homepage">Link styled as a button</a></p>
+<p>Adding arbitrary HTML attributes to an element using Pandoc’s attribute syntax:</p>
+<div id="some_id_1" class="some_class" style="background: #ad1457; color: white; margin-left: 40px;" title="a paragraph of text" data-color="white" disabled="true">
+<p>Manubot Manubot Manubot Manubot Manubot.
+Manubot Manubot Manubot Manubot.
+Manubot Manubot Manubot.
+Manubot Manubot.
+Manubot.</p>
+</div>
+<p>Adding arbitrary HTML attributes to an element with the Manubot <code>attributes</code> plugin (more flexible than Pandoc’s method in terms of which elements you can add attributes to):</p>
+<p>Manubot Manubot Manubot Manubot Manubot.
+Manubot Manubot Manubot Manubot.
+Manubot Manubot Manubot.
+Manubot Manubot.
+Manubot.
+<!-- $id="element_id" class="some_class" $style="color: #ad1457; margin-left: 40px;" $disabled="true" $title="a paragraph of text" $data-color="red" --></p>
+<p>Available background colors for text, images, code, banners, etc:</p>
+<p><code class="white">white</code>
+<code class="lightgrey">lightgrey</code>
+<code class="grey">grey</code>
+<code class="darkgrey">darkgrey</code>
+<code class="black">black</code>
+<code class="lightred">lightred</code>
+<code class="lightyellow">lightyellow</code>
+<code class="lightgreen">lightgreen</code>
+<code class="lightblue">lightblue</code>
+<code class="lightpurple">lightpurple</code>
+<code class="red">red</code>
+<code class="orange">orange</code>
+<code class="yellow">yellow</code>
+<code class="green">green</code>
+<code class="blue">blue</code>
+<code class="purple">purple</code></p>
+<p>Using the <a href="https://fontawesome.com/">Font Awesome</a> icon set:</p>
+<!-- include the Font Awesome library, per: https://fontawesome.com/start -->
+<p><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"></p>
+<p><i class="fas fa-check"></i> <i class="fas fa-question"></i> <i class="fas fa-star"></i> <i class="fas fa-bell"></i> <i class="fas fa-times-circle"></i> <i class="fas fa-ellipsis-h"></i></p>
+<p><span class="banner lightgrey"><i class="fas fa-scroll fa-lg"></i> <strong>Light Grey Banner</strong><br>
+useful for <em>general information</em> - <a href="https://manubot.org/">manubot.org</a></span></p>
+<p><span class="banner lightblue"><i class="fas fa-info-circle fa-lg"></i> <strong>Blue Banner</strong><br>
+useful for <em>important information</em> - <a href="https://manubot.org/">manubot.org</a></span></p>
+<p><span class="banner lightred"><i class="fas fa-ban fa-lg"></i> <strong>Light Red Banner</strong><br>
+useful for <em>warnings</em> - <a href="https://manubot.org/">manubot.org</a></span></p>
 <h2 id="document-log">Document Log</h2>
 <table>
 <thead>
@@ -86,167 +556,277 @@ The INDIGO-DataCloud, DEEP-Hybrid-DataCloud, eXtreme-DataCloud and EOSC-Synergy 
 </tbody>
 </table>
 <h2 id="introduction-and-purpose">Introduction and Purpose</h2>
-<p>This document has been tailored upon the recommendations and requirements found in the Initial Plan for Software Management and Pilot Services deliverable <span class="citation" data-cites="5VMJDbB2"><a href="#ref-5VMJDbB2">1</a></span>, produced by the INDIGO-DataCloud project. These guidelines evolved throughout the project’s lifetime and are being extended in the EOSC-Synergy, DEEP-Hybrid-DataCloud and eXtreme DataCloud subsequent projects. The result is a consolidated Software Quality Assurance (SQA) baseline criteria emanated from the European Open Science Cloud (EOSC), which aims to outline the SQA principles to be considered in the upcoming software development efforts within the European research community, and continuously evolve in order to be aligned with future software engineering practices and security recommendations.</p>
+<p>This document has been tailored upon the recommendations and requirements found
+in the Initial Plan for Software Management and Pilot Services deliverable
+<span class="citation" data-cites="5VMJDbB2"><a href="#ref-5VMJDbB2" role="doc-biblioref">9</a></span>,
+produced by the INDIGO-DataCloud project. These guidelines evolved throughout
+the project’s lifetime and are being extended in the
+EOSC-Synergy, DEEP-Hybrid-DataCloud and eXtreme DataCloud subsequent projects. The result is
+a consolidated Software Quality Assurance (SQA) baseline criteria emanated
+from the European Open Science Cloud (EOSC), which aims to outline the SQA
+principles to be considered in the upcoming software development efforts within
+the European research community, and continuously evolve in order to be aligned
+with future software engineering practices and security recommendations.</p>
 <h2 id="goals">Goals</h2>
 <ol type="1">
-<li>Set the base of minimum SQA criteria that a software developed within EOSC development project SHOULD fulfill.</li>
-<li>Enhance the visibility, accessibility and distribution of the produced source code through the alignment to the Open Source Definition.</li>
-<li>Promote code style standards to deliver good quality source code emphasizing its readability and reusability.</li>
-<li>Improve the quality and reliability of software by covering different testing methods at development and pre-production stages.</li>
-<li>Propose a change-based driven scenario where all new updates in the source code are continuously validated by the automated execution of the relevant tests.</li>
-<li>Adopt an agile approach to effectively produce timely and audience-specific documentation.</li>
-<li>Lower the barriers of software adoption by delivering quality documentation and the utilization of automated deployment solutions.</li>
-<li>Encourage secure coding practices and security static analysis at the development phase while providing recommendations on external security assessment.</li>
+<li>Set the base of minimum SQA criteria that a software developed within EOSC
+development project SHOULD fulfill.</li>
+<li>Enhance the visibility, accessibility and distribution of the produced
+source code through the alignment to the Open Source Definition.</li>
+<li>Promote code style standards to deliver good quality source code emphasizing
+its readability and reusability.</li>
+<li>Improve the quality and reliability of software by covering different
+testing methods at development and pre-production stages.</li>
+<li>Propose a change-based driven scenario where all new updates in the source
+code are continuously validated by the automated execution of the relevant
+tests.</li>
+<li>Adopt an agile approach to effectively produce timely and audience-specific
+documentation.</li>
+<li>Lower the barriers of software adoption by delivering quality documentation
+and the utilization of automated deployment solutions.</li>
+<li>Encourage secure coding practices and security static analysis at the
+development phase while providing recommendations on external security
+assessment.</li>
 </ol>
 <h2 id="notational-conventions">Notational Conventions</h2>
-<p>The keywords “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119 <span class="citation" data-cites="Ms8G1A12"><a href="#ref-Ms8G1A12">2</a></span>.</p>
+<p>The keywords “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”,
+“SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be
+interpreted as described in RFC 2119 <span class="citation" data-cites="Ms8G1A12"><a href="#ref-Ms8G1A12" role="doc-biblioref">10</a></span>.</p>
 <h2 id="quality-criteria">Quality Criteria</h2>
-<p>The following sections describe the quality conventions and best practices that apply to the development phase of a software component within the EOSC ecosystem. These guidelines ruled the software development process of the former European Commission-funded project INDIGO-DataCloud, where they have proved valuable for improving the reliability of software produced in the scientific European arena.</p>
-<p>The next sections describe the development process driven by a change-based strategy, followed by a continuous integration approach. Changes in the source code, trigger automated builds to analyze the new contributions in order to validate them before being added to the software component code base. Consequently, software components are more eligible for being deployed in production infrastructures, reducing the likelihood of service disruption.</p>
+<p>The following sections describe the quality conventions and best practices that
+apply to the development phase of a software component within the EOSC
+ecosystem. These guidelines ruled the software development process of the
+former European Commission-funded project INDIGO-DataCloud, where they have
+proved valuable for improving the reliability of software produced in the
+scientific European arena.</p>
+<p>The next sections describe the development process driven by a change-based
+strategy, followed by a continuous integration approach. Changes in the source
+code, trigger automated builds to analyze the new contributions in order to
+validate them before being added to the software component code base.
+Consequently, software components are more eligible for being deployed in
+production infrastructures, reducing the likelihood of service disruption.</p>
 <h3 id="code-accessibility-qc.acc">Code Accessibility [QC.Acc]</h3>
 <ul>
-<li><strong>[QC.Acc01]</strong> Following the open-source model, the source code being produced MUST be open and publicly available to promote the adoption and augment the visibility of the software developments.</li>
+<li><strong>[QC.Acc01]</strong> Following the open-source model, the source code being produced MUST be open
+and publicly available to promote the adoption and augment the visibility of
+the software developments.</li>
 <li><strong>[QC.Acc02]</strong> Source code MUST use a Version Control System (VCS).
 <ul>
-<li><strong>[QC.Acc02.1]</strong> It is RECOMMENDED that all software components delivered by the same project agree on a common VCS.</li>
+<li><strong>[QC.Acc02.1]</strong> It is RECOMMENDED that all software components delivered by the same
+project agree on a common VCS.</li>
 </ul></li>
-<li><strong>[QC.Acc03]</strong> Source code produced within the scope of a broader development project SHOULD reside in a common organization of a version control repository hosting service.</li>
+<li><strong>[QC.Acc03]</strong> Source code produced within the scope of a broader development project
+SHOULD reside in a common organization of a version control repository
+hosting service.</li>
 </ul>
 <h3 id="licensing-qc.lic">Licensing [QC.Lic]</h3>
 <ul>
-<li><strong>[QC.Lic01]</strong> As open-source software, source code MUST adhere to an open-source license to be freely used, modified and distributed by others.
+<li><strong>[QC.Lic01]</strong> As open-source software, source code MUST adhere to an open-source license
+to be freely used, modified and distributed by others.
 <ul>
 <li><strong>[QC.Lic01.1]</strong> Non-licensed software is exclusive copyright by default.</li>
 </ul></li>
-<li><strong>[QC.Lic02]</strong> License MUST be compliant with the Open Source Definition <span class="citation" data-cites="HdIbF8WL"><a href="#ref-HdIbF8WL">3</a></span>.
+<li><strong>[QC.Lic02]</strong> License MUST be compliant with the Open Source Definition <span class="citation" data-cites="HdIbF8WL"><a href="#ref-HdIbF8WL" role="doc-biblioref">11</a></span>.
 <ul>
-<li><strong>[QC.Lic02.1]</strong> RECOMMENDED licenses are listed in the Open Source Initiative portal under the Popular Licenses category <span class="citation" data-cites="xVJMmGVr"><a href="#ref-xVJMmGVr">4</a></span>.</li>
+<li><strong>[QC.Lic02.1]</strong> RECOMMENDED licenses are listed in the Open Source Initiative portal
+under the Popular Licenses category <span class="citation" data-cites="xVJMmGVr"><a href="#ref-xVJMmGVr" role="doc-biblioref">12</a></span>.</li>
 </ul></li>
-<li><strong>[QC.Lic03]</strong> Licenses MUST be physically present (e.g. as a LICENSE file) in the root of all the source code repositories related to the software component.</li>
+<li><strong>[QC.Lic03]</strong> Licenses MUST be physically present (e.g. as a LICENSE file) in the root of
+all the source code repositories related to the software component.</li>
 </ul>
 <h3 id="code-workflow-qc.wor">Code Workflow [QC.Wor]</h3>
 <p>A change-based approach is accomplished with a branching model.</p>
 <ul>
-<li><strong>[QC.Wor01]</strong> The main branch in the source code repository MUST maintain a working state version of the software component.
+<li><strong>[QC.Wor01]</strong> The main branch in the source code repository MUST maintain a working state
+version of the software component.
 <ul>
-<li><strong>[QC.Wor01.1]</strong> Main branch SHOULD be protected to disallow force pushing, thus preventing untested and unreviewed source code from entering the production-ready version.</li>
-<li><strong>[QC.Wor01.2]</strong> New features SHOULD only be merged in the main branch whenever the SQA criteria is fulfilled.</li>
+<li><strong>[QC.Wor01.1]</strong> Main branch SHOULD be protected to disallow force pushing, thus
+preventing untested and unreviewed source code from entering the
+production-ready version.</li>
+<li><strong>[QC.Wor01.2]</strong> New features SHOULD only be merged in the main branch whenever the SQA
+criteria is fulfilled.</li>
 </ul></li>
 <li><strong>[QC.Wor02]</strong> New changes in the source code MUST be placed in individual branches.
 <ul>
-<li><strong>[QC.Wor02.1]</strong> It is RECOMMENDED to agree on a branch nomenclature, usually by prefixing, to differentiate change types (e.g. feature, release, fix).</li>
+<li><strong>[QC.Wor02.1]</strong> It is RECOMMENDED to agree on a branch nomenclature, usually by
+prefixing, to differentiate change types (e.g. feature, release, fix).</li>
 </ul></li>
-<li><strong>[QC.Wor03]</strong> The existence of a secondary long-term branch that contains the changes for the next release is RECOMMENDED.
+<li><strong>[QC.Wor03]</strong> The existence of a secondary long-term branch that contains the changes for
+the next release is RECOMMENDED.
 <ul>
 <li><strong>[QC.Wor03.1]</strong> Next release changes come from the individual branches.</li>
-<li><strong>[QC.Wor03.2]</strong> Once ready for release, changes in the secondary long-term branch are merged into the main branch and versioned. At that point in time, main and secondary branches are aligned. This step SHOULD mark a production release.</li>
+<li><strong>[QC.Wor03.2]</strong> Once ready for release, changes in the secondary long-term branch are
+merged into the main branch and versioned. At that point in time, main
+and secondary branches are aligned. This step SHOULD mark a production
+release.</li>
 </ul></li>
-<li><strong>[QC.Wor04]</strong> Semantic Versioning <span class="citation" data-cites="13UfgtMhu"><a href="#ref-13UfgtMhu">5</a></span> specification is RECOMMENDED for tagging the production releases.</li>
+<li><strong>[QC.Wor04]</strong> Semantic Versioning <span class="citation" data-cites="13UfgtMhu"><a href="#ref-13UfgtMhu" role="doc-biblioref">13</a></span> specification is RECOMMENDED for
+tagging the production releases.</li>
 </ul>
 <h3 id="code-management-qc.man">Code Management [QC.Man]</h3>
 <ul>
-<li><strong>[QC.Man01]</strong> An issue tracking system facilitates structured software development. Leveraging issues to track down both new enhancements and defects (bugs or documentation typos) is RECOMMENDED.
+<li><strong>[QC.Man01]</strong> An issue tracking system facilitates structured software development. Leveraging
+issues to track down both new enhancements and defects (bugs or documentation typos)
+is RECOMMENDED.
 <ul>
-<li><strong>[QC.Man01.1]</strong> In addition to monitoring the internal development, issues are the best means for supporting users. External users SHOULD be able to create incidences based on the operational performance of the software.</li>
-<li><strong>[QC.Man01.2]</strong> The description of an issue SHOULD be concise and state clearly the problem. It is RECOMMENDED to add any reference to the actual problem. In the case of bugs, the issue SHOULD be accompanied by the relevant debug information. * The usage of templates for the issue description is RECOMMENDED.</li>
+<li><strong>[QC.Man01.1]</strong> In addition to monitoring the internal development, issues are the best means for
+supporting users. External users SHOULD be able to create incidences based on the
+operational performance of the software.</li>
+<li><strong>[QC.Man01.2]</strong> The description of an issue SHOULD be concise and state clearly the problem. It is
+RECOMMENDED to add any reference to the actual problem. In the case of bugs, the
+issue SHOULD be accompanied by the relevant debug information.
+* The usage of templates for the issue description is RECOMMENDED.</li>
 </ul></li>
-<li><strong>[QC.Man02]</strong> In social coding environments, pull requests represent the cornerstone of collaboration. A pull request provides a place for review and discussion of the changes proposed to be part of an existing version of the code.
+<li><strong>[QC.Man02]</strong> In social coding environments, pull requests represent the cornerstone of collaboration.
+A pull request provides a place for review and discussion of the changes proposed to be
+part of an existing version of the code.
 <ul>
 <li><strong>[QC.Man02.1]</strong> Pull requests SHOULD be used for every change in the codebase.</li>
 <li><strong>[QC.Man02.2]</strong> A software project SHOULD be open to external collaboration through pull requests.</li>
-<li><strong>[QC.Man02.3]</strong> A pull request description SHOULD be concise and state clearly its purpose (e.g. if it is fixing an observed bug or adding a new feature)
+<li><strong>[QC.Man02.3]</strong> A pull request description SHOULD be concise and state clearly its purpose (e.g. if
+it is fixing an observed bug or adding a new feature)
 <ul>
 <li>The usage of templates for the pull request’s description is RECOMMENDED.</li>
 </ul></li>
-<li><strong>[QC.Man02.4]</strong> It is RECOMMENDED to use pull requests to address open issues. The pull request description SHOULD make reference to the identifiers of the issues it is fixing (to eventually close them, either manually or automatically).</li>
+<li><strong>[QC.Man02.4]</strong> It is RECOMMENDED to use pull requests to address open issues. The pull request
+description SHOULD make reference to the identifiers of the issues it is fixing
+(to eventually close them, either manually or automatically).</li>
 </ul></li>
 </ul>
 <h3 id="code-style-qc.sty">Code Style [QC.Sty]</h3>
-<p>Code style requirements pursue the correct maintenance of the source code by the common agreement of a series of style conventions. These vary based on the programming language being used.</p>
+<p>Code style requirements pursue the correct maintenance of the source code by
+the common agreement of a series of style conventions. These vary based on the
+programming language being used.</p>
 <ul>
-<li><strong>[QC.Sty01]</strong> Each individual software product MUST comply with community-driven or de-facto code style standards for the programming languages being used.
+<li><strong>[QC.Sty01]</strong> Each individual software product MUST comply with community-driven or de-facto
+code style standards for the programming languages being used.
 <ul>
 <li><strong>[QC.Sty01.1]</strong> Compliance with multiple complementary standards MAY exist.</li>
 </ul></li>
-<li><strong>[QC.Sty02]</strong> Custom code style guidelines SHOULD be avoided, only considered in the hypothetical event of programming languages without existing community style standards.
+<li><strong>[QC.Sty02]</strong> Custom code style guidelines SHOULD be avoided, only considered in the
+hypothetical event of programming languages without existing community style
+standards.
 <ul>
-<li><strong>[QC.Sty02.1]</strong> Custom styles MUST be documented by defining each convention and its expected output.</li>
-<li><strong>[QC.Sty02.2]</strong> Custom styles SHOULD evolve over time towards a more consistent definition.</li>
+<li><strong>[QC.Sty02.1]</strong> Custom styles MUST be documented by defining each convention and its
+expected output.</li>
+<li><strong>[QC.Sty02.2]</strong> Custom styles SHOULD evolve over time towards a more consistent
+definition.</li>
 </ul></li>
-<li><strong>[QC.Sty03]</strong> Exceptions of individual conventions from the main definition are allowed but SHOULD bavoided
+<li><strong>[QC.Sty03]</strong> Exceptions of individual conventions from the main definition are allowed
+but SHOULD bavoided
 <ul>
 <li><strong>[QC.Sty03.1]</strong> Absence of standard conventions SHOULD be justified and tracked.</li>
 </ul></li>
-<li><strong>[QC.Sty04]</strong> Code style compliance testing MUST be automated and MUST be triggered for each candidate change in the source code.</li>
+<li><strong>[QC.Sty04]</strong> Code style compliance testing MUST be automated and MUST be triggered for
+each candidate change in the source code.</li>
 </ul>
 <h3 id="code-metadata-qc.met">Code metadata [QC.Met]</h3>
-<p>Metadata for the software component provides a way to achieve its full identification, thus making software citation viable <span class="citation" data-cites="AJBpTuJY">[<a href="#ref-AJBpTuJY">6</a>]</span>. It allows the assignement of a Digital Object Identifier (DOI) and is key towards preservation, discovery, reuse, and attribution of the software component.</p>
+<p>Metadata for the software component provides a way to achieve its full identification,
+thus making software citation viable <span class="citation" data-cites="AJBpTuJY">[<a href="#ref-AJBpTuJY" role="doc-biblioref">14</a>]</span>.
+It allows the assignement of a Digital Object Identifier (DOI) and is key
+towards preservation, discovery, reuse, and attribution of the software component.</p>
 <ul>
-<li><strong>[QC.Met01]</strong> A metadata file SHOULD exist along side the code, under its VCS. The metadata file SHOULD be updated when needed, as is the case of a new version.</li>
+<li><strong>[QC.Met01]</strong> A metadata file SHOULD exist along side the code, under its VCS.
+The metadata file SHOULD be updated when needed, as is the case of a new version.</li>
 </ul>
 <h3 id="unit-testing-qc.uni">Unit Testing [QC.Uni]</h3>
-<p>Unit testing evaluates all the possible flows in the internal design of the code, so that its behaviour becomes apparent. It is a key type of testing for early detection of failures in the development cycle.</p>
+<p>Unit testing evaluates all the possible flows in the internal design of the
+code, so that its behaviour becomes apparent. It is a key type of testing for
+early detection of failures in the development cycle.</p>
 <ul>
 <li><strong>[QC.Uni01]</strong> Minimum acceptable code coverage threshold SHOULD be 70%.
 <ul>
-<li><strong>[QC.Uni01.1]</strong> Unit testing coverage SHOULD be higher for those sections of the code identified as critical by the developers, such as units part of a security module.</li>
-<li><strong>[QC.Uni01.2]</strong> Unit testing coverage MAY be lower for external libraries or pieces of code not maintained within the product’s code base.</li>
+<li><strong>[QC.Uni01.1]</strong> Unit testing coverage SHOULD be higher for those sections of the code
+identified as critical by the developers, such as units part of a
+security module.</li>
+<li><strong>[QC.Uni01.2]</strong> Unit testing coverage MAY be lower for external libraries or pieces of
+code not maintained within the product’s code base.</li>
 </ul></li>
-<li><strong>[QC.Uni02]</strong> Units SHOULD reside in the repository code base but separated from the main code.</li>
+<li><strong>[QC.Uni02]</strong> Units SHOULD reside in the repository code base but separated from the main
+code.</li>
 <li><strong>[QC.Uni03]</strong> Unit testing coverage MUST be checked on change basis.</li>
 <li><strong>[QC.Uni04]</strong> Unit testing coverage MUST be automated.
 <ul>
-<li><strong>[QC.Uni04.1]</strong> When working on automated testing, the use of testing doubles is RECOMMENDED to mimic a simplistic behaviour of objects and procedures.</li>
+<li><strong>[QC.Uni04.1]</strong> When working on automated testing, the use of testing doubles is
+RECOMMENDED to mimic a simplistic behaviour of objects and procedures.</li>
 </ul></li>
 </ul>
 <h3 id="functional-testing-qc.fun">Functional Testing [QC.Fun]</h3>
-<p>Functional testing involves the verification of the software component’s identified functionality, based on requested requirements and agreed design specifications. This type of software testing focus on the evaluation of the functionality that the software component exposes, leaving apart any internal design analysis or side-effects to external systems.</p>
+<p>Functional testing involves the verification of the software component’s
+identified functionality, based on requested requirements and agreed design
+specifications. This type of software testing focus on the evaluation of the
+functionality that the software component exposes, leaving apart any internal
+design analysis or side-effects to external systems.</p>
 <ul>
-<li><strong>[QC.Fun01]</strong> Functional testing SHOULD tend to cover the full set of functionality that the software component claims to provide.</li>
-<li><strong>[QC.Fun02]</strong> Functional tests SHOULD be checked automatically with the exception of those functionality that require human interaction, such as Graphical User Interfaces (GUI).</li>
-<li><strong>[QC.Fun03]</strong> When working on automated testing, the use of testing doubles is RECOMMENDED to mimic a simplistic behaviour of objects and procedures.</li>
-<li><strong>[QC.Fun04]</strong> Functional tests SHOULD reside in the software component repository code base but separated from the main code.</li>
-<li><strong>[QC.Fun05]</strong> Regression testing, that checks the conformance with previous tests, is covered at this stage by executing the complete set of functional tests available.</li>
+<li><strong>[QC.Fun01]</strong> Functional testing SHOULD tend to cover the full set of functionality that
+the software component claims to provide.</li>
+<li><strong>[QC.Fun02]</strong> Functional tests SHOULD be checked automatically with the exception of those
+functionality that require human interaction, such as Graphical User
+Interfaces (GUI).</li>
+<li><strong>[QC.Fun03]</strong> When working on automated testing, the use of testing doubles is RECOMMENDED
+to mimic a simplistic behaviour of objects and procedures.</li>
+<li><strong>[QC.Fun04]</strong> Functional tests SHOULD reside in the software component repository code
+base but separated from the main code.</li>
+<li><strong>[QC.Fun05]</strong> Regression testing, that checks the conformance with previous tests, is
+covered at this stage by executing the complete set of functional tests
+available.</li>
 <li><strong>[QC.Fun06]</strong> Functional and regression testing MUST be checked on change basis.</li>
-<li><strong>[QC.Fun07]</strong> Functional and regression testing coverage MAY NOT be suitable for automated testing.</li>
+<li><strong>[QC.Fun07]</strong> Functional and regression testing coverage MAY NOT be suitable for automated
+testing.</li>
 </ul>
 <h3 id="integration-testing-qc.int">Integration Testing [QC.Int]</h3>
-<p>Integration testing refers to the evaluation of the interactions among coupled software components or parts of a system that cooperate to achieve a given functionality.</p>
+<p>Integration testing refers to the evaluation of the interactions among coupled
+software components or parts of a system that cooperate to achieve a given
+functionality.</p>
 <ul>
-<li><strong>[QC.Int01]</strong> Integration testing outcome MUST guarantee the overall operation of the software component whenever new functionality are involved.</li>
-<li><strong>[QC.Int02]</strong> Integration testing MAY be complemented with Acceptance and Scalability testing.</li>
+<li><strong>[QC.Int01]</strong> Integration testing outcome MUST guarantee the overall operation of the
+software component whenever new functionality are involved.</li>
+<li><strong>[QC.Int02]</strong> Integration testing MAY be complemented with Acceptance and Scalability
+testing.</li>
 <li><strong>[QC.Int03]</strong> Integration testing MAY NOT be suitable for automated testing.</li>
-<li><strong>[QC.Int04]</strong> Ad-hoc pilot service infrastructures and/or local testbeds MAY be used to cope with the integration testing requirements.</li>
-<li><strong>[QC.Int05]</strong> Integration testing MAY NOT be viable to be checked on change basis, as it is likely to involve complex scenarios.</li>
+<li><strong>[QC.Int04]</strong> Ad-hoc pilot service infrastructures and/or local testbeds MAY be used to
+cope with the integration testing requirements.</li>
+<li><strong>[QC.Int05]</strong> Integration testing MAY NOT be viable to be checked on change basis, as it
+is likely to involve complex scenarios.</li>
 </ul>
 <h3 id="documentation-qc.doc">Documentation [QC.Doc]</h3>
 <ul>
 <li><strong>[QC.Doc01]</strong> Documentation MUST be treated as code.
 <ul>
-<li><strong>[QC.Doc01.1]</strong> Version controlled, it MAY reside in the same repository where the source code lies.</li>
+<li><strong>[QC.Doc01.1]</strong> Version controlled, it MAY reside in the same repository where the source
+code lies.</li>
 </ul></li>
-<li><strong>[QC.Doc02]</strong> Documentation MUST use plain text format using a markup language, such as Markdown or reStructuredText.
+<li><strong>[QC.Doc02]</strong> Documentation MUST use plain text format using a markup language, such as
+Markdown or reStructuredText.
 <ul>
-<li><strong>[QC.Doc02.1]</strong> It is RECOMMENDED that all software components delivered by the same project agree on a common markup language.</li>
+<li><strong>[QC.Doc02.1]</strong> It is RECOMMENDED that all software components delivered by the same
+project agree on a common markup language.</li>
 </ul></li>
 <li><strong>[QC.Doc03]</strong> Documentation MUST be online available in a documentation repository.
 <ul>
 <li><strong>[QC.Doc03.1]</strong> Documentation SHOULD be rendered automatically.</li>
 </ul></li>
-<li><strong>[QC.Doc04]</strong> Documentation MUST be updated on new software versions involving any substantial or minimal change in the behaviour of the application.</li>
+<li><strong>[QC.Doc04]</strong> Documentation MUST be updated on new software versions involving any
+substantial or minimal change in the behaviour of the application.</li>
 <li><strong>[QC.Doc05]</strong> Documentation MUST be updated whenever reported as inaccurate or unclear.</li>
-<li><strong>[QC.Doc06]</strong> Documentation MUST be produced according to the target audience, varying according to the software component specification. The identified types of documentation and their RECOMMENDED content are:
+<li><strong>[QC.Doc06]</strong> Documentation MUST be produced according to the target audience, varying
+according to the software component specification. The identified types of
+documentation and their RECOMMENDED content are:
 <ul>
 <li><strong>[QC.Doc06.1]</strong> README file
 <ul>
 <li>One-paragraph description of the application.</li>
-<li>A “Getting Started” step-by-step description on how to get a development environment running (prerequisites, installation).</li>
+<li>A “Getting Started” step-by-step description on how to get a
+development environment running (prerequisites, installation).</li>
 <li>Automated test execution how-to.</li>
-<li>Links to the external documentation below (production deployment, user guides).</li>
-<li>Contributing code of conduct (optionally linked to an external CONTRIBUTING file)</li>
+<li>Links to the external documentation below (production deployment,
+user guides).</li>
+<li>Contributing code of conduct (optionally linked to an external
+CONTRIBUTING file)</li>
 <li>Versioning specification.</li>
 <li>Author list and contacts.</li>
-<li>License information, with a link to the detailed description in an external LICENSE file.</li>
+<li>License information, with a link to the detailed description in an
+external LICENSE file.</li>
 <li>Acknowledgments.</li>
 </ul></li>
 <li><strong>[QC.Doc06.2]</strong> Developer
@@ -280,53 +860,96 @@ The INDIGO-DataCloud, DEEP-Hybrid-DataCloud, eXtreme-DataCloud and EOSC-Synergy 
 </ul>
 <h3 id="security-qc.sec">Security [QC.Sec]</h3>
 <ul>
-<li><strong>[QC.Sec01]</strong> Secure coding practices SHALL be applied into all the stages of a software component development lifecycle.
+<li><strong>[QC.Sec01]</strong> Secure coding practices SHALL be applied into all the stages of a software
+component development lifecycle.
 <ul>
-<li><strong>[QC.Sec01.1]</strong> Compliance with Open Web Application Security Project (OWASP) secure coding guidelines <span class="citation" data-cites="13kp1l5RC"><a href="#ref-13kp1l5RC">7</a></span> is RECOMMENDED, even for non-web applications.</li>
+<li><strong>[QC.Sec01.1]</strong> Compliance with Open Web Application Security Project (OWASP) secure
+coding guidelines <span class="citation" data-cites="13kp1l5RC"><a href="#ref-13kp1l5RC" role="doc-biblioref">15</a></span>
+is RECOMMENDED, even for non-web applications.</li>
 </ul></li>
-<li><strong>[QC.Sec02]</strong> Source code SHALL use automated linter tools to perform static application security testing (SAST) <span class="citation" data-cites="18kdpX8Tx"><a href="#ref-18kdpX8Tx">8</a></span> that flag common suspicious constructs that may cause a bug or lead to a security risk (e.g. inconsistent data structure sizes or unused resources).</li>
-<li><strong>[QC.Sec03]</strong> Dynamic application security testing (DAST) <span class="citation" data-cites="WzDw9I2K"><a href="#ref-WzDw9I2K">9</a></span> SHALL be performed from the outside, to software components in an operating state, to look for security vulnerabilities (e.g. SQL injection, cross-site scripting).</li>
-<li><strong>[QC.Sec04]</strong> Manual penetration testing MAY be part of the application security verification effort.</li>
-<li><strong>[QC.Sec05]</strong> Security code reviews [9] for certain vulnerabilities SHOULD be done as part of the identification of potential security flaws in the code. Inputs SHOULD come from automated linters and manual penetration testing results.</li>
-<li><strong>[QC.Sec06]</strong> World-writable files or directories MUST NOT be present in the product’s configuration or logging locations.</li>
-<li><strong>[QC.Sec07]</strong> World-writable files SHOULD NOT be created while the service is in operation. Whenever they are required, the relevant files MUST be documented.</li>
+<li><strong>[QC.Sec02]</strong> Source code SHALL use automated linter tools to perform static application
+security testing (SAST) <span class="citation" data-cites="18kdpX8Tx"><a href="#ref-18kdpX8Tx" role="doc-biblioref">16</a></span>
+that flag common suspicious constructs that may cause a bug or lead to a
+security risk (e.g. inconsistent data structure sizes or unused resources).</li>
+<li><strong>[QC.Sec03]</strong> Dynamic application security testing (DAST) <span class="citation" data-cites="WzDw9I2K"><a href="#ref-WzDw9I2K" role="doc-biblioref">17</a></span>
+SHALL be performed from the outside, to software components in an operating
+state, to look for security vulnerabilities (e.g. SQL injection, cross-site
+scripting).</li>
+<li><strong>[QC.Sec04]</strong> Manual penetration testing MAY be part of the application security
+verification effort.</li>
+<li><strong>[QC.Sec05]</strong> Security code reviews [9] for certain vulnerabilities SHOULD be done as part
+of the identification of potential security flaws in the code. Inputs SHOULD
+come from automated linters and manual penetration testing results.</li>
+<li><strong>[QC.Sec06]</strong> World-writable files or directories MUST NOT be present in the product’s
+configuration or logging locations.</li>
+<li><strong>[QC.Sec07]</strong> World-writable files SHOULD NOT be created while the service is in
+operation. Whenever they are required, the relevant files MUST be documented.</li>
 <li><strong>[QC.Sec08]</strong> World-readable files MUST NOT contain passwords.</li>
-<li><strong>[QC.Sec09]</strong> The services delivered SHALL adhere to any extra security policies or requirements set at the operational level.</li>
+<li><strong>[QC.Sec09]</strong> The services delivered SHALL adhere to any extra security policies or
+requirements set at the operational level.</li>
 </ul>
 <h3 id="code-review-qc.rev">Code Review [QC.Rev]</h3>
-<p>Code review implies the informal, non-automated, peer, human-based revision of any change in the source code. It appears as the last step in the change management pipeline, once the candidate change has successfully passed over the required set of change-based tests.</p>
+<p>Code review implies the informal, non-automated, peer, human-based revision of
+any change in the source code. It appears as the last step in the change
+management pipeline, once the candidate change has successfully passed over the
+required set of change-based tests.</p>
 <ul>
-<li><strong>[QC.Rev01]</strong> Code reviews MUST be done in the agreed peer review tool within the project, with the following RECOMMENDED functionality:
+<li><strong>[QC.Rev01]</strong> Code reviews MUST be done in the agreed peer review tool within the project,
+with the following RECOMMENDED functionality:
 <ul>
-<li><strong>[QC.Rev01.1]</strong> Allows general and specific comments on the line or lines that need to be reviewed.</li>
+<li><strong>[QC.Rev01.1]</strong> Allows general and specific comments on the line or lines that need to
+be reviewed.</li>
 <li><strong>[QC.Rev01.2]</strong> Shows the results of the required change-based test executions.</li>
-<li><strong>[QC.Rev01.3]</strong> Allows to prevent merges of the candidate change whenever not all the required tests are successful. Exceptions to this rule cover the third-party or upstream contributions which MAY use the existing mechanisms or tools for code review provided by the target software project. This exception MUST only be allowed whenever the external revision lifecycle does not interfere with the project deadlines.</li>
+<li><strong>[QC.Rev01.3]</strong> Allows to prevent merges of the candidate change whenever not all the
+required tests are successful.
+Exceptions to this rule cover the third-party or upstream contributions
+which MAY use the existing mechanisms or tools for code review provided by
+the target software project. This exception MUST only be allowed whenever
+the external revision lifecycle does not interfere with the project
+deadlines.</li>
 </ul></li>
-<li><strong>[QC.Rev02]</strong> Code reviews MUST be open and collaborative, allowing external expert revisions.</li>
-<li><strong>[QC.Rev03]</strong> Code reviews SHOULD be concise and use neutral language. The areas where the reviewers MAY focus are:
+<li><strong>[QC.Rev02]</strong> Code reviews MUST be open and collaborative, allowing external expert
+revisions.</li>
+<li><strong>[QC.Rev03]</strong> Code reviews SHOULD be concise and use neutral language. The areas where the
+reviewers MAY focus are:
 <ul>
-<li><strong>[QC.Rev03.1]</strong> Message description: commit message is clear, self-explanatory and describes precisely the objectives being addressed.</li>
-<li><strong>[QC.Rev03.2]</strong> Goal or scope: change is needed and/or addresses/fixes the whole set of objectives.</li>
-<li><strong>[QC.Rev03.3]</strong> Code analysis: useless statements in the code, library or modules imported but never used or code style suggestions.</li>
-<li><strong>[QC.Rev03.4]</strong> Review of required tests: current battery of tests is sufficient for validation.</li>
-<li><strong>[QC.Rev03.5]</strong> Review of documentation: whether the change SHOULD bring along a corresponding update in the documentation.</li>
+<li><strong>[QC.Rev03.1]</strong> Message description: commit message is clear, self-explanatory and
+describes precisely the objectives being addressed.</li>
+<li><strong>[QC.Rev03.2]</strong> Goal or scope: change is needed and/or addresses/fixes the whole set of
+objectives.</li>
+<li><strong>[QC.Rev03.3]</strong> Code analysis: useless statements in the code, library or modules
+imported but never used or code style suggestions.</li>
+<li><strong>[QC.Rev03.4]</strong> Review of required tests: current battery of tests is sufficient for
+validation.</li>
+<li><strong>[QC.Rev03.5]</strong> Review of documentation: whether the change SHOULD bring along a
+corresponding update in the documentation.</li>
 </ul></li>
 <li><strong>[QC.Rev04]</strong> Code reviews MUST be checked on change basis.</li>
-<li><strong>[QC.Rev05]</strong> Code reviews SHOULD assess the inherent security risk of the changes, ensuring that the security model has not been downgraded or compromised by the changes.</li>
+<li><strong>[QC.Rev05]</strong> Code reviews SHOULD assess the inherent security risk of the changes,
+ensuring that the security model has not been downgraded or compromised by
+the changes.</li>
 </ul>
 <h3 id="automated-deployment-qc.aud">Automated Deployment [QC.Aud]</h3>
 <ul>
-<li><strong>[QC.Aud01]</strong> Production-ready code SHALL be deployed as a workable system with the minimal user or system administrator interaction leveraging software configuration management (SCM) tools.</li>
+<li><strong>[QC.Aud01]</strong> Production-ready code SHALL be deployed as a workable system with the minimal
+user or system administrator interaction leveraging software configuration
+management (SCM) tools.</li>
 <li><strong>[QC.Aud02]</strong> A SCM module is treated as code.
 <ul>
-<li><strong>[QC.Aud02.1]</strong> Version controlled, it SHOULD reside in a different repository than the source code to facilitate the distribution.</li>
+<li><strong>[QC.Aud02.1]</strong> Version controlled, it SHOULD reside in a different repository than the
+source code to facilitate the distribution.</li>
 </ul></li>
-<li><strong>[QC.Aud03]</strong> It is RECOMMENDED that all software components delivered by the same project agree on a common SCM tool.
+<li><strong>[QC.Aud03]</strong> It is RECOMMENDED that all software components delivered by the same project
+agree on a common SCM tool.
 <ul>
-<li><strong>[QC.Aud03.1]</strong> However, software products are not restricted to provide a unique solution for the automated deployment.</li>
+<li><strong>[QC.Aud03.1]</strong> However, software products are not restricted to provide a unique
+solution for the automated deployment.</li>
 </ul></li>
-<li><strong>[QC.Aud04]</strong> Any change affecting the application’s deployment or operation MUST be subsequently reflected in the relevant SCM modules.</li>
-<li><strong>[QC.Aud05]</strong> Official repositories provided by the manufacturer SHOULD be used to host the SCM modules, thus augmenting the visibility and promote external collaboration.</li>
+<li><strong>[QC.Aud04]</strong> Any change affecting the application’s deployment or operation MUST be
+subsequently reflected in the relevant SCM modules.</li>
+<li><strong>[QC.Aud05]</strong> Official repositories provided by the manufacturer SHOULD be used to host
+the SCM modules, thus augmenting the visibility and promote external
+collaboration.</li>
 </ul>
 <h2 id="glossary">Glossary</h2>
 <dl>
@@ -358,52 +981,98 @@ The INDIGO-DataCloud, DEEP-Hybrid-DataCloud, eXtreme-DataCloud and EOSC-Synergy 
 <dd>Version Control System
 </dd>
 </dl>
-<h2 id="references" class="page_break_before">References</h2>
+<h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
-<div id="refs">
+<div id="refs" class="references hanging-indent" role="doc-bibliography">
+<div id="ref-IhliSZDo">
+<p>1. <strong>Sci-Hub provides access to nearly all scholarly literature</strong> <br />
+Daniel S Himmelstein, Ariel Rodriguez Romero, Jacob G Levernier, Thomas Anthony Munro, Stephen Reid McLaughlin, Bastian Greshake Tzovaras, Casey S Greene<br />
+<em>eLife</em> (2018-03-01) <a href="https://doi.org/ckcj">https://doi.org/ckcj</a> <br />
+DOI: <a href="https://doi.org/10.7554/elife.32822">10.7554/elife.32822</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29424689">29424689</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5832410">PMC5832410</a></p>
+</div>
+<div id="ref-mSMVRkoc">
+<p>2. <strong>Reproducibility of computational workflows is automated using continuous analysis</strong> <br />
+Brett K Beaulieu-Jones, Casey S Greene<br />
+<em>Nature biotechnology</em> (2017-04) <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6103790/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6103790/</a> <br />
+DOI: <a href="https://doi.org/10.1038/nbt.3780">10.1038/nbt.3780</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28288103">28288103</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6103790">PMC6103790</a></p>
+</div>
+<div id="ref-126Wi5Us4">
+<p>3. <strong>Bitcoin for the biological literature.</strong> <br />
+Douglas Heaven<br />
+<em>Nature</em> (2019-02) <a href="https://www.ncbi.nlm.nih.gov/pubmed/30718888">https://www.ncbi.nlm.nih.gov/pubmed/30718888</a> <br />
+DOI: <a href="https://doi.org/10.1038/d41586-019-00447-9">10.1038/d41586-019-00447-9</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30718888">30718888</a></p>
+</div>
+<div id="ref-QhC8yJ7V">
+<p>4. <strong>Plan S: Accelerating the transition to full and immediate Open Access to scientific publications</strong> <br />
+cOAlition S<br />
+(2018-09-04) <a href="https://www.wikidata.org/wiki/Q56458321">https://www.wikidata.org/wiki/Q56458321</a></p>
+</div>
+<div id="ref-zBPP9YKu">
+<p>5. <strong>Open access</strong> <br />
+Peter Suber<br />
+<em>MIT Press</em> (2012) <br />
+ISBN: <a href="https://worldcat.org/isbn/9780262517638">9780262517638</a></p>
+</div>
+<div id="ref-6acIRW4q">
+<p>6. <strong>Open collaborative writing with Manubot</strong> <br />
+Daniel S. Himmelstein, Vincent Rubinetti, David R. Slochower, Dongbo Hu, Venkat S. Malladi, Casey S. Greene, Anthony Gitter<br />
+<em>Manubot</em> (2020-05-25) <a href="https://greenelab.github.io/meta-review/">https://greenelab.github.io/meta-review/</a></p>
+</div>
+<div id="ref-PZMP42Ak">
+<p>7. <strong>Opportunities and obstacles for deep learning in biology and medicine</strong> <br />
+Travers Ching, Daniel S. Himmelstein, Brett K. Beaulieu-Jones, Alexandr A. Kalinin, Brian T. Do, Gregory P. Way, Enrico Ferrero, Paul-Michael Agapow, Michael Zietz, Michael M. Hoffman, … Casey S. Greene<br />
+<em>Journal of The Royal Society Interface</em> (2018-04-04) <a href="https://doi.org/gddkhn">https://doi.org/gddkhn</a> <br />
+DOI: <a href="https://doi.org/10.1098/rsif.2017.0387">10.1098/rsif.2017.0387</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29618526">29618526</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5938574">PMC5938574</a></p>
+</div>
+<div id="ref-YuJbg3zO">
+<p>8. <strong>Open collaborative writing with Manubot</strong> <br />
+Daniel S. Himmelstein, Vincent Rubinetti, David R. Slochower, Dongbo Hu, Venkat S. Malladi, Casey S. Greene, Anthony Gitter<br />
+<em>PLOS Computational Biology</em> (2019-06-24) <a href="https://doi.org/c7np">https://doi.org/c7np</a> <br />
+DOI: <a href="https://doi.org/10.1371/journal.pcbi.1007128">10.1371/journal.pcbi.1007128</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31233491">31233491</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6611653">PMC6611653</a></p>
+</div>
 <div id="ref-5VMJDbB2">
-<p>1. <strong>INDIGO-DataCloud collaboration, Initial Plan for Software Management and Pilot Services</strong><br />
+<p>9. <strong>INDIGO-DataCloud collaboration, Initial Plan for Software Management and Pilot Services</strong> <br />
 Members of the INDIGO-DataCloud collaboration<br />
 (2015) <a href="https://owncloud.indigo-datacloud.eu/index.php/s/yDklCrWjKnjutVA">https://owncloud.indigo-datacloud.eu/index.php/s/yDklCrWjKnjutVA</a></p>
 </div>
 <div id="ref-Ms8G1A12">
-<p>2. <strong>Key words for use in RFCs to Indicate Requirement Levels</strong><br />
+<p>10. <strong>Key words for use in RFCs to Indicate Requirement Levels</strong> <br />
 Scott Bradner<br />
 (1997) <a href="https://www.ietf.org/rfc/rfc2119.txt">https://www.ietf.org/rfc/rfc2119.txt</a></p>
 </div>
 <div id="ref-HdIbF8WL">
-<p>3. <strong>The Open Source Definition, URL: https://opensource.org/osd</strong><br />
+<p>11. <strong>The Open Source Definition, URL: https://opensource.org/osd</strong> <br />
 Open Source Initiative<br />
 <a href="https://opensource.org/osd">https://opensource.org/osd</a></p>
 </div>
 <div id="ref-xVJMmGVr">
-<p>4. <strong>Licenses &amp; Standards, URL: https://opensource.org/licenses</strong><br />
+<p>12. <strong>Licenses &amp; Standards, URL: https://opensource.org/licenses</strong> <br />
 Open Source Initiative<br />
 <a href="https://opensource.org/licenses">https://opensource.org/licenses</a></p>
 </div>
 <div id="ref-13UfgtMhu">
-<p>5. <strong>Semantic Versioning 2.0.0, URL: https://semver.org</strong><br />
+<p>13. <strong>Semantic Versioning 2.0.0, URL: https://semver.org</strong> <br />
 Tom Preston-Werner<br />
 <a href="https://semver.org">https://semver.org</a></p>
 </div>
 <div id="ref-AJBpTuJY">
-<p>6. <strong>Software citation principles</strong><br />
+<p>14. <strong>Software citation principles</strong> <br />
 Arfon M. Smith, Daniel S. Katz, Kyle E. Niemeyer<br />
-<em>PeerJ Computer Science</em> (2016-09-19) <a href="https://peerj.com/articles/cs-86">https://peerj.com/articles/cs-86</a><br />
+<em>PeerJ Computer Science</em> (2016-09-19) <a href="http://dx.doi.org/10.7717/peerj-cs.86">http://dx.doi.org/10.7717/peerj-cs.86</a> <br />
 DOI: <a href="https://doi.org/10.7717/peerj-cs.86">10.7717/peerj-cs.86</a></p>
 </div>
 <div id="ref-13kp1l5RC">
-<p>7. <strong>OWASP Secure Coding Practices, Quick Reference Guide, URL: https://www.owasp.org/images/0/08/OWASP_SCP_Quick_Reference_Guide_v2.pdf</strong><br />
+<p>15. <strong>OWASP Secure Coding Practices, Quick Reference Guide, URL: https://www.owasp.org/images/0/08/OWASP_SCP_Quick_Reference_Guide_v2.pdf</strong> <br />
 The OWASP Foundation<br />
 (2010) <a href="https://www.owasp.org/images/0/08/OWASP_SCP_Quick_Reference_Guide_v2.pdf">https://www.owasp.org/images/0/08/OWASP_SCP_Quick_Reference_Guide_v2.pdf</a></p>
 </div>
 <div id="ref-18kdpX8Tx">
-<p>8. <strong>Source Code Analysis Tools, URL: https://www.owasp.org/index.php/Source_Code_Analysis_Tools</strong><br />
+<p>16. <strong>Source Code Analysis Tools, URL: https://www.owasp.org/index.php/Source_Code_Analysis_Tools</strong> <br />
 The OWASP Foundation<br />
 <a href="https://www.owasp.org/index.php/Source_Code_Analysis_Tools">https://www.owasp.org/index.php/Source_Code_Analysis_Tools</a></p>
 </div>
 <div id="ref-WzDw9I2K">
-<p>9. <strong>Dynamic Application Security Testing, URL: https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools</strong><br />
+<p>17. <strong>Dynamic Application Security Testing, URL: https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools</strong> <br />
 The OWASP Foundation<br />
 <a href="https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools">https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools</a></p>
 </div>
@@ -436,17 +1105,15 @@ The OWASP Foundation<br />
         body {
             position: relative;
             box-sizing: border-box;
-            max-width: 8.5in;
             font-size: 12pt;
             line-height: 1.5;
+            max-width: 8.5in;
             margin: 20px auto;
             padding: 40px;
             border-radius: 5px;
             border: solid 1px #bdbdbd;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
             background: #ffffff;
-            word-break: all;
-            word-break: break-word;
         }
     }
 
@@ -481,8 +1148,7 @@ The OWASP Foundation<br />
 
     /* biggest heading */
     h1 {
-        margin-top: 40px;
-        margin-bottom: 30px;
+        margin: 40px 0;
         text-align: center;
     }
 
@@ -491,6 +1157,26 @@ The OWASP Foundation<br />
         margin-top: 30px;
         padding-bottom: 5px;
         border-bottom: solid 1px #bdbdbd;
+    }
+
+    /* heading font sizes */
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    h3{
+        font-size: 1.35em;
+    }
+    h4 {
+        font-size: 1.25em;
+    }
+    h5 {
+        font-size: 1.15em;
+    }
+    h6 {
+        font-size: 1em;
     }
 
     /* -------------------------------------------------- */
@@ -505,7 +1191,7 @@ The OWASP Foundation<br />
     /* manuscript title caption text (ie "automatically generated on") */
     header + p {
         text-align: center;
-        margin-top: 0;
+        margin-top: 10px;
     }
 
     /* -------------------------------------------------- */
@@ -515,7 +1201,13 @@ The OWASP Foundation<br />
     /* links */
     a {
         color: #2196f3;
-        word-break: break-all;
+        overflow-wrap: break-word;
+    }
+
+    /* normal links (not empty, not button link, not syntax highlighting link) */
+    a:not(:empty):not(.button):not(.sourceLine) {
+        padding-left: 1px;
+        padding-right: 1px;
     }
 
     /* superscripts and subscripts */
@@ -603,7 +1295,8 @@ The OWASP Foundation<br />
     }
 
     /* figure image element */
-    figure img {
+    figure > img,
+    figure > svg {
         max-width: 100%;
         display: block;
         margin-left: auto;
@@ -611,7 +1304,8 @@ The OWASP Foundation<br />
     }
 
     /* figure auto-number */
-    img + figcaption > span:first-of-type {
+    img + figcaption > span:first-of-type,
+    svg + figcaption > span:first-of-type {
         font-weight: bold;
         margin-right: 5px;
     }
@@ -635,16 +1329,14 @@ The OWASP Foundation<br />
         border: solid 1px #bdbdbd;
         padding: 10px;
         /* squash table if too wide for page by forcing line breaks */
-        /* put line break break anywhere in text */
-        word-break: break-all;
-        /* put line break between words. if not supported by browser, will fall back to break-all */
+        overflow-wrap: break-word;
         word-break: break-word;
     }
 
     /* header row and even rows */
     th,
     tr:nth-child(2n) {
-        background-color: #f5f5f5;
+        background-color: #fafafa;
     }
 
     /* odd rows */
@@ -895,7 +1587,7 @@ The OWASP Foundation<br />
     @media print {
         @page {
             /* suggested printing margin */
-            margin: 0.75in;
+            margin: 0.5in;
         }
 
         /* document and "page" elements */
@@ -904,6 +1596,48 @@ The OWASP Foundation<br />
             padding: 0;
             width: 100%;
             height: 100%;
+        }
+
+        /* "page" element */
+        body {
+            font-size: 11pt !important;
+            line-height: 1.35;
+        }
+
+        /* all headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 15px 0;
+        }
+
+        /* figures and tables */
+        figure, table {
+            font-size: 0.85em;
+        }
+
+        /* table cells */
+        th,
+        td {
+            padding: 5px;
+        }
+
+        /* shrink font awesome icons */
+        i.fas,
+        i.fab,
+        i.far,
+        i.fal {
+            transform: scale(0.85);
+        }
+
+        /* decrease banner margins */
+        .banner {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 15px;
         }
 
         /* class for centering an element vertically on its own page */
@@ -916,11 +1650,6 @@ The OWASP Foundation<br />
             vertical-align: middle;
             break-before: page;
             break-after: page;
-        }
-
-        /* <h2> heading */
-        h2 {
-            margin-top: 0;
         }
 
         /* always insert a page break before the element */
@@ -975,6 +1704,43 @@ The OWASP Foundation<br />
     }
 
     /* -------------------------------------------------- */
+    /* tablenos */
+    /* -------------------------------------------------- */
+
+    /* tablenos wrapper */
+    .tablenos {
+        /* show scrollbar on tables if necessary to prevent overflow */
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .tablenos > table {
+        /* move margins from table to table_wrapper to allow margin collapsing */
+        margin: 0;
+    }
+
+    @media only screen {
+        /* tablenos wrapper */
+        .tablenos {
+            /* show scrollbar on tables if necessary to prevent overflow */
+            overflow-x: auto !important;
+        }
+
+        .tablenos th,
+        .tablenos td {
+            overflow-wrap: unset !important;
+            word-break: unset !important;
+        }
+
+        /* table in wrapper */
+        .tablenos table,
+        .tablenos table * {
+            /* don't break table words */
+            overflow-wrap: normal !important;
+        }
+    }
+
+    /* -------------------------------------------------- */
     /* mathjax */
     /* -------------------------------------------------- */
 
@@ -1003,34 +1769,8 @@ The OWASP Foundation<br />
 
     /* equation */
     span[id^="eq:"] > span.math.display > span {
-        /* nudge to make room for equation auto-number */
-        margin-right: 40px !important;
-    }
-
-    /* -------------------------------------------------- */
-    /* table scroll plugin */
-    /* -------------------------------------------------- */
-
-    @media only screen {
-        /* table wrapper */
-        .table_wrapper {
-            /* show scrollbar on tables if necessary to prevent overflow */
-            overflow: auto;
-            width: 100%;
-            margin: 20px 0;
-        }
-
-        /* table within table wrapper */
-        .table_wrapper table,
-        .table_wrapper table * {
-            /* don't break table words */
-            word-break: normal !important;
-        }
-
-        .table_wrapper > table {
-            /* move margins from table to table_wrapper to allow margin collapsing */
-            margin: 0;
-        }
+        /* nudge to make room for equation auto-number and anchor */
+        margin-right: 60px !important;
     }
 
     /* -------------------------------------------------- */
@@ -1133,8 +1873,7 @@ The OWASP Foundation<br />
             border: solid 1px #bdbdbd;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
             background: #ffffff;
-            word-break: all;
-            word-break: break-word;
+            overflow-wrap: break-word;
         }
 
         /* tooltip copy of paragraphs and figures */
@@ -1146,7 +1885,8 @@ The OWASP Foundation<br />
         }
 
         /* tooltip copy of <img> */
-        #tooltip_content > figure > img {
+        #tooltip_content > figure > img,
+        #tooltip_content > figure > svg {
             max-height: 260px;
         }
 
@@ -1239,19 +1979,13 @@ The OWASP Foundation<br />
     /* -------------------------------------------------- */
 
     @media only screen {
-        /* toc panel when open */
+        /* toc panel */
         #toc_panel {
             box-sizing: border-box;
             position: fixed;
             top: 0;
             left: 0;
-            min-width: 260px;
-            max-width: 480px;
-            /* keep panel edge consistent distance away from "page" edge */
-            width: calc(((100vw - 8.5in) / 2) - 30px - 40px);
-            bottom: 0;
             background: #ffffff;
-            border-right: solid 1px #bdbdbd;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
             z-index: 2;
         }
@@ -1261,39 +1995,48 @@ The OWASP Foundation<br />
             min-width: 60px;
             width: 60px;
             height: 60px;
+            border-right: solid 1px #bdbdbd;
             border-bottom: solid 1px #bdbdbd;
+        }
+
+        /* toc panel when open */
+        #toc_panel[data-open="true"] {
+            min-width: 260px;
+            max-width: 480px;
+            /* keep panel edge consistent distance away from "page" edge */
+            width: calc(((100vw - 8.5in) / 2) - 30px - 40px);
+            bottom: 0;
+            border-right: solid 1px #bdbdbd;
         }
 
         /* toc panel header */
-        #toc_panel > h3 {
+        #toc_header {
             box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
             height: 60px;
             margin: 0;
             padding: 20px;
-            border-bottom: solid 1px #bdbdbd;
         }
 
-        /* toc panel when hovered */
-        #toc_panel > h3:hover {
+        /* toc panel header when hovered */
+        #toc_header:hover {
             cursor: pointer;
+        }
+
+        /* toc panel header when panel open */
+        #toc_panel[data-open="true"] > #toc_header {
+            border-bottom: solid 1px #bdbdbd;
         }
 
         /* toc open/close header button */
         #toc_button {
             margin-right: 20px;
-            vertical-align: top;
-        }
-
-        /* toc header text */
-        #toc_header_text {
-            vertical-align: top;
-            font-weight: 600;
-            position: relative;
-            top: -4px;
         }
 
         /* hide toc list and header text when closed */
-        #toc_panel[data-open="false"] #toc_header_text,
+        #toc_panel[data-open="false"] > #toc_header > *:not(#toc_button),
         #toc_panel[data-open="false"] > #toc_list {
             display: none;
         }
@@ -1394,7 +2137,7 @@ The OWASP Foundation<br />
 
     @media only screen {
         /* regular <img> in document when hovered */
-        .lightbox_document_img:hover {
+        img.lightbox_document_img:hover {
             cursor: pointer;
         }
 
@@ -1525,10 +2268,39 @@ The OWASP Foundation<br />
     /* hypothesis (annotations) plugin */
     /* -------------------------------------------------- */
 
+    /* hypothesis activation button */
+    #hypothesis_button {
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        background: #ffffff;
+        border-radius: 0;
+        border-left: solid 1px #bdbdbd;
+        border-bottom: solid 1px #bdbdbd;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        z-index: 2;
+    }
+
+    /* hypothesis button svg */
+    #hypothesis_button > svg {
+        position: relative;
+        top: -4px;
+    }
+
+    /* hypothesis annotation count */
+    #hypothesis_count {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 5px;
+    }
+
     /* side panel */
     .annotator-frame {
         width: 280px !important;
-        z-index: 0 !important;
     }
 
     /* match highlight color to rest of theme */
@@ -1546,8 +2318,12 @@ The OWASP Foundation<br />
         background: #f5f5f5 !important;
     }
 
-    /* always hide toolbar and tooltip on print */
+    /* always hide button, toolbar, and tooltip on print */
     @media only print {
+        #hypothesis_button {
+            display: none;
+        }
+
         .annotator-frame {
             display: none !important;
         }
@@ -1557,74 +2333,6 @@ The OWASP Foundation<br />
         }
     }
 </style>
-<!-- table scroll plugin -->
-
-<script>
-    (function() {
-        // /////////////////////////
-        // DESCRIPTION
-        // /////////////////////////
-
-        // This Manubot plugin allows tables that are too wide to fit within
-        // the page to have a scrollbar instead of being squashed to fit.
-
-        // /////////////////////////
-        // OPTIONS
-        // /////////////////////////
-
-        // plugin name prefix for url parameters
-        const pluginName = 'tableScroll';
-
-        // default plugin options
-        const options = {
-            // whether plugin is on or not
-            enabled: 'true'
-        };
-
-        // change options above, or override with url parameter, eg:
-        // 'manuscript.html?pluginName-enabled=false'
-
-        // /////////////////////////
-        // SCRIPT
-        // /////////////////////////
-
-        // start script
-        function start() {
-            // wrap each table in a container
-            const tables = document.querySelectorAll('table');
-            for (const table of tables)
-                wrapElement(table).classList.add('table_wrapper');
-            // table_wrapper CSS class in theme file provides scroll
-            // functionality
-        }
-
-        // wrap element in div and return div
-        function wrapElement(element) {
-            const parent = element.parentNode;
-            const wrapper = document.createElement('div');
-            parent.replaceChild(wrapper, element);
-            wrapper.appendChild(element);
-            return wrapper;
-        }
-
-        // load options from url parameters
-        function loadOptions() {
-            const url = window.location.search;
-            const params = new URLSearchParams(url);
-            for (const optionName of Object.keys(options)) {
-                const paramName = pluginName + '-' + optionName;
-                const param = params.get(paramName);
-                if (param !== '' && param !== null)
-                    options[optionName] = param;
-            }
-        }
-        loadOptions();
-
-        // start script when document is finished loading
-        if (options.enabled === 'true')
-            window.addEventListener('load', start);
-    })();
-</script>
 <!-- anchors plugin -->
 
 <script>
@@ -1650,7 +2358,7 @@ The OWASP Foundation<br />
         const options = {
             // which types of elements to add anchors next to, in
             // "document.querySelector" format
-            typesQuery: 'h1, h2, h3, figure, table',
+            typesQuery: 'h1, h2, h3, [id^="fig:"], [id^="tbl:"], [id^="eq:"]',
             // whether plugin is on or not
             enabled: 'true'
         };
@@ -1677,11 +2385,13 @@ The OWASP Foundation<br />
         function onScroll() {
             // if url has hash and user has scrolled out of view of hash
             // target, remove hash from url
+            const tolerance = 100;
             const target = getHashTarget();
             if (target) {
                 if (
-                    target.getBoundingClientRect().top > window.innerHeight ||
-                    target.getBoundingClientRect().bottom < 0
+                    target.getBoundingClientRect().top >
+                        window.innerHeight + tolerance ||
+                    target.getBoundingClientRect().bottom < 0 - tolerance
                 )
                     history.pushState(null, null, ' ');
             }
@@ -1689,24 +2399,20 @@ The OWASP Foundation<br />
 
         // add anchor to element
         function addAnchor(element) {
-            let withId; // element with unique id
             let addTo; // element to add anchor button to
 
             // if figure or table, modify withId and addTo to get expected
             // elements
-            if (element.tagName.toLowerCase() === 'figure') {
-                withId = element.querySelector('img');
+            if (element.id.indexOf('fig:') === 0) {
                 addTo = element.querySelector('figcaption');
-            } else if (element.tagName.toLowerCase() === 'table') {
-                withId =
-                    element.previousElementSibling ||
-                    element.parentNode.previousElementSibling;
+            } else if (element.id.indexOf('tbl:') === 0) {
                 addTo = element.querySelector('caption');
+            } else if (element.id.indexOf('eq:') === 0) {
+                addTo = element.querySelector('.eqnos-number');
             }
 
-            withId = withId || element;
             addTo = addTo || element;
-            const id = withId.id || withId.name || null;
+            const id = element.id || null;
 
             // do not add anchor if element doesn't have assigned id.
             // id is generated by pandoc and is assumed to be unique and
@@ -1728,17 +2434,15 @@ The OWASP Foundation<br />
         function getHashTarget() {
             const hash = window.location.hash;
             const id = hash.slice(1);
-            let target = document.querySelector(
-                '[id="' + id + '"], [name="' + id + '"]'
-            );
+            let target = document.querySelector('[id="' + id + '"]');
             if (!target)
                 return;
 
             // if figure or table, modify target to get expected element
-            if (hash.indexOf('#fig:') === 0)
-                target = target.parentNode;
-            if (hash.indexOf('#tbl:') === 0)
-                target = target.nextElementSibling;
+            if (id.indexOf('fig:') === 0)
+                target = target.querySelector('figure');
+            if (id.indexOf('tbl:') === 0)
+                target = target.querySelector('table');
 
             return target;
         }
@@ -1866,6 +2570,7 @@ The OWASP Foundation<br />
             // trigger any function listening for "onscroll" event
             window.dispatchEvent(new Event('scroll'));
             window.scrollTo(0, y);
+            document.activeElement.blur();
             element.focus();
         }
 
@@ -1873,17 +2578,15 @@ The OWASP Foundation<br />
         function getHashTarget(link) {
             const hash = link ? link.hash : window.location.hash;
             const id = hash.slice(1);
-            let target = document.querySelector(
-                '[id="' + id + '"], [name="' + id + '"]'
-            );
+            let target = document.querySelector('[id="' + id + '"]');
             if (!target)
                 return;
 
             // if figure or table, modify target to get expected element
-            if (hash.indexOf('#fig:') === 0)
-                target = target.parentNode;
-            if (hash.indexOf('#tbl:') === 0)
-                target = target.nextElementSibling;
+            if (id.indexOf('fig:') === 0)
+                target = target.querySelector('figure');
+            if (id.indexOf('tbl:') === 0)
+                target = target.querySelector('table');
 
             return target;
         }
@@ -2071,9 +2774,6 @@ The OWASP Foundation<br />
             // whether user must click off to close tooltip instead of just
             // un-hovering
             clickClose: 'false',
-            // whether to keep tooltip horizontal position when moving between
-            // prev/next occurrences
-            keepHorizontal: 'true',
             // delay (in ms) between opening and closing tooltip
             delay: '100',
             // whether plugin is on or not
@@ -2154,8 +2854,10 @@ The OWASP Foundation<br />
             // regular link click (and navigation) on second tap
             if (event.target === document.activeElement)
                 event.target.click();
-            else
+            else {
+                document.activeElement.blur();
                 event.target.focus();
+            }
             if (event.cancelable)
                 event.preventDefault();
             event.stopPropagation();
@@ -2172,22 +2874,27 @@ The OWASP Foundation<br />
             if (!event || !event.key)
                 return;
 
-            // trigger click of prev/next button
             switch (event.key) {
-            case 'ArrowLeft':
-                const prevButton = document.getElementById(
-                    'tooltip_prev_button'
-                );
-                if (prevButton)
-                    prevButton.click();
-                break;
-            case 'ArrowRight':
-                const nextButton = document.getElementById(
-                    'tooltip_next_button'
-                );
-                if (nextButton)
-                    nextButton.click();
-                break;
+                // trigger click of prev button
+                case 'ArrowLeft':
+                    const prevButton = document.getElementById(
+                        'tooltip_prev_button'
+                    );
+                    if (prevButton)
+                        prevButton.click();
+                    break;
+                // trigger click of next button
+                case 'ArrowRight':
+                    const nextButton = document.getElementById(
+                        'tooltip_next_button'
+                    );
+                    if (nextButton)
+                        nextButton.click();
+                    break;
+                // close on esc
+                case 'Escape':
+                    closeTooltip();
+                    break;
             }
         }
 
@@ -2229,12 +2936,8 @@ The OWASP Foundation<br />
 
         // open tooltip
         function openTooltip(link) {
-            // if setting is on and already-open tooltip can be found, store
-            // original x position of tooltip
-            let prevX;
-            const prevTooltip = document.getElementById('tooltip');
-            if (options.keepHorizontal === 'true' && prevTooltip)
-                prevX = getRectInPage(prevTooltip).left;
+            // delete tooltip if it exists, start fresh
+            closeTooltip();
 
             // make tooltip element
             const tooltip = makeTooltip(link);
@@ -2253,7 +2956,7 @@ The OWASP Foundation<br />
 
             // position tooltip
             const position = function() {
-                positionTooltip(link, prevX);
+                positionTooltip(link);
             };
             position();
 
@@ -2272,9 +2975,6 @@ The OWASP Foundation<br />
 
         // make tooltip
         function makeTooltip(link) {
-            // delete tooltip if it exists, start fresh
-            closeTooltip();
-
             // get target element that link points to
             const source = getSource(link);
 
@@ -2449,19 +3149,15 @@ The OWASP Foundation<br />
         function getSource(link) {
             const hash = link ? link.hash : window.location.hash;
             const id = hash.slice(1);
-            let target = document.querySelector(
-                '[id="' + id + '"], [name="' + id + '"]'
-            );
+            let target = document.querySelector('[id="' + id + '"]');
             if (!target)
                 return;
 
-            // if figure or table, modify target to get expected element
-            if (hash.indexOf('#ref-') === 0)
+            // if ref or figure, modify target to get expected element
+            if (id.indexOf('ref-') === 0)
                 target = target.querySelector('p');
-            else if (hash.indexOf('#fig:') === 0)
-                target = target.parentNode;
-            else if (hash.indexOf('#tbl:') === 0)
-                return;
+            else if (id.indexOf('fig:') === 0)
+                target = target.querySelector('figure');
 
             return target;
         }
@@ -2469,7 +3165,7 @@ The OWASP Foundation<br />
         // when prev/next arrow button is clicked
         function onPrevNextClick(link, prevNextLink) {
             if (link && prevNextLink)
-                goToElement(prevNextLink, getRectInView(link).top);
+                goToElement(prevNextLink, window.innerHeight * 0.5);
         }
 
         // scroll to and focus element
@@ -2483,6 +3179,7 @@ The OWASP Foundation<br />
             // trigger any function listening for "onscroll" event
             window.dispatchEvent(new Event('scroll'));
             window.scrollTo(0, y);
+            document.activeElement.blur();
             element.focus();
         }
 
@@ -2770,11 +3467,11 @@ The OWASP Foundation<br />
 
         // add button next to each figure
         function makeFigureButtons() {
-            const figures = document.querySelectorAll('img[id^="fig:"]');
+            const figures = document.querySelectorAll('[id^="fig:"]');
             for (const figure of figures) {
                 // get figure id and element to add button to
                 const id = figure.id;
-                const container = figure.nextElementSibling;
+                const container = figure.querySelector('figcaption') || figure;
                 const first = getFirstOccurrence(id);
 
                 // if can't find link to figure, ignore
@@ -2798,13 +3495,11 @@ The OWASP Foundation<br />
 
         // add button next to each figure
         function makeTableButtons() {
-            const tables = document.querySelectorAll('a[name^="tbl:"]');
+            const tables = document.querySelectorAll('[id^="tbl:"]');
             for (const table of tables) {
                 // get ref id and element to add button to
-                const id = table.name;
-                const container = table.nextElementSibling.querySelector(
-                    'caption'
-                );
+                const id = table.id;
+                const container = table.querySelector('caption') || table;
                 const first = getFirstOccurrence(id);
 
                 // if can't find link to table, ignore
@@ -2837,6 +3532,7 @@ The OWASP Foundation<br />
             // trigger any function listening for "onscroll" event
             window.dispatchEvent(new Event('scroll'));
             window.scrollTo(0, y);
+            document.activeElement.blur();
             element.focus();
         }
 
@@ -2985,7 +3681,7 @@ The OWASP Foundation<br />
             const links = getLinks();
             for (const link of links) {
                 // attach mouse and focus listeners to link
-                link.addEventListener('mouseover', onLinkFocus);
+                link.addEventListener('mouseenter', onLinkFocus);
                 link.addEventListener('focus', onLinkFocus);
                 link.addEventListener('mouseleave', onLinkUnhover);
             }
@@ -3027,17 +3723,9 @@ The OWASP Foundation<br />
         function getHashTarget(link) {
             const hash = link ? link.hash : window.location.hash;
             const id = hash.slice(1);
-            let target = document.querySelector(
-                '[id="' + id + '"], [name="' + id + '"]'
-            );
+            let target = document.querySelector('[id="' + id + '"]');
             if (!target)
                 return;
-
-            // if figure or table, modify target to get expected element
-            if (hash.indexOf('#fig:') === 0)
-                target = target.parentNode;
-            else if (hash.indexOf('#tbl:') === 0)
-                target = target.nextElementSibling.querySelector('caption');
 
             return target;
         }
@@ -3131,8 +3819,6 @@ The OWASP Foundation<br />
             window.addEventListener('load', start);
     })();
 </script>
-<!-- table of contents plugin -->
-
 <script>
     (function() {
         // /////////////////////////
@@ -3155,15 +3841,18 @@ The OWASP Foundation<br />
             // which types of elements to add links for, in
             // "document.querySelector" format
             typesQuery: 'h1, h2, h3',
+            // whether toc starts open. use 'true' or 'false', or 'auto' to
+            // use 'true' behavior when screen wide enough and 'false' when not
+            startOpen: 'false',
+            // whether toc closes when clicking on toc link. use 'true' or
+            // 'false', or 'auto' to use 'false' behavior when screen wide
+            // enough and 'true' when not
+            clickClose: 'auto',
             // if list item is more than this many characters, text will be
             // truncated
             charLimit: '50',
             // whether or not to show bullets next to each toc item
             bullets: 'false',
-            // whether default behavior is to be closed ('false'), open
-            // ('true'), or only open when screen wide enough to fit panel
-            // ('auto')
-            open: 'false',
             // whether plugin is on or not
             enabled: 'true'
         };
@@ -3183,15 +3872,24 @@ The OWASP Foundation<br />
             if (!panel)
                 return;
             makeEntries(panel);
+            // attach panel to document after making entries, so 'toc' heading
+            // in panel isn't included in toc
             document.body.insertBefore(panel, document.body.firstChild);
 
-            openOrClosePanel();
+            // initial panel state
+            if (
+                options.startOpen === 'true' ||
+                (options.startOpen === 'auto' && !isSmallScreen())
+            )
+                openPanel();
+            else
+                closePanel();
 
             // attach click, scroll, and hash change listeners to window
             window.addEventListener('click', onClick);
-            window.addEventListener('touchstart', onClick);
             window.addEventListener('scroll', onScroll);
             window.addEventListener('hashchange', onScroll);
+            window.addEventListener('keyup', onKeyUp);
             onScroll();
 
             // add class to push document body down out of way of toc button
@@ -3206,30 +3904,25 @@ The OWASP Foundation<br />
             return window.innerWidth < 816 + 260 * 2;
         }
 
-        // open/close panel based on option and screen size
-        function openOrClosePanel() {
-            if (
-                options.open === 'true' ||
-                (options.open === 'auto' && !isSmallScreen())
-            )
-                openPanel();
-            else
-                closePanel();
-        }
-
         // when mouse is clicked anywhere in window
         function onClick() {
-            const panel = document.getElementById('toc_panel');
-            if (!panel)
-                return;
-
-            if (panel.dataset.open === 'true')
-                openOrClosePanel();
+            if (isSmallScreen())
+                closePanel();
         }
 
         // when window is scrolled or hash changed
         function onScroll() {
             highlightViewed();
+        }
+
+        // when key pressed
+        function onKeyUp(event) {
+            if (!event || !event.key)
+                return;
+
+            // close on esc
+            if (event.key === 'Escape')
+                closePanel();
         }
 
         // find entry of currently viewed document section in toc and highlight
@@ -3285,20 +3978,19 @@ The OWASP Foundation<br />
                 panel.dataset.bullets = 'true';
 
             // create header
-            const header = document.createElement('h3');
+            const header = document.createElement('div');
+            header.id = 'toc_header';
 
             // create toc button
             const button = document.createElement('button');
             button.id = 'toc_button';
-            button.innerHTML = document.querySelector(
-                '.icon_th_list'
-            ).innerHTML;
+            button.innerHTML = document.querySelector('.icon_th_list').innerHTML;
+            button.title = 'Table of Contents';
             button.classList.add('icon_button');
 
             // create header text
-            const text = document.createElement('span');
+            const text = document.createElement('h4');
             text.innerHTML = 'Table of Contents';
-            text.id = 'toc_header_text';
 
             // create container for toc list
             const list = document.createElement('div');
@@ -3330,18 +4022,18 @@ The OWASP Foundation<br />
                 const link = document.createElement('a');
                 link.classList.add('toc_link');
                 switch (element.tagName.toLowerCase()) {
-                case 'h1':
-                    link.dataset.level = '1';
-                    break;
-                case 'h2':
-                    link.dataset.level = '2';
-                    break;
-                case 'h3':
-                    link.dataset.level = '3';
-                    break;
-                case 'h4':
-                    link.dataset.level = '4';
-                    break;
+                    case 'h1':
+                        link.dataset.level = '1';
+                        break;
+                    case 'h2':
+                        link.dataset.level = '2';
+                        break;
+                    case 'h3':
+                        link.dataset.level = '3';
+                        break;
+                    case 'h4':
+                        link.dataset.level = '4';
+                        break;
                 }
                 link.title = element.innerText;
                 let text = element.innerText;
@@ -3375,8 +4067,14 @@ The OWASP Foundation<br />
         }
 
         // when link is clicked
-        function onLinkClick() {
-            openOrClosePanel();
+        function onLinkClick(event) {
+            if (
+                options.clickClose === 'true' ||
+                (options.clickClose === 'auto' && isSmallScreen())
+            )
+                closePanel();
+            else
+                openPanel();
         }
 
         // open panel if closed, close if opened
@@ -3464,6 +4162,9 @@ The OWASP Foundation<br />
             // whether to fit image to view ('fit'), display at 100% and shrink
             // if necessary ('shrink'), or always display at 100% ('100')
             defaultZoom: 'fit',
+            // whether to zoom in/out toward center of view ('true') or mouse
+            // ('false')
+            centerZoom: 'false',
             // whether plugin is on or not
             enabled: 'true'
         };
@@ -3504,22 +4205,27 @@ The OWASP Foundation<br />
             if (!event || !event.key)
                 return;
 
-            // trigger click of prev/next button
             switch (event.key) {
-            case 'ArrowLeft':
-                const prevButton = document.getElementById(
-                    'lightbox_prev_button'
-                );
-                if (prevButton)
-                    prevButton.click();
-                break;
-            case 'ArrowRight':
-                const nextButton = document.getElementById(
-                    'lightbox_next_button'
-                );
-                if (nextButton)
-                    nextButton.click();
-                break;
+                // trigger click of prev button
+                case 'ArrowLeft':
+                    const prevButton = document.getElementById(
+                        'lightbox_prev_button'
+                    );
+                    if (prevButton)
+                        prevButton.click();
+                    break;
+                // trigger click of next button
+                case 'ArrowRight':
+                    const nextButton = document.getElementById(
+                        'lightbox_next_button'
+                    );
+                    if (nextButton)
+                        nextButton.click();
+                    break;
+                // close on esc
+                case 'Escape':
+                    closeLightbox();
+                    break;
             }
         }
 
@@ -3746,8 +4452,11 @@ The OWASP Foundation<br />
                 event.stopPropagation();
 
                 // point around which to scale img
-                const originX = window.mouseX;
-                const originY = window.mouseY;
+                const viewRect = container.getBoundingClientRect();
+                const viewX = (viewRect.left + viewRect.right) / 2;
+                const viewY = (viewRect.top + viewRect.bottom) / 2;
+                const originX = options.centerZoom === 'true' ? viewX : mouseX;
+                const originY = options.centerZoom === 'true' ? viewY : mouseY;
 
                 // get point on image under origin
                 const oldRect = img.getBoundingClientRect();
@@ -3776,7 +4485,7 @@ The OWASP Foundation<br />
             };
 
             // when container is clicked
-            function onContainerClick() {
+            function onContainerClick(event) {
                 // if container itself is target of click, and not other
                 // element above it
                 if (event.target === this)
@@ -3822,6 +4531,10 @@ The OWASP Foundation<br />
                 translateY = clickTranslateY + window.mouseY - clickMouseY;
                 updateTransform();
                 event.preventDefault();
+
+                // remove global listener if lightbox removed from document
+                if (!document.body.contains(container))
+                    window.removeEventListener('mousemove', onWindowMouseMove);
             };
 
             // when window is resized
@@ -3837,7 +4550,8 @@ The OWASP Foundation<br />
             img.addEventListener('dblclick', fit);
             img.addEventListener('mousedown', onImageMouseDown);
             container.addEventListener('wheel', onContainerWheel);
-            container.addEventListener('click', onContainerClick);
+            container.addEventListener('mousedown', onContainerClick);
+            container.addEventListener('touchstart', onContainerClick);
             window.addEventListener('mouseup', onWindowMouseUp);
             window.addEventListener('mousemove', onWindowMouseMove);
             window.addEventListener('resize', onWindowResize);
@@ -4040,19 +4754,154 @@ The OWASP Foundation<br />
         ></path>
     </svg>
 </template>
-<!-- math plugin configuration -->
+<!-- attributes plugin -->
+
+<script>
+    (function() {
+        // /////////////////////////
+        // DESCRIPTION
+        // /////////////////////////
+
+        // This Manubot plugin allows arbitrary HTML attributes to be attached
+        // to (almost) any element. Place an HTML comment inside or next to the
+        // desired element in the format <!-- $attribute="value" -->
+
+        // /////////////////////////
+        // OPTIONS
+        // /////////////////////////
+
+        // plugin name prefix for url parameters
+        const pluginName = 'attributes';
+
+        // default plugin options
+        const options = {
+            // whether plugin is on or not
+            enabled: 'true'
+        };
+
+        // change options above, or override with url parameter, eg:
+        // 'manuscript.html?pluginName-enabled=false'
+
+        // /////////////////////////
+        // SCRIPT
+        // /////////////////////////
+
+        // start script
+        function start() {
+            // get list of comments in document
+            const comments = findComments();
+
+            for(const comment of comments)
+                if (comment.parentElement)
+                    addAttributes(
+                        comment.parentElement,
+                        comment.nodeValue.trim()
+                    );
+        }
+
+        // add html attributes to specified element based on string of 
+        // html attributes and values
+        function addAttributes(element, text) {
+            // regex's for finding attribute/value pairs in the format of
+            // attribute="value" or attribute='value
+            const regex2 = /\$([a-zA-Z\-]+)?=\"(.+?)\"/;
+            const regex1 = /\$([a-zA-Z\-]+)?=\'(.+?)\'/;
+
+            // loop through attribute/value pairs
+            let match;
+            while(match = text.match(regex2) || text.match(regex1)) {
+                // get attribute and value from regex capture groups
+                let attribute = match[1];
+                let value = match[2];
+
+                // remove from string
+                text = text.substring(match.index + match[0].length);
+
+                if (!attribute || !value)
+                    break;
+
+                // set attribute of parent element
+                try {
+                    element.setAttribute(attribute, value);
+                } catch(error) {
+                    console.log(error);
+                }
+
+                // special case for colspan
+                if (attribute === 'colspan')
+                    removeTableCells(element, value);
+            }
+        }
+
+        // get list of comment elements in document
+        function findComments() {
+            const comments = [];
+
+            // iterate over comment nodes in document
+            function acceptNode(node) {
+                return NodeFilter.FILTER_ACCEPT;
+            }
+            const iterator = document.createNodeIterator(
+                document.body,
+                NodeFilter.SHOW_COMMENT,
+                acceptNode
+            );
+            let node;
+            while(node = iterator.nextNode())
+                comments.push(node);
+
+            return comments;
+        }
+
+        // remove certain number of cells after specified cell
+        function removeTableCells(cell, number) {
+            number = parseInt(number);
+            if (!number)
+                return;
+
+            // remove elements
+            for(; number > 1; number--) {
+                if (cell.nextElementSibling)
+                    cell.nextElementSibling.remove();
+            }
+        }
+
+        // load options from url parameters
+        function loadOptions() {
+            const url = window.location.search;
+            const params = new URLSearchParams(url);
+            for (const optionName of Object.keys(options)) {
+                const paramName = pluginName + '-' + optionName;
+                const param = params.get(paramName);
+                if (param !== '' && param !== null)
+                    options[optionName] = param;
+            }
+        }
+        loadOptions();
+
+        // start script when document is finished loading
+        if (options.enabled === 'true')
+            window.addEventListener('load', start);
+    })();
+</script>
+<!-- mathjax plugin configuration -->
 
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         "CommonHTML": { linebreaks: { automatic: true } },
         "HTML-CSS": { linebreaks: { automatic: true } },
-        "SVG": { linebreaks: { automatic: true } }
-    });
+        "SVG": { linebreaks: { automatic: true } },
+        "fast-preview": { disabled: true }
+  });
 </script>
 
-<!-- math plugin -->
+<!-- mathjax plugin -->
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+    integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A=="
+    crossorigin="anonymous"
+>
     // /////////////////////////
     // DESCRIPTION
     // /////////////////////////
@@ -4062,9 +4911,19 @@ The OWASP Foundation<br />
 
     // https://www.mathjax.org/
 </script>
-<!-- annotations plugin configuration -->
+<!-- annotations plugin -->
 
 <script>
+    // /////////////////////////
+    // DESCRIPTION
+    // /////////////////////////
+
+    // This third-party plugin 'Hypothesis' allows public annotation of the
+    // manuscript.
+
+    // https://web.hypothes.is/
+
+    // plugin configuration
     window.hypothesisConfig = function() {
         return {
             branding: {
@@ -4077,20 +4936,85 @@ The OWASP Foundation<br />
             }
         };
     };
+
+    // hypothesis client script
+    const embed = 'https://hypothes.is/embed.js';
+    // hypothesis annotation count query url
+    const query = 'https://api.hypothes.is/api/search?limit=0&url='
+
+    
+    // start script
+    function start() {
+        const button = makeButton();
+        document.body.insertBefore(button, document.body.firstChild);
+        insertCount(button);
+    }
+
+    // make button
+    function makeButton() {
+        // create button
+        const button = document.createElement('button');
+        button.id = 'hypothesis_button';
+        button.innerHTML = document.querySelector('.icon_hypothesis').innerHTML;
+        button.title = 'Hypothesis annotations';
+        button.classList.add('icon_button');
+
+        function onClick(event) {
+            onButtonClick(event, button);
+        }
+
+        // attach click listeners
+        button.addEventListener('click', onClick);
+
+        return button;
+    }
+
+    // insert annotations count
+    async function insertCount(button) {
+        // get annotation count from Hypothesis based on url
+        let count = '-';
+        try {
+            const canonical = document.querySelector('link[rel="canonical"]');
+            const location = window.location;
+            const url = encodeURIComponent((canonical || location).href);
+            const response = await fetch(query + url);
+            const json = await response.json();
+            count = json.total || '-';
+        } catch(error) {
+            console.log(error);
+        }
+        
+        // put count into button
+        const counter = document.createElement('span');
+        counter.id = 'hypothesis_count';
+        counter.innerHTML = count;
+        button.title = 'View ' + count + ' Hypothesis annotations';
+        button.append(counter);
+    }
+
+    // when button is clicked
+    function onButtonClick(event, button) {
+        const script = document.createElement('script');
+        script.src = embed;
+        document.body.append(script);
+        button.remove();
+    }
+
+    window.addEventListener('load', start);
 </script>
 
-<!-- annotations plugin -->
+<!-- hypothesis icon -->
 
-<script src='https://hypothes.is/embed.js'>
-    // /////////////////////////
-    // DESCRIPTION
-    // /////////////////////////
-
-    // This third-party plugin 'Hypothesis' allows public annotation of the
-    // manuscript.
-
-    // https://web.hypothes.is/
-</script>
+<template class="icon_hypothesis">
+    <!-- modified from: https://simpleicons.org/icons/hypothesis.svg / https://git.io/Jf1VB -->
+    <svg width="16" height="16" viewBox="0 0 24 24" tabindex="-1">
+        <path
+            fill="currentColor"
+            d="M3.43 0C2.5 0 1.72 .768 1.72 1.72V18.86C1.72 19.8 2.5 20.57 3.43 20.57H9.38L12 24L14.62 20.57H20.57C21.5 20.57 22.29 19.8 22.29 18.86V1.72C22.29 .77 21.5 0 20.57 0H3.43M5.14 3.43H7.72V9.43S8.58 7.72 10.28 7.72C12 7.72 13.74 8.57 13.74 11.24V17.14H11.16V12C11.16 10.61 10.28 10.07 9.43 10.29C8.57 10.5 7.72 11.41 7.72 13.29V17.14H5.14V3.43M18 13.72C18.95 13.72 19.72 14.5 19.72 15.42A1.71 1.71 0 0 1 18 17.13A1.71 1.71 0 0 1 16.29 15.42C16.29 14.5 17.05 13.71 18 13.71Z"
+            tabindex="-1"
+        ></path>
+    </svg>
+</template>
 <!-- analytics plugin -->
 
 <!-- copy and paste code from Google Analytics or similar service here -->
