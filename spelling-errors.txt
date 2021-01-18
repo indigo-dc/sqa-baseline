@@ -5,7 +5,6 @@ aliqua
 aliquip
 amet
 anim
-API
 assignement
 Aud
 aute
@@ -44,6 +43,7 @@ fugiat
 Giacinto
 Gomes
 hoc
+IAST
 IFCA
 incididunt
 INFN
@@ -60,7 +60,6 @@ linters
 Lorem
 magna
 mariojmdavid
-Metadata
 mollit
 nisi
 nostrud
@@ -95,8 +94,5 @@ unreviewed
 VCS
 velit
 veniam
-versioned
-Versioning
 voluptate
 Wor
-Workflow

@@ -11,7 +11,7 @@ keywords:
 - software deployment
 - agile development
 lang: en-US
-date-meta: '2021-01-14'
+date-meta: '2021-01-18'
 author-meta:
 - Pablo Orviz
 - Alvaro Lopez
@@ -29,8 +29,8 @@ header-includes: |-
   <meta name="citation_title" content="A set of Common Software Quality Assurance Baseline Criteria for Research Projects" />
   <meta property="og:title" content="A set of Common Software Quality Assurance Baseline Criteria for Research Projects" />
   <meta property="twitter:title" content="A set of Common Software Quality Assurance Baseline Criteria for Research Projects" />
-  <meta name="dc.date" content="2021-01-14" />
-  <meta name="citation_publication_date" content="2021-01-14" />
+  <meta name="dc.date" content="2021-01-18" />
+  <meta name="citation_publication_date" content="2021-01-18" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -63,9 +63,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://indigo-dc.github.io/sqa-baseline/" />
   <meta name="citation_pdf_url" content="https://indigo-dc.github.io/sqa-baseline/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://indigo-dc.github.io/sqa-baseline/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://indigo-dc.github.io/sqa-baseline/v/c9afe6556b22a286a01ddf8319b39f77e18fd4e6/" />
-  <meta name="manubot_html_url_versioned" content="https://indigo-dc.github.io/sqa-baseline/v/c9afe6556b22a286a01ddf8319b39f77e18fd4e6/" />
-  <meta name="manubot_pdf_url_versioned" content="https://indigo-dc.github.io/sqa-baseline/v/c9afe6556b22a286a01ddf8319b39f77e18fd4e6/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://indigo-dc.github.io/sqa-baseline/v/1424d23fea9454e900de508685c9271bc4632343/" />
+  <meta name="manubot_html_url_versioned" content="https://indigo-dc.github.io/sqa-baseline/v/1424d23fea9454e900de508685c9271bc4632343/" />
+  <meta name="manubot_pdf_url_versioned" content="https://indigo-dc.github.io/sqa-baseline/v/1424d23fea9454e900de508685c9271bc4632343/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -93,10 +93,10 @@ _A DOI-citable version of this manuscript is available at <http://hdl.handle.net
 
 <small><em>
 This manuscript
-([permalink](https://indigo-dc.github.io/sqa-baseline/v/c9afe6556b22a286a01ddf8319b39f77e18fd4e6/))
+([permalink](https://indigo-dc.github.io/sqa-baseline/v/1424d23fea9454e900de508685c9271bc4632343/))
 was automatically generated
-from [indigo-dc/sqa-baseline@c9afe65](https://github.com/indigo-dc/sqa-baseline/tree/c9afe6556b22a286a01ddf8319b39f77e18fd4e6)
-on January 14, 2021.
+from [indigo-dc/sqa-baseline@1424d23](https://github.com/indigo-dc/sqa-baseline/tree/1424d23fea9454e900de508685c9271bc4632343)
+on January 18, 2021 with the use of <https://gitlab.com/manubot/rootstock/>.
 </em></small>
 
 ## Authors
@@ -480,19 +480,20 @@ useful for *warnings* - [manubot.org](https://manubot.org/)
 ## Document Log
 
 | Issue | Date | Comment |
-|----------|----------|----------|
+|-------|------|---------|
 | v1.0 | 31/01/2018 | First draft version |
 | v2.0 | 05/02/2018 | Updated criteria |
 | v3.0 | 20/12/2019 | Code management section, metadata for software |
 | v3.1 | 05/03/2020 | Add tags/names for each criteria |
 | v3.2 | 23/04/2020 | Add EOSC-Synergy to copyright |
+| v3.3 | 15/10/2020 | Fix issues: #32, #46, #47, #48, #49, #51 |
 
 
 ## Introduction and Purpose
 
 This document has been tailored upon the recommendations and requirements found
 in the Initial Plan for Software Management and Pilot Services deliverable
-@url:https://owncloud.indigo-datacloud.eu/index.php/s/yDklCrWjKnjutVA,
+[@url:https://owncloud.indigo-datacloud.eu/index.php/s/yDklCrWjKnjutVA],
 produced by the INDIGO-DataCloud project. These guidelines evolved throughout
 the project’s lifetime and are being extended in the
 EOSC-Synergy, DEEP-Hybrid-DataCloud and eXtreme DataCloud subsequent projects. The result is
@@ -506,9 +507,10 @@ with future software engineering practices and security recommendations.
 ## Goals
 
 1. Set the base of minimum SQA criteria that a software developed within EOSC
-development project SHOULD fulfill.
+development project MUST fulfill.
 2. Enhance the visibility, accessibility and distribution of the produced
-source code through the alignment to the Open Source Definition.
+source code through the alignment to the
+Open Source Definition [@https://opensource.org/osd].
 3. Promote code style standards to deliver good quality source code emphasizing
 its readability and reusability.
 4. Improve the quality and reliability of software by covering different
@@ -529,7 +531,7 @@ assessment.
 
 The keywords “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”,
 “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be
-interpreted as described in RFC 2119 @url:https://www.ietf.org/rfc/rfc2119.txt.
+interpreted as described in RFC 2119 [@https://www.rfc-editor.org/info/rfc2119].
 
 
 ## Quality Criteria
@@ -565,9 +567,9 @@ production infrastructures, reducing the likelihood of service disruption.
 * **[QC.Lic01]** As open-source software, source code MUST adhere to an open-source license
   to be freely used, modified and distributed by others.
   * **[QC.Lic01.1]** Non-licensed software is exclusive copyright by default.
-* **[QC.Lic02]** License MUST be compliant with the Open Source Definition @url:https://opensource.org/osd.
+* **[QC.Lic02]** License MUST be compliant with the Open Source Definition [@https://opensource.org/osd].
   * **[QC.Lic02.1]** RECOMMENDED licenses are listed in the Open Source Initiative portal
-    under the Popular Licenses category @url:https://opensource.org/licenses.
+    under the Popular Licenses category [@https://opensource.org/licenses].
 * **[QC.Lic03]** Licenses MUST be physically present (e.g. as a LICENSE file) in the root of
   all the source code repositories related to the software component.
 
@@ -592,7 +594,7 @@ A change-based approach is accomplished with a branching model.
     merged into the main branch and versioned. At that point in time, main
     and secondary branches are aligned. This step SHOULD mark a production
     release.
-* **[QC.Wor04]** Semantic Versioning @url:https://semver.org specification is RECOMMENDED for
+* **[QC.Wor04]** Semantic Versioning [@https://semver.org] specification is RECOMMENDED for
   tagging the production releases.
 
 ### Code Management [QC.Man]
@@ -644,7 +646,7 @@ programming language being used.
 ### Code metadata [QC.Met]
 
 Metadata for the software component provides a way to achieve its full identification,
-thus making software citation viable [@url:http://dx.doi.org/10.7717/peerj-cs.86].
+thus making software citation viable [@doi:10.7717/peerj-cs.86].
 It allows the assignement of a Digital Object Identifier (DOI) and is key
 towards preservation, discovery, reuse, and attribution of the software component.
 
@@ -670,6 +672,27 @@ early detection of failures in the development cycle.
   * **[QC.Uni04.1]** When working on automated testing, the use of testing doubles is
     RECOMMENDED to mimic a simplistic behaviour of objects and procedures.
 
+### Integration Testing [QC.Int]
+
+Integration testing refers to the evaluation of the interactions among coupled
+software components or parts of a system that cooperate to achieve a given
+functionality.
+
+* **[QC.Int01]** Integration testing outcome MUST guarantee the overall operation of the
+  software component whenever new functionality are involved.
+* **[QC.Int02]** Integration testing MAY be complemented with Acceptance and Scalability
+  testing.
+* **[QC.Int03]** Integration testing MUST NOT rely on non-operational or
+out-of-the-warranty services.
+  * **[QC.Int03.1]** On lack of automation, pilot service infrastructures or
+  local testbeds MAY be used.
+  * **[QC.Int03.2]** In the presence of CI environments, integration tests
+  SHOULD be suitable for the automated testing.
+* **[QC.Int04]** Ad-hoc pilot service infrastructures and/or local testbeds MAY be used to 
+  cope with the integration testing requirements.
+* **[QC.Int05]** Integration testing MAY NOT be viable to be checked on change basis, as it
+  is likely to involve complex scenarios.
+
 ### Functional Testing [QC.Fun]
 
 Functional testing involves the verification of the software component’s
@@ -694,21 +717,16 @@ design analysis or side-effects to external systems.
 * **[QC.Fun07]** Functional and regression testing coverage MAY NOT be suitable for automated
   testing.
 
-### Integration Testing [QC.Int]
+### Test-Driven Development (TDD)
 
-Integration testing refers to the evaluation of the interactions among coupled
-software components or parts of a system that cooperate to achieve a given
-functionality.
+Test-Driven Development [@isbn:9780321146533], is a software development process relying on software
+requirements being converted to test cases before software is fully developed,
+and tracking all software development by repeatedly testing the software against
+all test cases. This is opposed to software being developed first and test cases
+created later.
 
-* **[QC.Int01]** Integration testing outcome MUST guarantee the overall operation of the
-  software component whenever new functionality are involved.
-* **[QC.Int02]** Integration testing MAY be complemented with Acceptance and Scalability
-  testing.
-* **[QC.Int03]** Integration testing MAY NOT be suitable for automated testing.
-* **[QC.Int04]** Ad-hoc pilot service infrastructures and/or local testbeds MAY be used to 
-  cope with the integration testing requirements.
-* **[QC.Int05]** Integration testing MAY NOT be viable to be checked on change basis, as it
-  is likely to involve complex scenarios.
+* **[QC.Tdd01]** Software requirements SHOULD be converted to test cases, and these
+  test cases SHOULD be checked automatically. 
 
 ### Documentation [QC.Doc]
 
@@ -768,35 +786,45 @@ functionality.
 * **[QC.Sec01]** Secure coding practices SHALL be applied into all the stages of a software
   component development lifecycle.
   * **[QC.Sec01.1]** Compliance with Open Web Application Security Project (OWASP) secure
-    coding guidelines @url:https://www.owasp.org/images/0/08/OWASP_SCP_Quick_Reference_Guide_v2.pdf
+    coding guidelines
+    [@https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content]
     is RECOMMENDED, even for non-web applications.
 * **[QC.Sec02]** Source code SHALL use automated linter tools to perform static application
-  security testing (SAST) @url:https://www.owasp.org/index.php/Source_Code_Analysis_Tools
+  security testing (SAST) [@https://owasp.org/www-community/Source_Code_Analysis_Tools]
   that flag common suspicious constructs that may cause a bug or lead to a
   security risk (e.g. inconsistent data structure sizes or unused resources).
-* **[QC.Sec03]** Dynamic application security testing (DAST) @url:https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools
+* **[QC.Sec03]** Dynamic application security testing (DAST)
+  [@https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools]
   SHALL be performed from the outside, to software components in an operating
   state, to look for security vulnerabilities (e.g. SQL injection, cross-site
   scripting).
-* **[QC.Sec04]** Manual penetration testing MAY be part of the application security
+* **[QC.Sec04]** Interactive Application Security Testing (IAST)
+  [@https://www.veracode.com/security/interactive-application-security-testing-iast],
+  analyzes code for security vulnerabilities while the app is run by an automated test.
+  IAST SHOULD be performed to software components in an operating state, while Functional
+  Testing **[QC.Fun]**, is running.
+* **[QC.Sec05]** Manual penetration testing MAY be part of the application security
   verification effort.
-* **[QC.Sec05]** Security code reviews [9] for certain vulnerabilities SHOULD be done as part
+* **[QC.Sec06]** Security code reviews
+  [@https://owasp.org/www-project-code-review-guide/migrated_content]
+  for certain vulnerabilities SHOULD be done as part
   of the identification of potential security flaws in the code. Inputs SHOULD
   come from automated linters and manual penetration testing results.
-* **[QC.Sec06]** World-writable files or directories MUST NOT be present in the product’s
+* **[QC.Sec07]** World-writable files or directories MUST NOT be present in the product’s
   configuration or logging locations.
-* **[QC.Sec07]** World-writable files SHOULD NOT be created while the service is in
+* **[QC.Sec08]** World-writable files SHOULD NOT be created while the service is in
   operation. Whenever they are required, the relevant files MUST be documented.
-* **[QC.Sec08]** World-readable files MUST NOT contain passwords.
-* **[QC.Sec09]** The services delivered SHALL adhere to any extra security policies or
+* **[QC.Sec09]** World-readable files MUST NOT contain passwords.
+* **[QC.Sec10]** The services delivered SHALL adhere to any extra security policies or
   requirements set at the operational level.
 
 ### Code Review [QC.Rev]
 
 Code review implies the informal, non-automated, peer, human-based revision of
-any change in the source code. It appears as the last step in the change
-management pipeline, once the candidate change has successfully passed over the
-required set of change-based tests.
+any change in the source code
+[@https://owasp.org/www-project-code-review-guide/migrated_content].
+It appears as the last step in the change management pipeline, once the candidate
+change has successfully passed over the required set of change-based tests.
 
 * **[QC.Rev01]** Code reviews MUST be done in the agreed peer review tool within the project,
   with the following RECOMMENDED functionality:
@@ -862,6 +890,9 @@ __DAST__
 __EOSC__
 : European Open Science Cloud
 
+__IAST__
+: Interactive Application Security Testing
+
 __OWASP__
 : Open Web Application Security Project
 
@@ -873,6 +904,9 @@ __SCM__
 
 __SQA__
 : Software Quality Assurance
+
+__TDD__
+: Test-Driven Development
 
 __VCS__
 : Version Control System

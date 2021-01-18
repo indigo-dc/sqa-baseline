@@ -10,7 +10,7 @@
   <meta name="author" content="Mario David" />
   <meta name="author" content="Jorge Gomes" />
   <meta name="author" content="Giacinto Donvito" />
-  <meta name="dcterms.date" content="2021-01-14" />
+  <meta name="dcterms.date" content="2021-01-18" />
   <meta name="keywords" content="research software, software quality assurance, software lifecycle, devops, software automation, software quality baseline, software testing, software deployment, agile development" />
   <title>A set of Common Software Quality Assurance Baseline Criteria for Research Projects</title>
   <style>
@@ -95,8 +95,8 @@
   <meta name="citation_title" content="A set of Common Software Quality Assurance Baseline Criteria for Research Projects" />
   <meta property="og:title" content="A set of Common Software Quality Assurance Baseline Criteria for Research Projects" />
   <meta property="twitter:title" content="A set of Common Software Quality Assurance Baseline Criteria for Research Projects" />
-  <meta name="dc.date" content="2021-01-14" />
-  <meta name="citation_publication_date" content="2021-01-14" />
+  <meta name="dc.date" content="2021-01-18" />
+  <meta name="citation_publication_date" content="2021-01-18" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -129,9 +129,9 @@
   <meta name="citation_fulltext_html_url" content="https://indigo-dc.github.io/sqa-baseline/" />
   <meta name="citation_pdf_url" content="https://indigo-dc.github.io/sqa-baseline/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://indigo-dc.github.io/sqa-baseline/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://indigo-dc.github.io/sqa-baseline/v/c9afe6556b22a286a01ddf8319b39f77e18fd4e6/" />
-  <meta name="manubot_html_url_versioned" content="https://indigo-dc.github.io/sqa-baseline/v/c9afe6556b22a286a01ddf8319b39f77e18fd4e6/" />
-  <meta name="manubot_pdf_url_versioned" content="https://indigo-dc.github.io/sqa-baseline/v/c9afe6556b22a286a01ddf8319b39f77e18fd4e6/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://indigo-dc.github.io/sqa-baseline/v/1424d23fea9454e900de508685c9271bc4632343/" />
+  <meta name="manubot_html_url_versioned" content="https://indigo-dc.github.io/sqa-baseline/v/1424d23fea9454e900de508685c9271bc4632343/" />
+  <meta name="manubot_pdf_url_versioned" content="https://indigo-dc.github.io/sqa-baseline/v/1424d23fea9454e900de508685c9271bc4632343/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -158,10 +158,10 @@
 <p><em>A DOI-citable version of this manuscript is available at <a href="http://hdl.handle.net/10261/160086" class="uri">http://hdl.handle.net/10261/160086</a></em>.</p>
 <p><small><em>
 This manuscript
-(<a href="https://indigo-dc.github.io/sqa-baseline/v/c9afe6556b22a286a01ddf8319b39f77e18fd4e6/">permalink</a>)
+(<a href="https://indigo-dc.github.io/sqa-baseline/v/1424d23fea9454e900de508685c9271bc4632343/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/indigo-dc/sqa-baseline/tree/c9afe6556b22a286a01ddf8319b39f77e18fd4e6">indigo-dc/sqa-baseline@c9afe65</a>
-on January 14, 2021.
+from <a href="https://github.com/indigo-dc/sqa-baseline/tree/1424d23fea9454e900de508685c9271bc4632343">indigo-dc/sqa-baseline@1424d23</a>
+on January 18, 2021 with the use of <a href="https://gitlab.com/manubot/rootstock/" class="uri">https://gitlab.com/manubot/rootstock/</a>.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -437,7 +437,7 @@ White background specified to serve as a backdrop for transparent sections of th
 </tbody>
 </table>
 </div>
-<div id="tbl:c38fc4b9-4f5a-4973-b077-d542d0bccc36" class="tablenos">
+<div id="tbl:878e0b6d-6cb7-4d6f-850a-2789958e94a6" class="tablenos">
 <table>
 <caption><span>Table 3:</span> A table with merged cells using the <code>attributes</code> plugin.
 </caption>
@@ -553,12 +553,17 @@ useful for <em>warnings</em> - <a href="https://manubot.org/">manubot.org</a></s
 <td>23/04/2020</td>
 <td>Add EOSC-Synergy to copyright</td>
 </tr>
+<tr class="even">
+<td>v3.3</td>
+<td>15/10/2020</td>
+<td>Fix issues: #32, #46, #47, #48, #49, #51</td>
+</tr>
 </tbody>
 </table>
 <h2 id="introduction-and-purpose">Introduction and Purpose</h2>
 <p>This document has been tailored upon the recommendations and requirements found
 in the Initial Plan for Software Management and Pilot Services deliverable
-<span class="citation" data-cites="5VMJDbB2"><a href="#ref-5VMJDbB2" role="doc-biblioref">9</a></span>,
+<span class="citation" data-cites="5VMJDbB2">[<a href="#ref-5VMJDbB2" role="doc-biblioref">9</a>]</span>,
 produced by the INDIGO-DataCloud project. These guidelines evolved throughout
 the project’s lifetime and are being extended in the
 EOSC-Synergy, DEEP-Hybrid-DataCloud and eXtreme DataCloud subsequent projects. The result is
@@ -570,9 +575,10 @@ with future software engineering practices and security recommendations.</p>
 <h2 id="goals">Goals</h2>
 <ol type="1">
 <li>Set the base of minimum SQA criteria that a software developed within EOSC
-development project SHOULD fulfill.</li>
+development project MUST fulfill.</li>
 <li>Enhance the visibility, accessibility and distribution of the produced
-source code through the alignment to the Open Source Definition.</li>
+source code through the alignment to the
+Open Source Definition <span class="citation" data-cites="HdIbF8WL">[<a href="#ref-HdIbF8WL" role="doc-biblioref">10</a>]</span>.</li>
 <li>Promote code style standards to deliver good quality source code emphasizing
 its readability and reusability.</li>
 <li>Improve the quality and reliability of software by covering different
@@ -591,7 +597,7 @@ assessment.</li>
 <h2 id="notational-conventions">Notational Conventions</h2>
 <p>The keywords “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”,
 “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be
-interpreted as described in RFC 2119 <span class="citation" data-cites="Ms8G1A12"><a href="#ref-Ms8G1A12" role="doc-biblioref">10</a></span>.</p>
+interpreted as described in RFC 2119 <span class="citation" data-cites="e4CC51Rz">[<a href="#ref-e4CC51Rz" role="doc-biblioref">11</a>]</span>.</p>
 <h2 id="quality-criteria">Quality Criteria</h2>
 <p>The following sections describe the quality conventions and best practices that
 apply to the development phase of a software component within the EOSC
@@ -626,10 +632,10 @@ to be freely used, modified and distributed by others.
 <ul>
 <li><strong>[QC.Lic01.1]</strong> Non-licensed software is exclusive copyright by default.</li>
 </ul></li>
-<li><strong>[QC.Lic02]</strong> License MUST be compliant with the Open Source Definition <span class="citation" data-cites="HdIbF8WL"><a href="#ref-HdIbF8WL" role="doc-biblioref">11</a></span>.
+<li><strong>[QC.Lic02]</strong> License MUST be compliant with the Open Source Definition <span class="citation" data-cites="HdIbF8WL">[<a href="#ref-HdIbF8WL" role="doc-biblioref">10</a>]</span>.
 <ul>
 <li><strong>[QC.Lic02.1]</strong> RECOMMENDED licenses are listed in the Open Source Initiative portal
-under the Popular Licenses category <span class="citation" data-cites="xVJMmGVr"><a href="#ref-xVJMmGVr" role="doc-biblioref">12</a></span>.</li>
+under the Popular Licenses category <span class="citation" data-cites="xVJMmGVr">[<a href="#ref-xVJMmGVr" role="doc-biblioref">12</a>]</span>.</li>
 </ul></li>
 <li><strong>[QC.Lic03]</strong> Licenses MUST be physically present (e.g. as a LICENSE file) in the root of
 all the source code repositories related to the software component.</li>
@@ -660,7 +666,7 @@ merged into the main branch and versioned. At that point in time, main
 and secondary branches are aligned. This step SHOULD mark a production
 release.</li>
 </ul></li>
-<li><strong>[QC.Wor04]</strong> Semantic Versioning <span class="citation" data-cites="13UfgtMhu"><a href="#ref-13UfgtMhu" role="doc-biblioref">13</a></span> specification is RECOMMENDED for
+<li><strong>[QC.Wor04]</strong> Semantic Versioning <span class="citation" data-cites="13UfgtMhu">[<a href="#ref-13UfgtMhu" role="doc-biblioref">13</a>]</span> specification is RECOMMENDED for
 tagging the production releases.</li>
 </ul>
 <h3 id="code-management-qc.man">Code Management [QC.Man]</h3>
@@ -722,7 +728,7 @@ each candidate change in the source code.</li>
 </ul>
 <h3 id="code-metadata-qc.met">Code metadata [QC.Met]</h3>
 <p>Metadata for the software component provides a way to achieve its full identification,
-thus making software citation viable <span class="citation" data-cites="AJBpTuJY">[<a href="#ref-AJBpTuJY" role="doc-biblioref">14</a>]</span>.
+thus making software citation viable <span class="citation" data-cites="BrOt8n62">[<a href="#ref-BrOt8n62" role="doc-biblioref">14</a>]</span>.
 It allows the assignement of a Digital Object Identifier (DOI) and is key
 towards preservation, discovery, reuse, and attribution of the software component.</p>
 <ul>
@@ -751,6 +757,28 @@ code.</li>
 RECOMMENDED to mimic a simplistic behaviour of objects and procedures.</li>
 </ul></li>
 </ul>
+<h3 id="integration-testing-qc.int">Integration Testing [QC.Int]</h3>
+<p>Integration testing refers to the evaluation of the interactions among coupled
+software components or parts of a system that cooperate to achieve a given
+functionality.</p>
+<ul>
+<li><strong>[QC.Int01]</strong> Integration testing outcome MUST guarantee the overall operation of the
+software component whenever new functionality are involved.</li>
+<li><strong>[QC.Int02]</strong> Integration testing MAY be complemented with Acceptance and Scalability
+testing.</li>
+<li><strong>[QC.Int03]</strong> Integration testing MUST NOT rely on non-operational or
+out-of-the-warranty services.
+<ul>
+<li><strong>[QC.Int03.1]</strong> On lack of automation, pilot service infrastructures or
+local testbeds MAY be used.</li>
+<li><strong>[QC.Int03.2]</strong> In the presence of CI environments, integration tests
+SHOULD be suitable for the automated testing.</li>
+</ul></li>
+<li><strong>[QC.Int04]</strong> Ad-hoc pilot service infrastructures and/or local testbeds MAY be used to
+cope with the integration testing requirements.</li>
+<li><strong>[QC.Int05]</strong> Integration testing MAY NOT be viable to be checked on change basis, as it
+is likely to involve complex scenarios.</li>
+</ul>
 <h3 id="functional-testing-qc.fun">Functional Testing [QC.Fun]</h3>
 <p>Functional testing involves the verification of the software component’s
 identified functionality, based on requested requirements and agreed design
@@ -774,20 +802,15 @@ available.</li>
 <li><strong>[QC.Fun07]</strong> Functional and regression testing coverage MAY NOT be suitable for automated
 testing.</li>
 </ul>
-<h3 id="integration-testing-qc.int">Integration Testing [QC.Int]</h3>
-<p>Integration testing refers to the evaluation of the interactions among coupled
-software components or parts of a system that cooperate to achieve a given
-functionality.</p>
+<h3 id="test-driven-development-tdd">Test-Driven Development (TDD)</h3>
+<p>Test-Driven Development <span class="citation" data-cites="G9TtUkFA">[<a href="#ref-G9TtUkFA" role="doc-biblioref">15</a>]</span>, is a software development process relying on software
+requirements being converted to test cases before software is fully developed,
+and tracking all software development by repeatedly testing the software against
+all test cases. This is opposed to software being developed first and test cases
+created later.</p>
 <ul>
-<li><strong>[QC.Int01]</strong> Integration testing outcome MUST guarantee the overall operation of the
-software component whenever new functionality are involved.</li>
-<li><strong>[QC.Int02]</strong> Integration testing MAY be complemented with Acceptance and Scalability
-testing.</li>
-<li><strong>[QC.Int03]</strong> Integration testing MAY NOT be suitable for automated testing.</li>
-<li><strong>[QC.Int04]</strong> Ad-hoc pilot service infrastructures and/or local testbeds MAY be used to
-cope with the integration testing requirements.</li>
-<li><strong>[QC.Int05]</strong> Integration testing MAY NOT be viable to be checked on change basis, as it
-is likely to involve complex scenarios.</li>
+<li><strong>[QC.Tdd01]</strong> Software requirements SHOULD be converted to test cases, and these
+test cases SHOULD be checked automatically.</li>
 </ul>
 <h3 id="documentation-qc.doc">Documentation [QC.Doc]</h3>
 <ul>
@@ -864,35 +887,45 @@ external LICENSE file.</li>
 component development lifecycle.
 <ul>
 <li><strong>[QC.Sec01.1]</strong> Compliance with Open Web Application Security Project (OWASP) secure
-coding guidelines <span class="citation" data-cites="13kp1l5RC"><a href="#ref-13kp1l5RC" role="doc-biblioref">15</a></span>
+coding guidelines
+<span class="citation" data-cites="4dWdwpMx">[<a href="#ref-4dWdwpMx" role="doc-biblioref">16</a>]</span>
 is RECOMMENDED, even for non-web applications.</li>
 </ul></li>
 <li><strong>[QC.Sec02]</strong> Source code SHALL use automated linter tools to perform static application
-security testing (SAST) <span class="citation" data-cites="18kdpX8Tx"><a href="#ref-18kdpX8Tx" role="doc-biblioref">16</a></span>
+security testing (SAST) <span class="citation" data-cites="NkFxEpFJ">[<a href="#ref-NkFxEpFJ" role="doc-biblioref">17</a>]</span>
 that flag common suspicious constructs that may cause a bug or lead to a
 security risk (e.g. inconsistent data structure sizes or unused resources).</li>
-<li><strong>[QC.Sec03]</strong> Dynamic application security testing (DAST) <span class="citation" data-cites="WzDw9I2K"><a href="#ref-WzDw9I2K" role="doc-biblioref">17</a></span>
+<li><strong>[QC.Sec03]</strong> Dynamic application security testing (DAST)
+<span class="citation" data-cites="WzDw9I2K">[<a href="#ref-WzDw9I2K" role="doc-biblioref">18</a>]</span>
 SHALL be performed from the outside, to software components in an operating
 state, to look for security vulnerabilities (e.g. SQL injection, cross-site
 scripting).</li>
-<li><strong>[QC.Sec04]</strong> Manual penetration testing MAY be part of the application security
+<li><strong>[QC.Sec04]</strong> Interactive Application Security Testing (IAST)
+<span class="citation" data-cites="rOjwGLXC">[<a href="#ref-rOjwGLXC" role="doc-biblioref">19</a>]</span>,
+analyzes code for security vulnerabilities while the app is run by an automated test.
+IAST SHOULD be performed to software components in an operating state, while Functional
+Testing <strong>[QC.Fun]</strong>, is running.</li>
+<li><strong>[QC.Sec05]</strong> Manual penetration testing MAY be part of the application security
 verification effort.</li>
-<li><strong>[QC.Sec05]</strong> Security code reviews [9] for certain vulnerabilities SHOULD be done as part
+<li><strong>[QC.Sec06]</strong> Security code reviews
+<span class="citation" data-cites="WcTAxPJy">[<a href="#ref-WcTAxPJy" role="doc-biblioref">20</a>]</span>
+for certain vulnerabilities SHOULD be done as part
 of the identification of potential security flaws in the code. Inputs SHOULD
 come from automated linters and manual penetration testing results.</li>
-<li><strong>[QC.Sec06]</strong> World-writable files or directories MUST NOT be present in the product’s
+<li><strong>[QC.Sec07]</strong> World-writable files or directories MUST NOT be present in the product’s
 configuration or logging locations.</li>
-<li><strong>[QC.Sec07]</strong> World-writable files SHOULD NOT be created while the service is in
+<li><strong>[QC.Sec08]</strong> World-writable files SHOULD NOT be created while the service is in
 operation. Whenever they are required, the relevant files MUST be documented.</li>
-<li><strong>[QC.Sec08]</strong> World-readable files MUST NOT contain passwords.</li>
-<li><strong>[QC.Sec09]</strong> The services delivered SHALL adhere to any extra security policies or
+<li><strong>[QC.Sec09]</strong> World-readable files MUST NOT contain passwords.</li>
+<li><strong>[QC.Sec10]</strong> The services delivered SHALL adhere to any extra security policies or
 requirements set at the operational level.</li>
 </ul>
 <h3 id="code-review-qc.rev">Code Review [QC.Rev]</h3>
 <p>Code review implies the informal, non-automated, peer, human-based revision of
-any change in the source code. It appears as the last step in the change
-management pipeline, once the candidate change has successfully passed over the
-required set of change-based tests.</p>
+any change in the source code
+<span class="citation" data-cites="WcTAxPJy">[<a href="#ref-WcTAxPJy" role="doc-biblioref">20</a>]</span>.
+It appears as the last step in the change management pipeline, once the candidate
+change has successfully passed over the required set of change-based tests.</p>
 <ul>
 <li><strong>[QC.Rev01]</strong> Code reviews MUST be done in the agreed peer review tool within the project,
 with the following RECOMMENDED functionality:
@@ -965,6 +998,9 @@ collaboration.</li>
 <dt><strong>EOSC</strong></dt>
 <dd>European Open Science Cloud
 </dd>
+<dt><strong>IAST</strong></dt>
+<dd>Interactive Application Security Testing
+</dd>
 <dt><strong>OWASP</strong></dt>
 <dd>Open Web Application Security Project
 </dd>
@@ -976,6 +1012,9 @@ collaboration.</li>
 </dd>
 <dt><strong>SQA</strong></dt>
 <dd>Software Quality Assurance
+</dd>
+<dt><strong>TDD</strong></dt>
+<dd>Test-Driven Development
 </dd>
 <dt><strong>VCS</strong></dt>
 <dd>Version Control System
@@ -1035,15 +1074,15 @@ DOI: <a href="https://doi.org/10.1371/journal.pcbi.1007128">10.1371/journal.pcbi
 Members of the INDIGO-DataCloud collaboration<br />
 (2015) <a href="https://owncloud.indigo-datacloud.eu/index.php/s/yDklCrWjKnjutVA">https://owncloud.indigo-datacloud.eu/index.php/s/yDklCrWjKnjutVA</a></p>
 </div>
-<div id="ref-Ms8G1A12">
-<p>10. <strong>Key words for use in RFCs to Indicate Requirement Levels</strong> <br />
-Scott Bradner<br />
-(1997) <a href="https://www.ietf.org/rfc/rfc2119.txt">https://www.ietf.org/rfc/rfc2119.txt</a></p>
-</div>
 <div id="ref-HdIbF8WL">
-<p>11. <strong>The Open Source Definition, URL: https://opensource.org/osd</strong> <br />
+<p>10. <strong>The Open Source Definition, URL: https://opensource.org/osd</strong> <br />
 Open Source Initiative<br />
 <a href="https://opensource.org/osd">https://opensource.org/osd</a></p>
+</div>
+<div id="ref-e4CC51Rz">
+<p>11. <strong>Key words for use in RFCs to Indicate Requirement Levels</strong> <br />
+S. Bradner<br />
+(1997) <a href="https://www.rfc-editor.org/info/rfc2119">https://www.rfc-editor.org/info/rfc2119</a></p>
 </div>
 <div id="ref-xVJMmGVr">
 <p>12. <strong>Licenses &amp; Standards, URL: https://opensource.org/licenses</strong> <br />
@@ -1055,26 +1094,36 @@ Open Source Initiative<br />
 Tom Preston-Werner<br />
 <a href="https://semver.org">https://semver.org</a></p>
 </div>
-<div id="ref-AJBpTuJY">
+<div id="ref-BrOt8n62">
 <p>14. <strong>Software citation principles</strong> <br />
-Arfon M. Smith, Daniel S. Katz, Kyle E. Niemeyer<br />
-<em>PeerJ Computer Science</em> (2016-09-19) <a href="http://dx.doi.org/10.7717/peerj-cs.86">http://dx.doi.org/10.7717/peerj-cs.86</a> <br />
+Arfon M. Smith, Daniel S. Katz, Kyle E. Niemeyer, FORCE11 Software Citation Working Group<br />
+<em>PeerJ Computer Science</em> (2016-09-19) <a href="https://doi.org/bw3g">https://doi.org/bw3g</a> <br />
 DOI: <a href="https://doi.org/10.7717/peerj-cs.86">10.7717/peerj-cs.86</a></p>
 </div>
-<div id="ref-13kp1l5RC">
-<p>15. <strong>OWASP Secure Coding Practices, Quick Reference Guide, URL: https://www.owasp.org/images/0/08/OWASP_SCP_Quick_Reference_Guide_v2.pdf</strong> <br />
-The OWASP Foundation<br />
-(2010) <a href="https://www.owasp.org/images/0/08/OWASP_SCP_Quick_Reference_Guide_v2.pdf">https://www.owasp.org/images/0/08/OWASP_SCP_Quick_Reference_Guide_v2.pdf</a></p>
+<div id="ref-G9TtUkFA">
+<p>15. <strong>Test-driven development: by example</strong> <br />
+Kent Beck<br />
+<em>Addison-Wesley</em> (2003) <br />
+ISBN: <a href="https://worldcat.org/isbn/9780321146533">9780321146533</a></p>
 </div>
-<div id="ref-18kdpX8Tx">
-<p>16. <strong>Source Code Analysis Tools, URL: https://www.owasp.org/index.php/Source_Code_Analysis_Tools</strong> <br />
-The OWASP Foundation<br />
-<a href="https://www.owasp.org/index.php/Source_Code_Analysis_Tools">https://www.owasp.org/index.php/Source_Code_Analysis_Tools</a></p>
+<div id="ref-4dWdwpMx">
+<p>16. <strong>OWASP Secure Coding Practices-Quick Reference Guide</strong> <a href="https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content.html">https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content.html</a></p>
+</div>
+<div id="ref-NkFxEpFJ">
+<p>17. <strong>Source Code Analysis Tools | OWASP</strong> <a href="https://owasp.org/www-community/Source_Code_Analysis_Tools">https://owasp.org/www-community/Source_Code_Analysis_Tools</a></p>
 </div>
 <div id="ref-WzDw9I2K">
-<p>17. <strong>Dynamic Application Security Testing, URL: https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools</strong> <br />
+<p>18. <strong>Dynamic Application Security Testing, URL: https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools</strong> <br />
 The OWASP Foundation<br />
 <a href="https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools">https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools</a></p>
+</div>
+<div id="ref-rOjwGLXC">
+<p>19. <strong>What is IAST? Interactive Application Security Testing</strong> <br />
+Veracode<br />
+<a href="https://www.veracode.com/security/interactive-application-security-testing-iast">https://www.veracode.com/security/interactive-application-security-testing-iast</a></p>
+</div>
+<div id="ref-WcTAxPJy">
+<p>20. <strong>OWASP Code Review Guide</strong> <a href="https://owasp.org/www-project-code-review-guide/migrated_content.html">https://owasp.org/www-project-code-review-guide/migrated_content.html</a></p>
 </div>
 </div>
 <!-- default theme -->
