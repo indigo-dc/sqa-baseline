@@ -5,6 +5,7 @@ aliqua
 aliquip
 amet
 anim
+API
 assignement
 Aud
 aute
@@ -60,6 +61,7 @@ linters
 Lorem
 magna
 mariojmdavid
+metadata
 mollit
 nisi
 nostrud
@@ -94,5 +96,8 @@ unreviewed
 VCS
 velit
 veniam
+versioned
+Versioning
 voluptate
 Wor
+Workflow

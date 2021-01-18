@@ -130,14 +130,14 @@
       }
     ],
     "ci_source": {
-      "provider": "github",
+      "provider": "travis",
       "repo_slug": "indigo-dc/sqa-baseline",
       "repo_owner": "indigo-dc",
       "repo_name": "sqa-baseline",
       "commit": "1424d23fea9454e900de508685c9271bc4632343",
       "triggering_commit": "1424d23fea9454e900de508685c9271bc4632343",
-      "build_url": "https://github.com/indigo-dc/sqa-baseline/commit/1424d23fea9454e900de508685c9271bc4632343/checks",
-      "job_url": "https://github.com/indigo-dc/sqa-baseline/runs/run3"
+      "build_url": "https://travis-ci.org/indigo-dc/sqa-baseline/builds/755003798",
+      "job_url": "https://travis-ci.org/indigo-dc/sqa-baseline/jobs/755003799"
     },
     "html_url": "https://indigo-dc.github.io/sqa-baseline/",
     "pdf_url": "https://indigo-dc.github.io/sqa-baseline/manuscript.pdf",
