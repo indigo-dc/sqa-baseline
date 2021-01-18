@@ -1,5 +1,6 @@
 Acc
 Acknowledgements
+API
 assignement
 Aud
 bavoided
@@ -30,6 +31,7 @@ lifecycle
 linter
 linters
 mariojmdavid
+metadata
 Notational
 Orviz
 OWASP
@@ -45,4 +47,7 @@ SQA
 testbeds
 unreviewed
 VCS
+versioned
+Versioning
 Wor
+Workflow
