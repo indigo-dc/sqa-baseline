@@ -21,6 +21,28 @@ authors:
       - Spanish National Research Council (CSIC)
       - Institute of Physics of Cantabria (IFCA)
   -
+    github: mariojmdavid
+    name: Mario David
+    orcid: 0000-0003-1802-5356
+    email: mario@lip.pt
+    affiliations:
+      - Laboratory of Instrumentation and Experimental Particle Physics (LIP)
+  -
+    name: Isabel Campos
+    github: isabel-campos-plasencia
+    orcid: 0000-0002-9350-0383
+    email: isabel@campos-it.es
+    affiliations:
+      - Spanish National Research Council (CSIC)
+      - Institute of Physics of Cantabria (IFCA)
+  -
+    name: Germán Moltó
+    github: gmolto
+    orcid: 0000-0002-8049-253X
+    email: gmolto@dsic.upv.es
+    affiliations:
+      - Universitat Politècnica de València (UPV)
+  -
     github: alvaro.lopez
     name: Alvaro Lopez
     orcid: 0000-0002-0013-4602
@@ -35,13 +57,6 @@ authors:
     email: cristina.aiftimiei@cnaf.infn.it
     affiliations:
       -  National Institute of Nuclear Physics (INFN)
-  -
-    github: mariojmdavid
-    name: Mario David
-    orcid: 0000-0003-1802-5356
-    email: mario@lip.pt
-    affiliations:
-      - Laboratory of Instrumentation and Experimental Particle Physics (LIP)
   -
     github: jorge-lip
     name: Jorge Gomes
