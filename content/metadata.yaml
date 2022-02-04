@@ -11,47 +11,69 @@ keywords:
   - software deployment
   - agile development
 lang: en-US
-author_info:
+authors:
   -
-    github: orviz
     name: Pablo Orviz
+    github: orviz
     orcid: 0000-0002-2473-6405
     email: orviz@ifca.unican.es
     affiliations:
       - Spanish National Research Council (CSIC)
       - Institute of Physics of Cantabria (IFCA)
   -
-    github: alvaro.lopez
+    name: Mario David
+    github: mariojmdavid
+    orcid: 0000-0003-1802-5356
+    email: david@lip.pt
+    affiliations:
+      - Laboratory of Instrumentation and Experimental Particle Physics (LIP)
+  -
+    name: Isabel Campos
+    github: isabel-campos-plasencia
+    orcid: 0000-0002-9350-0383
+    email: isabel@campos-it.es
+    affiliations:
+      - Spanish National Research Council (CSIC)
+      - Institute of Physics of Cantabria (IFCA)
+  -
+    name: Jorge Gomes
+    github: jorge-lip
+    orcid: 0000-0002-9142-2596
+    email: jorge@lip.pt
+    affiliations:
+      - Laboratory of Instrumentation and Experimental Particle Physics (LIP)
+  -
+    name: Germán Moltó
+    github: gmolto
+    orcid: 0000-0002-8049-253X
+    email: gmolto@dsic.upv.es
+    affiliations:
+      - Universitat Politècnica de València (UPV)
+  -
+    name: Vyacheslav Tykhonov
+    github: 4tikhonov
+    orcid:  0000-0001-9447-9830
+    email: vyacheslav.tykhonov@dans.knaw.nl
+    affiliations:
+      - DANS-KNAW
+  -
+    name: Doina Cristina Duma
+    github: caifti
+    orcid: 0000-0002-0124-4870
+    email: cristina.aiftimiei@cnaf.infn.it
+    affiliations:
+      -  National Institute of Nuclear Physics (INFN)
+  -
     name: Alvaro Lopez
+    github: alvaro.lopez
     orcid: 0000-0002-0013-4602
     email: aloga@ifca.unican.es
     affiliations:
       - Spanish National Research Council (CSIC)
       - Institute of Physics of Cantabria (IFCA)
   -
-    github: caifti
-    name: Doina Cristina Duma
-    orcid: 0000-0002-0124-4870
-    email: cristina.aiftimiei@cnaf.infn.it
-    affiliations:
-      -  National Institute of Nuclear Physics (INFN)
-  -
-    github: mariojmdavid
-    name: Mario David
-    orcid: 0000-0003-1802-5356
-    email: mario@lip.pt
-    affiliations:
-      - Laboratory of Instrumentation and Experimental Particle Physics (LIP)
-  -
-    github: jorge-lip
-    name: Jorge Gomes
-    orcid: 0000-0002-9142-2596
-    email: jorge@lip.pt
-    affiliations:
-      - Laboratory of Instrumentation and Experimental Particle Physics (LIP)
-  -
-    github:
     name: Giacinto Donvito
+    github:
     orcid: 0000-0002-0628-1080
     email: giacinto.donvito@ba.infn.it
     affiliations:
