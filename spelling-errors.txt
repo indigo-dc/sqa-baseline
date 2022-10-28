@@ -1,12 +1,10 @@
 Acc
 Acknowledgements
 Ansible
-Aud
 caifti
 Cantabria
 cff
 checkCitable
-checkLicense
 checkstyle
 citable
 CLI
@@ -65,6 +63,7 @@ runtime
 SAST
 SCM
 SDLC
+SPDX
 SQA
 SQAaaS
 tikhonov
