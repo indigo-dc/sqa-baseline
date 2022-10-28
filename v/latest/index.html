@@ -13,7 +13,7 @@
   <meta name="author" content="Doina Cristina Duma" />
   <meta name="author" content="Alvaro Lopez" />
   <meta name="author" content="Giacinto Donvito" />
-  <meta name="dcterms.date" content="2022-02-04" />
+  <meta name="dcterms.date" content="2022-10-28" />
   <meta name="keywords" content="research software, software quality assurance, software lifecycle, devops, software automation, software quality baseline, software testing, software deployment, agile development" />
   <title>A set of Common Software Quality Assurance Baseline Criteria for Research Projects</title>
   <style>
@@ -55,8 +55,8 @@
   <meta name="citation_title" content="A set of Common Software Quality Assurance Baseline Criteria for Research Projects" />
   <meta property="og:title" content="A set of Common Software Quality Assurance Baseline Criteria for Research Projects" />
   <meta property="twitter:title" content="A set of Common Software Quality Assurance Baseline Criteria for Research Projects" />
-  <meta name="dc.date" content="2022-02-04" />
-  <meta name="citation_publication_date" content="2022-02-04" />
+  <meta name="dc.date" content="2022-10-28" />
+  <meta name="citation_publication_date" content="2022-10-28" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -99,9 +99,9 @@
   <meta name="citation_fulltext_html_url" content="https://indigo-dc.github.io/sqa-baseline/" />
   <meta name="citation_pdf_url" content="https://indigo-dc.github.io/sqa-baseline/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://indigo-dc.github.io/sqa-baseline/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://indigo-dc.github.io/sqa-baseline/v/5ff4a5bed9b789e0ecebc0a102acce29408715ee/" />
-  <meta name="manubot_html_url_versioned" content="https://indigo-dc.github.io/sqa-baseline/v/5ff4a5bed9b789e0ecebc0a102acce29408715ee/" />
-  <meta name="manubot_pdf_url_versioned" content="https://indigo-dc.github.io/sqa-baseline/v/5ff4a5bed9b789e0ecebc0a102acce29408715ee/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://indigo-dc.github.io/sqa-baseline/v/ff9bf3765e5a5023aeac5a4d752c0d68aaa3d857/" />
+  <meta name="manubot_html_url_versioned" content="https://indigo-dc.github.io/sqa-baseline/v/ff9bf3765e5a5023aeac5a4d752c0d68aaa3d857/" />
+  <meta name="manubot_pdf_url_versioned" content="https://indigo-dc.github.io/sqa-baseline/v/ff9bf3765e5a5023aeac5a4d752c0d68aaa3d857/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -121,10 +121,10 @@
 <p><em>A DOI-citable version of this manuscript is available at <a href="http://hdl.handle.net/10261/160086" class="uri">http://hdl.handle.net/10261/160086</a></em>.</p>
 <p><small><em>
 This manuscript
-(<a href="https://indigo-dc.github.io/sqa-baseline/v/5ff4a5bed9b789e0ecebc0a102acce29408715ee/">permalink</a>)
+(<a href="https://indigo-dc.github.io/sqa-baseline/v/ff9bf3765e5a5023aeac5a4d752c0d68aaa3d857/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/indigo-dc/sqa-baseline/tree/5ff4a5bed9b789e0ecebc0a102acce29408715ee">indigo-dc/sqa-baseline@5ff4a5b</a>
-on February 4, 2022 with the use of <a href="https://gitlab.com/manubot/rootstock/" class="uri">https://gitlab.com/manubot/rootstock/</a>.
+from <a href="https://github.com/indigo-dc/sqa-baseline/tree/ff9bf3765e5a5023aeac5a4d752c0d68aaa3d857">indigo-dc/sqa-baseline@ff9bf37</a>
+on October 28, 2022 with the use of <a href="https://gitlab.com/manubot/rootstock/" class="uri">https://gitlab.com/manubot/rootstock/</a>.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -216,9 +216,9 @@ grant agreement number 653549, 777435, 777367 and 857647 respectively.</p>
 <h1 class="page_break_before" id="document-log">Document Log</h1>
 <table>
 <colgroup>
-<col style="width: 31%" />
-<col style="width: 27%" />
-<col style="width: 40%" />
+<col style="width: 10%" />
+<col style="width: 17%" />
+<col style="width: 71%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -262,6 +262,11 @@ grant agreement number 653549, 777435, 777367 and 857647 respectively.</p>
 <td>v4.0</td>
 <td>02/02/2022</td>
 <td>Add annex, spell check, Fix issues: #7, #35, #50, #57, #59, #60, #61, #63, #64, #65, #66, #67, #69, #70, #71, #72, #73, #74, #75, #76, #77, #78, #80, #81</td>
+</tr>
+<tr class="even">
+<td>v4.1</td>
+<td>24/10/2022</td>
+<td>update pipeline tools, Fix issues: #68, #83, #85, #88, #90, #91, #92</td>
 </tr>
 </tbody>
 </table>
@@ -311,7 +316,8 @@ continuous integration approach. Changes in the source code, trigger automated b
 new contributions in order to validate them before being added to the software component code base.
 Consequently, software components are more eligible for deployment in production infrastructures,
 reducing the likelihood of service disruption.</p>
-<h2 id="code-accessibility-qc.acc">4.1. Code Accessibility [QC.Acc]</h2>
+<h2 id="code-handling">4.1. Code handling</h2>
+<h3 id="code-accessibility-qc.acc">4.1.1. Code Accessibility [QC.Acc]</h3>
 <ul>
 <li><p><strong>[QC.Acc01]</strong> Following the open-source model, the source code being produced <strong>MUST</strong> be open
 and publicly available to promote the adoption and augment the visibility of the software
@@ -324,211 +330,7 @@ project agree on a common VCS.</li>
 <li><p><strong>[QC.Acc03]</strong> Source code produced within the scope of a broader development project <strong>SHOULD</strong>
 reside in a common organization of a version control repository hosting service.</p></li>
 </ul>
-<h2 id="licensing-qc.lic">4.2. Licensing [QC.Lic]</h2>
-<ul>
-<li><p><strong>[QC.Lic01]</strong> As open-source software, source code <strong>MUST</strong> adhere to an open-source license to
-be freely used, modified and distributed by others.</p>
-<ul>
-<li><strong>[QC.Lic01.1]</strong> Non-licensed software is exclusive copyright by default.</li>
-</ul></li>
-<li><p><strong>[QC.Lic02]</strong> License <strong>MUST</strong> be compliant with the Open Source Definition
-<span class="citation" data-cites="HdIbF8WL">[<a href="#ref-HdIbF8WL" role="doc-biblioref">3</a>]</span>.</p>
-<ul>
-<li><strong>[QC.Lic02.1]</strong> <strong>RECOMMENDED</strong> licenses are listed in the Open Source Initiative portal under
-the Popular Licenses category <span class="citation" data-cites="xVJMmGVr">[<a href="#ref-xVJMmGVr" role="doc-biblioref">5</a>]</span>.</li>
-</ul></li>
-<li><p><strong>[QC.Lic03]</strong> Licenses <strong>MUST</strong> be physically present (e.g. as a LICENSE file) in the root of all
-the source code repositories related to the software component.</p></li>
-</ul>
-<h2 id="code-style-qc.sty">4.3. Code Style [QC.Sty]</h2>
-<p>Code style requirements pursue the correct maintenance of the source code by the common agreement of
-a series of style conventions. These vary based on the programming language being used.</p>
-<ul>
-<li><p><strong>[QC.Sty01]</strong> Each individual software product <strong>MUST</strong> comply with community-driven or de-facto
-code style standards for the programming languages being used.</p>
-<ul>
-<li><strong>[QC.Sty01.1]</strong> Compliance with multiple complementary standards <strong>MAY</strong> exist.</li>
-</ul></li>
-<li><p><strong>[QC.Sty02]</strong> Custom code style guidelines <strong>SHOULD</strong> be avoided, only considered in the
-hypothetical event of programming languages without existing community style standards.</p>
-<ul>
-<li><p><strong>[QC.Sty02.1]</strong> Custom styles <strong>MUST</strong> be documented by defining each convention and its
-expected output.</p></li>
-<li><p><strong>[QC.Sty02.2]</strong> Custom styles <strong>SHOULD</strong> evolve over time towards a more consistent definition.</p></li>
-</ul></li>
-<li><p><strong>[QC.Sty03]</strong> Exceptions of individual conventions from the main definition are allowed but
-<strong>SHOULD</strong> be avoided</p>
-<ul>
-<li><strong>[QC.Sty03.1]</strong> Absence of standard conventions <strong>SHOULD</strong> be justified and tracked.</li>
-</ul></li>
-<li><p><strong>[QC.Sty04]</strong> Code style compliance testing <strong>MUST</strong> be automated and <strong>MUST</strong> be triggered for
-each candidate change in the source code.</p></li>
-</ul>
-<h2 id="code-metadata-qc.met">4.4. Code metadata [QC.Met]</h2>
-<p>Metadata for the software component provides a way to achieve its full identification, thus making
-software citation viable <span class="citation" data-cites="BrOt8n62">[<a href="#ref-BrOt8n62" role="doc-biblioref">6</a>]</span>. It allows the assignment of a Digital Object
-Identifier (DOI) and is key towards preservation, discovery, reuse, and attribution of the software
-component.</p>
-<ul>
-<li><strong>[QC.Met01]</strong> A metadata file <strong>SHOULD</strong> exist along side the code, under its VCS. The metadata
-file <strong>SHOULD</strong> be updated when needed, as is the case of a new version.</li>
-</ul>
-<h2 id="unit-testing-qc.uni">4.5. Unit Testing [QC.Uni]</h2>
-<p>Unit testing evaluates all the possible flows in the internal design of the code, so that its
-behavior becomes apparent. It is a key type of testing for early detection of failures in the
-development cycle.</p>
-<ul>
-<li><p><strong>[QC.Uni01]</strong> Minimum acceptable code coverage threshold <strong>SHOULD</strong> be 70%.</p>
-<ul>
-<li><p><strong>[QC.Uni01.1]</strong> Unit testing coverage <strong>SHOULD</strong> be higher for those sections of the code
-identified as critical by the developers, such as units part of a security module.</p></li>
-<li><p><strong>[QC.Uni01.2]</strong> Unit testing coverage <strong>MAY</strong> be lower for external libraries or pieces of code
-not maintained within the product’s code base.</p></li>
-</ul></li>
-<li><p><strong>[QC.Uni02]</strong> Units <strong>SHOULD</strong> reside in the repository code but separated from the main code.</p></li>
-<li><p><strong>[QC.Uni03]</strong> Unit testing coverage <strong>MUST</strong> be checked on change basis.</p></li>
-<li><p><strong>[QC.Uni04]</strong> Unit testing coverage <strong>MUST</strong> be automated.</p>
-<ul>
-<li><strong>[QC.Uni04.1]</strong> When working on automated testing, the use of testing doubles is
-<strong>RECOMMENDED</strong> to mimic a simplistic behavior of objects and procedures (c.f. section 4.6.).</li>
-</ul></li>
-</ul>
-<h2 id="test-harness-qc.har">4.6. Test Harness [QC.Har]</h2>
-<p>In software development, a test harness
-<span class="citation" data-cites="18HEHu1mB">[<a href="#ref-18HEHu1mB" role="doc-biblioref">7</a>]</span>, is a collection of software
-and test data used by developers to unit test software models during development. A test harness
-will specifically refer to test doubles, which are programs that interact with the software being
-tested. Once a test harness is used to execute a test, they can also utilize a test library to
-generate reports.</p>
-<p>It is also a simple form of Integration Testing, where interaction and integration with external
-components are substituted by a Double.</p>
-<p>Test Double is a generic term for any case where you replace a production object for testing
-purposes. There are various kinds of double <span class="citation" data-cites="1DBB5Stor">[<a href="#ref-1DBB5Stor" role="doc-biblioref">8</a>]</span>:</p>
-<ul>
-<li><p><strong>Dummy objects</strong> are passed around but never actually used. Usually they are just used to fill
-parameter lists.</p></li>
-<li><p><strong>Fake objects</strong> actually have working implementations, but usually take some shortcut which makes
-them not suitable for production (such as an InMemoryTestDatabase).</p></li>
-<li><p><strong>Stubs</strong> provide canned answers to calls made during the test, usually not responding at all to
-anything outside what’s programmed in for the test.</p></li>
-<li><p><strong>Spies</strong> are stubs that also record some information based on how they were called. One form of
-this might be an email service that records how many messages where sent.</p></li>
-<li><p><strong>Mocks</strong> are pre-programmed with expectations which form a specification of the calls they are
-expected to receive. They can throw an exception if they receive a call they don’t expect and are
-checked during verification to ensure they got all the calls they were expecting.</p></li>
-</ul>
-<p>As such the following criteria is defined for Test Harness:</p>
-<ul>
-<li><p><strong>[QC.Har01]</strong> When working on automated testing, the use of Test Doubles is <strong>RECOMMENDED</strong> to
-mimic a simplistic behavior of objects and procedures.</p></li>
-<li><p><strong>[QC.Har02]</strong> Test Doubles <strong>SHOULD</strong> reside in the software component repository code base but
-separated from the main code.</p></li>
-<li><p><strong>[QC.Har03]</strong> Regression testing, that checks the conformance with previous tests, <strong>SHOULD</strong> be
-covered at this stage by executing the complete set of Test Doubles available.</p></li>
-<li><p><strong>[QC.Har04]</strong> Test Doubles and regression, <strong>MUST</strong> be checked on change basis.</p></li>
-</ul>
-<h2 id="test-driven-development-qc.tdd">4.7. Test-Driven Development [QC.Tdd]</h2>
-<p>Test-Driven Development <span class="citation" data-cites="G9TtUkFA">[<a href="#ref-G9TtUkFA" role="doc-biblioref">9</a>]</span>, is a software development process relying on software
-requirements being converted to test cases before software is fully developed, and tracking all
-software development by repeatedly testing the software against all test cases. This is opposed to
-software being developed first and test cases created later.</p>
-<ul>
-<li><strong>[QC.Tdd01]</strong> Software requirements <strong>SHOULD</strong> be converted to test cases, and these test cases
-<strong>SHOULD</strong> be checked automatically.</li>
-</ul>
-<h2 id="documentation-qc.doc">4.8. Documentation [QC.Doc]</h2>
-<ul>
-<li><p><strong>[QC.Doc01]</strong> Documentation <strong>MUST</strong> be treated as code.</p>
-<ul>
-<li><strong>[QC.Doc01.1]</strong> Version controlled, it <strong>MAY</strong> reside in the same repository where the source
-code lies.</li>
-</ul></li>
-<li><p><strong>[QC.Doc02]</strong> Documentation <strong>MUST</strong> use plain text format using a markup language, such as
-Markdown or reStructuredText.</p>
-<ul>
-<li><strong>[QC.Doc02.1]</strong> It is <strong>RECOMMENDED</strong> that all software components delivered by the same
-project agree on a common markup language.</li>
-</ul></li>
-<li><p><strong>[QC.Doc03]</strong> Documentation <strong>MUST</strong> be online and available in a documentation repository.</p>
-<ul>
-<li><strong>[QC.Doc03.1]</strong> Documentation <strong>SHOULD</strong> be rendered automatically.</li>
-</ul></li>
-<li><p><strong>[QC.Doc04]</strong> Documentation <strong>MUST</strong> be updated on new software versions involving any
-substantial or minimal change in the behavior of the application.</p></li>
-<li><p><strong>[QC.Doc05]</strong> Documentation <strong>MUST</strong> be updated whenever reported as inaccurate or unclear.</p></li>
-<li><p><strong>[QC.Doc06]</strong> Documentation <strong>MUST</strong> be produced according to the target audience, varying
-according to the software component specification. The identified types of documentation and their
-RECOMMENDED content are:</p>
-<ul>
-<li><p><strong>[QC.Doc06.1]</strong> README file <strong>MUST</strong> be present:</p>
-<ul>
-<li>One-paragraph description of the application.</li>
-<li>A <em>“Getting Started”</em> step-by-step description on how to get a development environment running
-(prerequisites, installation).</li>
-<li>Automated test execution how-to.</li>
-<li>Links to the external documentation below (production deployment, user guides).</li>
-<li>Versioning specification.</li>
-<li>Author list and contacts.</li>
-<li>Acknowledgments.</li>
-</ul></li>
-<li><p><strong>[QC.Doc06.2]</strong> CONTRIBUTING file <strong>MUST</strong> be present, details how external parties can
-contribute to the code and the code of conduct.</p></li>
-<li><p><strong>[QC.Doc06.3]</strong> LICENSE file <strong>MUST</strong> be present, License information with detailed description.</p></li>
-<li><p><strong>[QC.Doc06.4]</strong> Developer</p>
-<ul>
-<li>Private API documentation.</li>
-<li>Structure and interfaces.</li>
-<li>Build documentation.</li>
-</ul></li>
-<li><p><strong>[QC.Doc06.5]</strong> Deployment and Administration</p>
-<ul>
-<li>Installation and configuration guides.</li>
-<li>Service Reference Card, with the following RECOMMENDED content:
-<ul>
-<li>Brief functional description.</li>
-<li>List of processes or daemons.</li>
-<li>Init scripts and options.</li>
-<li>List of configuration files, location and example or template.</li>
-<li>Log files location and other useful audit information.</li>
-<li>List of ports.</li>
-<li>Service state information.</li>
-<li>List of cron jobs.</li>
-</ul></li>
-<li>Security information.</li>
-<li>FAQs and troubleshooting.</li>
-</ul></li>
-<li><p><strong>[QC.Doc06.6]</strong> User</p>
-<ul>
-<li>Public API documentation.</li>
-<li>Command Line Interface (CLI) reference.</li>
-</ul></li>
-</ul></li>
-</ul>
-<h2 id="security-qc.sec">4.9. Security [QC.Sec]</h2>
-<p>Security assessment is essential for any production <strong>Software</strong>. An effective implementation of the
-security requirements applies to every stage in the Software Development Life Cycle (SDLC),
-especially effective at the source code level.</p>
-<ul>
-<li><p><strong>[QC.Sec01]</strong> Secure coding practices <strong>MUST</strong> be applied into all the stages of a software
-component development lifecycle.</p>
-<ul>
-<li><strong>[QC.Sec01.1]</strong> Compliance with Open Web Application Security Project (OWASP) secure coding
-guidelines
-<span class="citation" data-cites="4dWdwpMx">[<a href="#ref-4dWdwpMx" role="doc-biblioref">10</a>]</span>
-is <strong>RECOMMENDED</strong>, even for non-web applications.</li>
-</ul></li>
-<li><p><strong>[QC.Sec02]</strong> Source code <strong>MUST</strong> use automated linter tools to perform static application
-security testing (SAST) <span class="citation" data-cites="NkFxEpFJ">[<a href="#ref-NkFxEpFJ" role="doc-biblioref">11</a>]</span> that flag
-common suspicious constructs that may cause a bug or lead to a security risk (e.g. inconsistent
-data structure sizes or unused resources).</p></li>
-<li><p><strong>[QC.Sec03]</strong> Security code reviews
-<span class="citation" data-cites="WcTAxPJy">[<a href="#ref-WcTAxPJy" role="doc-biblioref">12</a>]</span>
-for certain vulnerabilities <strong>SHOULD</strong> be done as part of the identification of potential security
-flaws in the code. Inputs <strong>SHOULD</strong> come from automated linters.</p></li>
-<li><p><strong>[QC.Sec04]</strong> World-writable files or directories <strong>MUST NOT</strong> be present in the product’s
-configuration or logging locations.</p></li>
-</ul>
-<h2 id="code-workflow-qc.wor">4.10. Code Workflow [QC.Wor]</h2>
+<h3 id="code-workflow-qc.wor">4.1.2. Code Workflow [QC.Wor]</h3>
 <p>A change-based approach is accomplished with a branching model.</p>
 <ul>
 <li><p><strong>[QC.Wor01]</strong> The main branch in the source code repository <strong>MUST</strong> maintain a working state
@@ -553,19 +355,14 @@ into the main branch and versioned. At that point in time, main and secondary br
 aligned. This step <strong>SHOULD</strong> mark a production release.</p></li>
 </ul></li>
 </ul>
-<h2 id="semantic-versioning-qc.ver">4.11. Semantic Versioning [QC.Ver]</h2>
-<ul>
-<li><strong>[QC.Ver01]</strong> Semantic Versioning <span class="citation" data-cites="13UfgtMhu">[<a href="#ref-13UfgtMhu" role="doc-biblioref">13</a>]</span> specification is <strong>RECOMMENDED</strong> for
-tagging the production releases.</li>
-</ul>
-<h2 id="code-management-qc.man">4.12. Code Management [QC.Man]</h2>
+<h3 id="code-management-qc.man">4.1.3. Code Management [QC.Man]</h3>
 <ul>
 <li><p><strong>[QC.Man01]</strong> An issue tracking system facilitates structured software development. Leveraging
 issues to track down both new enhancements and defects (bugs, documentation typos) is
 <strong>RECOMMENDED</strong>.</p>
 <ul>
-<li><p><strong>[QC.Man01.1]</strong> In addition to monitoring the internal development, issues are the best
-means for supporting users. External users <strong>SHOULD</strong> be able to create issues based on the
+<li><p><strong>[QC.Man01.1]</strong> In addition to monitoring the internal development, issues are the best means
+for supporting users. External users <strong>SHOULD</strong> be able to create issues based on the
 operational performance of the software.</p></li>
 <li><p><strong>[QC.Man01.2]</strong> The description of an issue <strong>SHOULD</strong> be concise and state clearly the
 problem. It is <strong>RECOMMENDED</strong> to add any reference to the actual problem. In the case of bugs,
@@ -588,9 +385,9 @@ purpose (e.g. if it is fixing an observed bug or adding a new feature).</p></li
 of the issues it is fixing (to eventually close them, either manually or automatically).</p></li>
 </ul></li>
 </ul>
-<h2 id="code-review-qc.rev">4.13. Code Review [QC.Rev]</h2>
+<h3 id="code-review-qc.rev">4.1.4. Code Review [QC.Rev]</h3>
 <p>Code review implies the informal, non-automated, peer review of any change in the source code
-<span class="citation" data-cites="WcTAxPJy">[<a href="#ref-WcTAxPJy" role="doc-biblioref">12</a>]</span>. It appears as the last step in
+<span class="citation" data-cites="WcTAxPJy">[<a href="#ref-WcTAxPJy" role="doc-biblioref">5</a>]</span>. It appears as the last step in
 the change management pipeline, once the candidate change has successfully passed over the required
 set of change-based tests.</p>
 <ul>
@@ -627,7 +424,221 @@ corresponding update in the documentation.</p></li>
 <li><p><strong>[QC.Rev05]</strong> Code reviews <strong>SHOULD</strong> assess the inherent security risk of the changes, ensuring
 that the security model has not been downgraded or compromised by the changes.</p></li>
 </ul>
-<h2 id="automated-delivery-qc.del">4.14. Automated Delivery [QC.Del]</h2>
+<h3 id="semantic-versioning-qc.ver">4.1.5. Semantic Versioning [QC.Ver]</h3>
+<ul>
+<li><strong>[QC.Ver01]</strong> Semantic Versioning <span class="citation" data-cites="13UfgtMhu">[<a href="#ref-13UfgtMhu" role="doc-biblioref">6</a>]</span> specification is <strong>RECOMMENDED</strong> for
+tagging the production releases.</li>
+</ul>
+<h2 id="files-and-documents">4.2. Files and documents</h2>
+<h3 id="licensing-qc.lic">4.2.1. Licensing [QC.Lic]</h3>
+<ul>
+<li><p><strong>[QC.Lic01]</strong> As open-source software, source code <strong>MUST</strong> adhere to an open-source license to
+be freely used, modified and distributed by others. Non-licensed software is exclusive copyright
+by default.</p>
+<ul>
+<li><strong>[QC.Lic01.1]</strong> Licenses <strong>MUST</strong> be physically present (e.g. as a LICENSE file) in the root
+of all the source code repositories related to the software component.</li>
+</ul></li>
+<li><p><strong>[QC.Lic02]</strong> License <strong>MUST</strong> be compliant with the Open Source Definition
+<span class="citation" data-cites="HdIbF8WL">[<a href="#ref-HdIbF8WL" role="doc-biblioref">3</a>]</span>.</p>
+<ul>
+<li><strong>[QC.Lic02.1]</strong> <strong>RECOMMENDED</strong> licenses are listed in the Open Source Initiative portal under
+the Popular Licenses category <span class="citation" data-cites="xVJMmGVr">[<a href="#ref-xVJMmGVr" role="doc-biblioref">7</a>]</span>, c.f. the complete list of
+Software Package Data Exchange (SPDX) <span class="citation" data-cites="hZiRW4Xr">[<a href="#ref-hZiRW4Xr" role="doc-biblioref">8</a>]</span>.</li>
+</ul></li>
+</ul>
+<h3 id="code-metadata-qc.met">4.2.2. Code metadata [QC.Met]</h3>
+<p>Metadata for the software component provides a way to achieve its full identification, thus making
+software citation viable <span class="citation" data-cites="BrOt8n62">[<a href="#ref-BrOt8n62" role="doc-biblioref">9</a>]</span>. It allows the assignment of a Digital Object
+Identifier (DOI) and is key towards preservation, discovery, reuse, and attribution of the software
+component.</p>
+<ul>
+<li><strong>[QC.Met01]</strong> A metadata file <strong>SHOULD</strong> exist along side the code, under its VCS. The metadata
+file <strong>SHOULD</strong> be updated when needed, as is the case of a new version.</li>
+</ul>
+<h3 id="documentation-qc.doc">4.2.3. Documentation [QC.Doc]</h3>
+<ul>
+<li><p><strong>[QC.Doc01]</strong> Documentation <strong>MUST</strong> be treated as code.</p>
+<ul>
+<li><strong>[QC.Doc01.1]</strong> Version controlled, it <strong>MAY</strong> reside in the same repository where the source
+code lies.</li>
+</ul></li>
+<li><p><strong>[QC.Doc02]</strong> Documentation <strong>MUST</strong> use plain text format using a markup language, such as
+Markdown or reStructuredText.</p>
+<ul>
+<li><strong>[QC.Doc02.1]</strong> It is <strong>RECOMMENDED</strong> that all software components delivered by the same
+project agree on a common markup language.</li>
+<li><strong>[QC.Doc2.2]</strong> Each individual documentation file <strong>SHOULD</strong> comply with community-driven or
+de-facto style standards for the markup languages being used.</li>
+</ul></li>
+<li><p><strong>[QC.Doc03]</strong> Documentation <strong>MUST</strong> be online and available in a documentation repository.</p>
+<ul>
+<li><strong>[QC.Doc03.1]</strong> Documentation <strong>SHOULD</strong> be rendered automatically.</li>
+</ul></li>
+<li><p><strong>[QC.Doc04]</strong> Documentation <strong>MUST</strong> be updated on new software versions involving any
+substantial or minimal change in the behavior of the application.</p></li>
+<li><p><strong>[QC.Doc05]</strong> Documentation <strong>MUST</strong> be updated whenever reported as inaccurate or unclear.</p></li>
+<li><p><strong>[QC.Doc06]</strong> Documentation <strong>MUST</strong> be produced according to the target audience, varying
+according to the software component specification. The identified types of documentation and their
+RECOMMENDED content are:</p>
+<ul>
+<li><p><strong>[QC.Doc06.1]</strong> README file <strong>MUST</strong> be present:</p>
+<ul>
+<li>One-paragraph description of the application.</li>
+<li>A <em>“Getting Started”</em> step-by-step description on how to get a development environment running
+(prerequisites, installation).</li>
+<li>Automated test execution how-to.</li>
+<li>Links to the external documentation below (production deployment, user guides).</li>
+<li>Versioning specification.</li>
+<li>Author list and contacts.</li>
+<li>Acknowledgments.</li>
+</ul></li>
+<li><p><strong>[QC.Doc06.2]</strong> CONTRIBUTING file <strong>MUST</strong> be present in order to communicate how external
+parties can contribute to the code.</p></li>
+<li><p><strong>[QC.Doc06.3]</strong> A code of conduct (usually defined in a CODE_OF_CONDUCT file) <strong>MUST</strong> be
+present in order to establish the positive social attitudes expected within the community of
+code contributors.</p></li>
+<li><p><strong>[QC.Doc06.4]</strong> LICENSE file <strong>MUST</strong> be present, License information with detailed description.</p></li>
+<li><p><strong>[QC.Doc06.5]</strong> Developer</p>
+<ul>
+<li>Private API documentation.</li>
+<li>Structure and interfaces.</li>
+<li>Build documentation.</li>
+</ul></li>
+<li><p><strong>[QC.Doc06.6]</strong> Deployment and Administration</p>
+<ul>
+<li>Installation and configuration guides.</li>
+<li>Service Reference Card, with the following RECOMMENDED content:
+<ul>
+<li>Brief functional description.</li>
+<li>List of processes or daemons.</li>
+<li>Init scripts and options.</li>
+<li>List of configuration files, location and example or template.</li>
+<li>Log files location and other useful audit information.</li>
+<li>List of ports.</li>
+<li>Service state information.</li>
+<li>List of cron jobs.</li>
+</ul></li>
+<li>Security information.</li>
+<li>FAQs and troubleshooting.</li>
+</ul></li>
+<li><p><strong>[QC.Doc06.7]</strong> User</p>
+<ul>
+<li>Public API documentation.</li>
+<li>Command Line Interface (CLI) reference.</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="static-testing---white-box-testing">4.3. Static testing - White box testing</h2>
+<h3 id="code-style-qc.sty">4.3.1. Code Style [QC.Sty]</h3>
+<p>Code style requirements pursue the correct maintenance of the source code by the common agreement of
+a series of style conventions. These vary based on the programming language being used.</p>
+<ul>
+<li><p><strong>[QC.Sty01]</strong> Each individual software product <strong>MUST</strong> comply with community-driven or de-facto
+code style standards for the programming languages being used.</p>
+<ul>
+<li><strong>[QC.Sty01.1]</strong> Compliance with multiple complementary standards <strong>MAY</strong> exist.</li>
+</ul></li>
+<li><p><strong>[QC.Sty02]</strong> Custom code style guidelines <strong>SHOULD</strong> be avoided, only considered in the
+hypothetical event of programming languages without existing community style standards.</p>
+<ul>
+<li><p><strong>[QC.Sty02.1]</strong> Custom styles <strong>MUST</strong> be documented by defining each convention and its
+expected output.</p></li>
+<li><p><strong>[QC.Sty02.2]</strong> Custom styles <strong>SHOULD</strong> evolve over time towards a more consistent definition.</p></li>
+</ul></li>
+<li><p><strong>[QC.Sty03]</strong> Exceptions of individual conventions from the main definition are allowed but
+<strong>SHOULD</strong> be avoided</p>
+<ul>
+<li><strong>[QC.Sty03.1]</strong> Absence of standard conventions <strong>SHOULD</strong> be justified and tracked.</li>
+</ul></li>
+<li><p><strong>[QC.Sty04]</strong> Code style compliance testing <strong>MUST</strong> be automated and <strong>MUST</strong> be triggered for
+each candidate change in the source code.</p></li>
+</ul>
+<h3 id="unit-testing-qc.uni">4.3.2. Unit Testing [QC.Uni]</h3>
+<p>Unit testing evaluates all the possible flows in the internal design of the code, so that its
+behavior becomes apparent. It is a key type of testing for early detection of failures in the
+development cycle.</p>
+<ul>
+<li><p><strong>[QC.Uni01]</strong> Minimum acceptable code coverage threshold <strong>SHOULD</strong> be 70%.</p>
+<ul>
+<li><p><strong>[QC.Uni01.1]</strong> Unit testing coverage <strong>SHOULD</strong> be higher for those sections of the code
+identified as critical by the developers, such as units part of a security module.</p></li>
+<li><p><strong>[QC.Uni01.2]</strong> Unit testing coverage <strong>MAY</strong> be lower for external libraries or pieces of code
+not maintained within the product’s code base.</p></li>
+</ul></li>
+<li><p><strong>[QC.Uni02]</strong> Units <strong>SHOULD</strong> reside in the repository code but separated from the main code.</p></li>
+<li><p><strong>[QC.Uni03]</strong> Unit testing coverage <strong>MUST</strong> be checked on change basis.</p></li>
+<li><p><strong>[QC.Uni04]</strong> Unit testing coverage <strong>MUST</strong> be automated.</p></li>
+</ul>
+<h3 id="test-harness-qc.har">4.3.3. Test Harness [QC.Har]</h3>
+<p>In software development, a test harness
+<span class="citation" data-cites="18HEHu1mB">[<a href="#ref-18HEHu1mB" role="doc-biblioref">10</a>]</span>, is a collection of software
+and test data used by developers to unit test software models during development. A test harness
+will specifically refer to test doubles, which are programs that interact with the software being
+tested. Once a test harness is used to execute a test, they can also utilize a test library to
+generate reports.</p>
+<p>It is also a simple form of Integration Testing, where interaction and integration with external
+components are substituted by a Double.</p>
+<p>Test Double is a generic term for any case where you replace a production object for testing
+purposes. There are various kinds of double <span class="citation" data-cites="1DBB5Stor">[<a href="#ref-1DBB5Stor" role="doc-biblioref">11</a>]</span>:</p>
+<ul>
+<li><p><strong>Dummy objects</strong> are passed around but never actually used. Usually they are just used to fill
+parameter lists.</p></li>
+<li><p><strong>Fake objects</strong> actually have working implementations, but usually take some shortcut which makes
+them not suitable for production (such as an InMemoryTestDatabase).</p></li>
+<li><p><strong>Stubs</strong> provide canned answers to calls made during the test, usually not responding at all to
+anything outside what’s programmed in for the test.</p></li>
+<li><p><strong>Spies</strong> are stubs that also record some information based on how they were called. One form of
+this might be an email service that records how many messages where sent.</p></li>
+<li><p><strong>Mocks</strong> are pre-programmed with expectations which form a specification of the calls they are
+expected to receive. They can throw an exception if they receive a call they don’t expect and are
+checked during verification to ensure they got all the calls they were expecting.</p></li>
+</ul>
+<p>As such the following criteria is defined for Test Harness:</p>
+<ul>
+<li><p><strong>[QC.Har01]</strong> When working on automated testing, the use of Test Doubles is <strong>RECOMMENDED</strong> to
+mimic a simplistic behavior of objects and procedures.</p></li>
+<li><p><strong>[QC.Har02]</strong> Test Doubles <strong>SHOULD</strong> reside in the software component repository code base but
+separated from the main code.</p></li>
+<li><p><strong>[QC.Har03]</strong> Regression testing, that checks the conformance with previous tests, <strong>SHOULD</strong> be
+covered at this stage by executing the complete set of Test Doubles available.</p></li>
+<li><p><strong>[QC.Har04]</strong> Test Doubles and regression, <strong>MUST</strong> be checked on change basis.</p></li>
+</ul>
+<h3 id="test-driven-development-qc.tdd">4.3.4. Test-Driven Development [QC.Tdd]</h3>
+<p>Test-Driven Development <span class="citation" data-cites="G9TtUkFA">[<a href="#ref-G9TtUkFA" role="doc-biblioref">12</a>]</span>, is a software development process relying on software
+requirements being converted to test cases before software is fully developed, and tracking all
+software development by repeatedly testing the software against all test cases. This is opposed to
+software being developed first and test cases created later.</p>
+<ul>
+<li><strong>[QC.Tdd01]</strong> Software requirements <strong>SHOULD</strong> be converted to test cases, and these test cases
+<strong>SHOULD</strong> be checked automatically.</li>
+</ul>
+<h3 id="security-qc.sec">4.3.5. Security [QC.Sec]</h3>
+<p>Security assessment is essential for any production <strong>Software</strong>. An effective implementation of the
+security requirements applies to every stage in the Software Development Life Cycle (SDLC),
+especially effective at the source code level.</p>
+<ul>
+<li><p><strong>[QC.Sec01]</strong> Secure coding practices <strong>MUST</strong> be applied into all the stages of a software
+component development lifecycle.</p>
+<ul>
+<li><strong>[QC.Sec01.1]</strong> Compliance with Open Web Application Security Project (OWASP) secure coding
+guidelines
+<span class="citation" data-cites="4dWdwpMx">[<a href="#ref-4dWdwpMx" role="doc-biblioref">13</a>]</span>
+is <strong>RECOMMENDED</strong>, even for non-web applications.</li>
+</ul></li>
+<li><p><strong>[QC.Sec02]</strong> Source code <strong>MUST</strong> use automated linter tools to perform static application
+security testing (SAST) <span class="citation" data-cites="NkFxEpFJ">[<a href="#ref-NkFxEpFJ" role="doc-biblioref">14</a>]</span> that flag
+common suspicious constructs that may cause a bug or lead to a security risk (e.g. inconsistent
+data structure sizes or unused resources).</p></li>
+<li><p><strong>[QC.Sec03]</strong> Security code reviews
+<span class="citation" data-cites="WcTAxPJy">[<a href="#ref-WcTAxPJy" role="doc-biblioref">5</a>]</span>
+for certain vulnerabilities <strong>SHOULD</strong> be done as part of the identification of potential security
+flaws in the code. Inputs <strong>SHOULD</strong> come from automated linters.</p></li>
+<li><p><strong>[QC.Sec04]</strong> World-writable files or directories <strong>MUST NOT</strong> be present in the product’s
+configuration or logging locations.</p></li>
+</ul>
+<h2 id="delivery">4.4. Delivery</h2>
+<h3 id="automated-delivery-qc.del">4.4.1. Automated Delivery [QC.Del]</h3>
 <p>Automated delivery comprises the build of Software into an artifact, its upload/registration into a
 public repository of such artifacts and notification of the success of the process.</p>
 <ul>
@@ -642,10 +653,11 @@ of such artifacts.</p></li>
 <li><p><strong>[QC.Del03]</strong> Upon success of the previous (<strong>QC.Del02</strong>) process, a notification <strong>MUST</strong> be
 sent to pre-defined parties such as the main developer or team.</p></li>
 </ul>
-<h2 id="automated-deployment-qc.dep">4.15. Automated Deployment [QC.Dep]</h2>
+<h2 id="deployment">4.5. Deployment</h2>
+<h3 id="automated-deployment-qc.dep">4.5.1. Automated Deployment [QC.Dep]</h3>
 <ul>
-<li><p><strong>[QC.Dep01]</strong> Production-ready code <strong>MUST</strong> be deployed as a workable system with the minimal user
-or system administrator interaction leveraging software configuration management (SCM) tools.</p></li>
+<li><p><strong>[QC.Dep01]</strong> Production-ready code <strong>MUST</strong> be deployed as a workable system with the minimal
+user or system administrator interaction leveraging software configuration management (SCM) tools.</p></li>
 <li><p><strong>[QC.Dep02]</strong> A SCM module is treated as code.</p>
 <ul>
 <li><strong>[QC.Dep02.1]</strong> Version controlled, it <strong>SHOULD</strong> reside in a different repository than the
@@ -659,7 +671,7 @@ solution for the automated deployment.</li>
 </ul></li>
 <li><p><strong>[QC.Dep04]</strong> Any change affecting the application’s deployment or operation <strong>MUST</strong> be
 subsequently reflected in the relevant SCM modules.</p></li>
-<li><p><strong>[QC.Dep05]</strong> Official repositories provided by the manufacturer <strong>SHOULD</strong> be used to host the
+<li><p><strong>[QC.Dep05]</strong> Official repositories provided by the main developer <strong>SHOULD</strong> be used to host the
 SCM modules, thus augmenting the visibility and promote external collaboration.</p></li>
 </ul>
 <h1 class="page_break_before" id="glossary">5. Glossary</h1>
@@ -724,7 +736,7 @@ the code, driven by the agreed code workflow (see A1.1).</p>
 <p>There are multiple technological solutions to compose CI/CD pipelines. The <strong>SQA as a Service
 (SQAaaS)</strong> platform<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> aids developers in such task, with the additional benefit of being 100%
 aligned with the criteria being described in this document. The SQAaaS solution relies on Jenkins
-code pipelines <span class="citation" data-cites="AIVhJAgK">[<a href="#ref-AIVhJAgK" role="doc-biblioref">15</a>/]</span> and allows developers to use either
+code pipelines <span class="citation" data-cites="AIVhJAgK">[<a href="#ref-AIVhJAgK" role="doc-biblioref">16</a>/]</span> and allows developers to use either
 a graphical (web-based) or code-based approach to define the work to be performed in each stage of
 the CI/CD pipeline.</p>
 <h2 id="a1.3.-services">A1.3. Services</h2>
@@ -741,8 +753,8 @@ tools.</p>
 derivative OS), DEBs (case of Debian/Ubuntu and derivatives) and in many cases containers such as
 Docker images.</p>
 <p>The artifacts are provided, in general, by public repositories and most notably Docker Hub
-<span class="citation" data-cites="fei3c4fX">[<a href="#ref-fei3c4fX" role="doc-biblioref">16</a>/]</span> in the case of Docker images. Other common repositories are PyPI
-<span class="citation" data-cites="Mduzvxei">[<a href="#ref-Mduzvxei" role="doc-biblioref">17</a>/]</span> for python SW and Maven <span class="citation" data-cites="vqsStOkw">[<a href="#ref-vqsStOkw" role="doc-biblioref">18</a>/]</span> for Java.</p>
+<span class="citation" data-cites="fei3c4fX">[<a href="#ref-fei3c4fX" role="doc-biblioref">17</a>/]</span> in the case of Docker images. Other common repositories are PyPI
+<span class="citation" data-cites="Mduzvxei">[<a href="#ref-Mduzvxei" role="doc-biblioref">18</a>/]</span> for python SW and Maven <span class="citation" data-cites="vqsStOkw">[<a href="#ref-vqsStOkw" role="doc-biblioref">19</a>/]</span> for Java.</p>
 <p>Regarding the CI/CD automation, Jenkins pipelines can be easily composed through the SQAaaS platform
 and put into the git repositories to be used by the Jenkins CI service to perform the tests. The
 tools used in the CI automation are shown in section A1.2.</p>
@@ -807,7 +819,7 @@ Criteria “FAIRness level of Digital Objects”, are not covered in this docume
 <tr class="even">
 <td>Ansible, Galaxy</td>
 <td>Install, Config</td>
-<td><strong>QC.Aud</strong></td>
+<td><strong>QC.Dep</strong></td>
 <td><a href="https://docs.ansible.com/" class="uri">https://docs.ansible.com/</a></td>
 <td>Automated deployment and configuration</td>
 </tr>
@@ -914,38 +926,38 @@ applicable programming language. This list is based on the template file in
 <td style="text-align: center;">Code style</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">bandit</td>
-<td style="text-align: center;"><strong>QC.Sec</strong></td>
-<td style="text-align: center;">Python</td>
-<td style="text-align: center;"><a href="https://bandit.readthedocs.io/" class="uri">https://bandit.readthedocs.io/</a></td>
-<td style="text-align: center;">Static security</td>
-</tr>
-<tr class="odd">
 <td style="text-align: center;">pycodestyle</td>
 <td style="text-align: center;"><strong>QC.Sty</strong></td>
 <td style="text-align: center;">Python</td>
 <td style="text-align: center;"><a href="https://pycodestyle.pycqa.org/en/latest/" class="uri">https://pycodestyle.pycqa.org/en/latest/</a></td>
 <td style="text-align: center;">Code style</td>
 </tr>
+<tr class="odd">
+<td style="text-align: center;">flake8</td>
+<td style="text-align: center;"><strong>QC.Sty</strong></td>
+<td style="text-align: center;">Python</td>
+<td style="text-align: center;"><a href="https://flake8.pycqa.org/en/latest/" class="uri">https://flake8.pycqa.org/en/latest/</a></td>
+<td style="text-align: center;">Code style</td>
+</tr>
 <tr class="even">
 <td style="text-align: center;">tox</td>
-<td style="text-align: center;"><strong>QC.Sty</strong>, <strong>QC.Uni</strong>, <strong>QC.Fun</strong>, <strong>QC.Sec</strong>, <strong>QC.Doc</strong></td>
+<td style="text-align: center;"><strong>QC.Sty</strong>, <strong>QC.Uni</strong>, <strong>QC.Sec</strong>, <strong>QC.Doc</strong></td>
 <td style="text-align: center;"><a href="https://tox.readthedocs.io/" class="uri">https://tox.readthedocs.io/</a></td>
 <td style="text-align: center;">Automated test framework</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
+<td style="text-align: center;">bandit</td>
+<td style="text-align: center;"><strong>QC.Sec</strong></td>
+<td style="text-align: center;">Python</td>
+<td style="text-align: center;"><a href="https://bandit.readthedocs.io/" class="uri">https://bandit.readthedocs.io/</a></td>
+<td style="text-align: center;">Static security</td>
+</tr>
+<tr class="even">
 <td style="text-align: center;">licensee</td>
 <td style="text-align: center;"><strong>QC.Lic</strong></td>
 <td style="text-align: center;">Agnostic</td>
 <td style="text-align: center;"><a href="https://github.com/licensee/licensee" class="uri">https://github.com/licensee/licensee</a></td>
-<td style="text-align: center;">Check license</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">checkLicense</td>
-<td style="text-align: center;"><strong>QC.Lic</strong></td>
-<td style="text-align: center;">Agnostic</td>
-<td style="text-align: center;"><a href="https://github.com/EOSC-synergy/sqa-composer-templates/tree/main/QC.Lic" class="uri">https://github.com/EOSC-synergy/sqa-composer-templates/tree/main/QC.Lic</a></td>
 <td style="text-align: center;">Check license</td>
 </tr>
 <tr class="odd">
@@ -983,6 +995,13 @@ applicable programming language. This list is based on the template file in
 <td style="text-align: center;"><a href="https://github.com/EOSC-synergy/sqa-composer-templates/tree/main/QC.Doc/find_doc_files.py" class="uri">https://github.com/EOSC-synergy/sqa-composer-templates/tree/main/QC.Doc/find_doc_files.py</a></td>
 <td style="text-align: center;">Documentation</td>
 </tr>
+<tr class="even">
+<td style="text-align: center;">get_git_tags.py”</td>
+<td style="text-align: center;"><strong>QC.Ver</strong></td>
+<td style="text-align: center;">Agnostic</td>
+<td style="text-align: center;"><a href="https://github.com/EOSC-synergy/sqaaas-tooling/blob/release/1.7.0/QC.Ver/get_git_tags.py" class="uri">https://github.com/EOSC-synergy/sqaaas-tooling/blob/release/1.7.0/QC.Ver/get_git_tags.py</a></td>
+<td style="text-align: center;">Semantic Version</td>
+</tr>
 </tbody>
 </table>
 <h1 class="page_break_before" id="references">References</h1>
@@ -1000,54 +1019,57 @@ applicable programming language. This list is based on the template file in
 <div id="ref-e4CC51Rz" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">4. </div><div class="csl-right-inline"><strong>Information on RFC 2119 » RFC Editor</strong> <a href="https://www.rfc-editor.org/info/rfc2119">https://www.rfc-editor.org/info/rfc2119</a></div>
 </div>
-<div id="ref-xVJMmGVr" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline"><strong>Licenses &amp; Standards, URL: https://opensource.org/licenses</strong> <div class="csl-block">Open Source Initiative</div> <a href="https://opensource.org/licenses">https://opensource.org/licenses</a></div>
-</div>
-<div id="ref-BrOt8n62" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline"><strong>Software citation principles</strong> <div class="csl-block">Arfon M Smith, Daniel S Katz, Kyle E Niemeyer, FORCE11 Software Citation Working Group</div> <em>PeerJ Computer Science</em> (2016-09-19) <a href="https://doi.org/bw3g">https://doi.org/bw3g</a> <div class="csl-block">DOI: <a href="https://doi.org/10.7717/peerj-cs.86">10.7717/peerj-cs.86</a></div></div>
-</div>
-<div id="ref-18HEHu1mB" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline"><strong>What is test harness? - Definition from WhatIs.com</strong> <div class="csl-block">SearchSoftwareQuality</div> <a href="https://searchsoftwarequality.techtarget.com/definition/test-harness">https://searchsoftwarequality.techtarget.com/definition/test-harness</a></div>
-</div>
-<div id="ref-1DBB5Stor" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline"><strong>xUnit test patterns: refactoring test code</strong> <div class="csl-block">Gerard Meszaros</div> <em>Addison-Wesley</em> (2007) <div class="csl-block">ISBN: 9780131495050</div></div>
-</div>
-<div id="ref-G9TtUkFA" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline"><strong>Test-driven development: by example</strong> <div class="csl-block">Kent Beck</div> <em>Addison-Wesley</em> (2003) <div class="csl-block">ISBN: 9780321146533</div></div>
-</div>
-<div id="ref-4dWdwpMx" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">10. </div><div class="csl-right-inline"><strong>OWASP Secure Coding Practices-Quick Reference Guide | OWASP Foundation</strong> <a href="https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content.html">https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content.html</a></div>
-</div>
-<div id="ref-NkFxEpFJ" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">11. </div><div class="csl-right-inline"><strong>Source Code Analysis Tools | OWASP Foundation</strong> <a href="https://owasp.org/www-community/Source_Code_Analysis_Tools">https://owasp.org/www-community/Source_Code_Analysis_Tools</a></div>
-</div>
 <div id="ref-WcTAxPJy" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">12. </div><div class="csl-right-inline"><strong>OWASP Code Review Guide | OWASP Foundation</strong> <a href="https://owasp.org/www-project-code-review-guide/migrated_content.html">https://owasp.org/www-project-code-review-guide/migrated_content.html</a></div>
+<div class="csl-left-margin">5. </div><div class="csl-right-inline"><strong>OWASP Code Review Guide | OWASP Foundation</strong> <a href="https://owasp.org/www-project-code-review-guide/migrated_content.html">https://owasp.org/www-project-code-review-guide/migrated_content.html</a></div>
 </div>
 <div id="ref-13UfgtMhu" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">13. </div><div class="csl-right-inline"><strong>Semantic Versioning 2.0.0, URL: https://semver.org</strong> <div class="csl-block">Tom Preston-Werner</div> <a href="https://semver.org">https://semver.org</a></div>
+<div class="csl-left-margin">6. </div><div class="csl-right-inline"><strong>Semantic Versioning 2.0.0, URL: https://semver.org</strong> <div class="csl-block">Tom Preston-Werner</div> <a href="https://semver.org">https://semver.org</a></div>
+</div>
+<div id="ref-xVJMmGVr" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline"><strong>Licenses &amp; Standards, URL: https://opensource.org/licenses</strong> <div class="csl-block">Open Source Initiative</div> <a href="https://opensource.org/licenses">https://opensource.org/licenses</a></div>
+</div>
+<div id="ref-hZiRW4Xr" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline"><strong>SPDX License List | Software Package Data Exchange (SPDX)</strong> <a href="https://spdx.org/licenses/">https://spdx.org/licenses/</a></div>
+</div>
+<div id="ref-BrOt8n62" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline"><strong>Software citation principles</strong> <div class="csl-block">Arfon M Smith, Daniel S Katz, Kyle E Niemeyer, FORCE11 Software Citation Working Group</div> <em>PeerJ Computer Science</em> (2016-09-19) <a href="https://doi.org/bw3g">https://doi.org/bw3g</a> <div class="csl-block">DOI: <a href="https://doi.org/10.7717/peerj-cs.86">10.7717/peerj-cs.86</a></div></div>
+</div>
+<div id="ref-18HEHu1mB" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline"><strong>What is test harness? - Definition from WhatIs.com</strong> <div class="csl-block">SearchSoftwareQuality</div> <a href="https://www.techtarget.com/searchsoftwarequality/definition/test-harness">https://www.techtarget.com/searchsoftwarequality/definition/test-harness</a></div>
+</div>
+<div id="ref-1DBB5Stor" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline"><strong>xUnit test patterns: refactoring test code</strong> <div class="csl-block">Gerard Meszaros</div> <em>Addison-Wesley</em> (2007) <div class="csl-block">ISBN: 9780131495050</div></div>
+</div>
+<div id="ref-G9TtUkFA" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline"><strong>Test-driven development: by example</strong> <div class="csl-block">Kent Beck</div> <em>Addison-Wesley</em> (2003) <div class="csl-block">ISBN: 9780321146533</div></div>
+</div>
+<div id="ref-4dWdwpMx" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">13. </div><div class="csl-right-inline"><strong>OWASP Secure Coding Practices-Quick Reference Guide | OWASP Foundation</strong> <a href="https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content.html">https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content.html</a></div>
+</div>
+<div id="ref-NkFxEpFJ" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">14. </div><div class="csl-right-inline"><strong>Source Code Analysis Tools | OWASP Foundation</strong> <a href="https://owasp.org/www-community/Source_Code_Analysis_Tools">https://owasp.org/www-community/Source_Code_Analysis_Tools</a></div>
 </div>
 <div id="ref-2zNCLIz6" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">14. </div><div class="csl-right-inline"><strong>EOSC-SYNERGY EU DELIVERABLE: D3.2 First prototype of the Service Integration platform</strong> <div class="csl-block">Pablo Orviz, Isabel Campos, EOSC-SYNERGY</div> <em>Digital.CSIC</em> (2020-10-08) <a href="https://doi.org/gm97w9">https://doi.org/gm97w9</a> <div class="csl-block">DOI: <a href="https://doi.org/10.20350/digitalcsic/12721">10.20350/digitalcsic/12721</a></div></div>
+<div class="csl-left-margin">15. </div><div class="csl-right-inline"><strong>EOSC-SYNERGY EU DELIVERABLE: D3.2 First prototype of the Service Integration platform</strong> <div class="csl-block">Pablo Orviz, Isabel Campos, EOSC-SYNERGY</div> <em>Digital.CSIC</em> (2020-10-08) <a href="https://doi.org/gm97w9">https://doi.org/gm97w9</a> <div class="csl-block">DOI: <a href="https://doi.org/10.20350/digitalcsic/12721">10.20350/digitalcsic/12721</a></div></div>
 </div>
 <div id="ref-AIVhJAgK" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">15. </div><div class="csl-right-inline"><strong>Pipeline</strong> <div class="csl-block">Pipeline</div> <a href="https://www.jenkins.io/doc/book/pipeline/">https://www.jenkins.io/doc/book/pipeline/</a></div>
+<div class="csl-left-margin">16. </div><div class="csl-right-inline"><strong>Pipeline</strong> <div class="csl-block">Pipeline</div> <a href="https://www.jenkins.io/doc/book/pipeline/">https://www.jenkins.io/doc/book/pipeline/</a></div>
 </div>
 <div id="ref-fei3c4fX" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">16. </div><div class="csl-right-inline"><strong>Docker Hub</strong> <a href="https://hub.docker.com/">https://hub.docker.com/</a></div>
+<div class="csl-left-margin">17. </div><div class="csl-right-inline"><strong>Docker Hub</strong> <a href="https://hub.docker.com/">https://hub.docker.com/</a></div>
 </div>
 <div id="ref-Mduzvxei" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">17. </div><div class="csl-right-inline"><strong>PyPI · The Python Package Index</strong> <div class="csl-block">PyPI</div> <a href="https://pypi.org/">https://pypi.org/</a></div>
+<div class="csl-left-margin">18. </div><div class="csl-right-inline"><strong>PyPI · The Python Package Index</strong> <div class="csl-block">PyPI</div> <a href="https://pypi.org/">https://pypi.org/</a></div>
 </div>
 <div id="ref-vqsStOkw" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">18. </div><div class="csl-right-inline"><strong>Maven – Welcome to Apache Maven</strong> <a href="https://maven.apache.org/">https://maven.apache.org/</a></div>
+<div class="csl-left-margin">19. </div><div class="csl-right-inline"><strong>Maven – Welcome to Apache Maven</strong> <a href="https://maven.apache.org/">https://maven.apache.org/</a></div>
 </div>
 </div>
 <section class="footnotes" role="doc-endnotes">
 <hr />
 <ol>
 <li id="fn1" role="doc-endnote"><p>The SQAaaS platform is being developed in the framework of the EOSC-Synergy project described
-in Deliverable 3.2 <span class="citation" data-cites="2zNCLIz6">[<a href="#ref-2zNCLIz6" role="doc-biblioref">14</a>]</span>). It details the architecture and set of
+in Deliverable 3.2 <span class="citation" data-cites="2zNCLIz6">[<a href="#ref-2zNCLIz6" role="doc-biblioref">15</a>]</span>). It details the architecture and set of
 components of the platform.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
