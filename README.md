@@ -6,6 +6,16 @@
 [![PDF Manuscript](https://img.shields.io/badge/manuscript-PDF-blue.svg)](https://indigo-dc.github.io/sqa-baseline/manuscript.pdf)
 [![Build Status](https://travis-ci.org/indigo-dc/sqa-baseline.svg?branch=master)](https://travis-ci.org/indigo-dc/sqa-baseline)
 
+<img src="content/images/logo-SYNERGY.png" height="50">
+<img src="content/images/logo-DEEP.png" height="50">
+<img src="content/images/logo-XDC.png" height="50">
+<img src="content/images/logo-INDIGO.png" height="50">
+
+<img src="content/images/logo-LIP.png" height="50">
+<img src="content/images/logo-csic.png" height="50">
+<img src="content/images/logo-INFN.png" height="50">
+<img src="content/images/logo-UPV.png" height="50">
+
 ## Motivation
 
 Research software development and maintenance often suffers from a lack of
