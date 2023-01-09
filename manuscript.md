@@ -11,7 +11,7 @@ keywords:
 - software deployment
 - agile development
 lang: en-US
-date-meta: '2022-10-28'
+date-meta: '2023-01-09'
 author-meta:
 - Pablo Orviz
 - Mario David
@@ -32,8 +32,8 @@ header-includes: |-
   <meta name="citation_title" content="A set of Common Software Quality Assurance Baseline Criteria for Research Projects" />
   <meta property="og:title" content="A set of Common Software Quality Assurance Baseline Criteria for Research Projects" />
   <meta property="twitter:title" content="A set of Common Software Quality Assurance Baseline Criteria for Research Projects" />
-  <meta name="dc.date" content="2022-10-28" />
-  <meta name="citation_publication_date" content="2022-10-28" />
+  <meta name="dc.date" content="2023-01-09" />
+  <meta name="citation_publication_date" content="2023-01-09" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -76,9 +76,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://indigo-dc.github.io/sqa-baseline/" />
   <meta name="citation_pdf_url" content="https://indigo-dc.github.io/sqa-baseline/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://indigo-dc.github.io/sqa-baseline/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://indigo-dc.github.io/sqa-baseline/v/ff9bf3765e5a5023aeac5a4d752c0d68aaa3d857/" />
-  <meta name="manubot_html_url_versioned" content="https://indigo-dc.github.io/sqa-baseline/v/ff9bf3765e5a5023aeac5a4d752c0d68aaa3d857/" />
-  <meta name="manubot_pdf_url_versioned" content="https://indigo-dc.github.io/sqa-baseline/v/ff9bf3765e5a5023aeac5a4d752c0d68aaa3d857/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://indigo-dc.github.io/sqa-baseline/v/a4eb7d5550ed5bbbfa78f08222d99fab2cbf1670/" />
+  <meta name="manubot_html_url_versioned" content="https://indigo-dc.github.io/sqa-baseline/v/a4eb7d5550ed5bbbfa78f08222d99fab2cbf1670/" />
+  <meta name="manubot_pdf_url_versioned" content="https://indigo-dc.github.io/sqa-baseline/v/a4eb7d5550ed5bbbfa78f08222d99fab2cbf1670/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -106,10 +106,10 @@ _A DOI-citable version of this manuscript is available at <http://hdl.handle.net
 
 <small><em>
 This manuscript
-([permalink](https://indigo-dc.github.io/sqa-baseline/v/ff9bf3765e5a5023aeac5a4d752c0d68aaa3d857/))
+([permalink](https://indigo-dc.github.io/sqa-baseline/v/a4eb7d5550ed5bbbfa78f08222d99fab2cbf1670/))
 was automatically generated
-from [indigo-dc/sqa-baseline@ff9bf37](https://github.com/indigo-dc/sqa-baseline/tree/ff9bf3765e5a5023aeac5a4d752c0d68aaa3d857)
-on October 28, 2022 with the use of <https://gitlab.com/manubot/rootstock/>.
+from [indigo-dc/sqa-baseline@a4eb7d5](https://github.com/indigo-dc/sqa-baseline/tree/a4eb7d5550ed5bbbfa78f08222d99fab2cbf1670)
+on January 9, 2023 with the use of <https://gitlab.com/manubot/rootstock/>.
 </em></small>
 
 ## Authors
