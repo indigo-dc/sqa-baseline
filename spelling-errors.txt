@@ -1,6 +1,6 @@
 Acc
 Acknowledgements
-ansible
+Ansible
 caifti
 Cantabria
 cff
@@ -42,7 +42,7 @@ mariojmdavid
 markdownlint
 Moltó
 Notational
-Orviz
+orviz
 OWASP
 plasencia
 Politècnica
