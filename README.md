@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/indigo-dc/sqa-baseline/tree/gh-pages) branch hosts the contents of this directory at <https://indigo-dc.github.io/sqa-baseline/>.
-The permalink for this webpage version is <https://indigo-dc.github.io/sqa-baseline/v/226ca4a4f38260303c0eb9ea1c61c47639f001b7/>.
+The permalink for this webpage version is <https://indigo-dc.github.io/sqa-baseline/v/c11dcdfb80a8055055626cb536ff1c8960e9e8c6/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://indigo-dc.github.io/sqa-baseline/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`226ca4a4f38260303c0eb9ea1c61c47639f001b7`](https://github.com/indigo-dc/sqa-baseline/commit/226ca4a4f38260303c0eb9ea1c61c47639f001b7).
+[`c11dcdfb80a8055055626cb536ff1c8960e9e8c6`](https://github.com/indigo-dc/sqa-baseline/commit/c11dcdfb80a8055055626cb536ff1c8960e9e8c6).
