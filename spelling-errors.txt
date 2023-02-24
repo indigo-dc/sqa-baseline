@@ -42,7 +42,7 @@ mariojmdavid
 markdownlint
 Moltó
 Notational
-orviz
+Orviz
 OWASP
 plasencia
 Politècnica
